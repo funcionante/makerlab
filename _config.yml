@@ -1,0 +1,19 @@
+# Site settings
+title: MakerLab
+email: makerlab@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: "https://makerlab.gitlab.io"
+owner_name: makerlab
+owner_url: https://gitlab.com/makerlab
+repository_name: makerlab.gitlab.io
+repository_url: https://gitlab.com/makerlab/makerlab.gitlab.io
+
+# Build settings
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
