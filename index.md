@@ -2,122 +2,56 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# What is MakerLab?
 
-[Link to another page](log.html).
+This is a normal paragraph following a header. GitHub is a code hosting
+platform for version control and collaboration. It lets you and others work
+together on projects from anywhere.
 
-There should be whitespace between paragraphs.
+## Technologies Used
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+_MakerLab_ uses many technologies. One of our main mottoes is to "don't
+reinvent the wheel".
 
-# [](#header-1)Header 1
+Here follows a list of projects that power us:
+*   django
+*   django-wiki
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+## The Team
 
-## [](#header-2)Header 2
+### Us
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+![Image of Ricardo Jesus](https://avatars1.githubusercontent.com/u/11319180?v=3&s=460){:height="120px" width="120px"}
+![Image of Diogo Ferreira](https://avatars2.githubusercontent.com/u/11805521?v=3&s=460){:height="120px" width="120px"}
+![Image of Leonardo Oliveira](https://avatars0.githubusercontent.com/u/10348875?v=3&s=460){:height="120px" width="120px"}
+![Image of Pedro Martins](https://avatars2.githubusercontent.com/u/10819202?v=3&s=460){:height="120px" width="120px"}
+![Image of ](https://octodex.github.com/images/original.png){:height="120px" width="120px"}
+![Image of ](https://octodex.github.com/images/original.png){:height="120px" width="120px"}
+{:center}
 
-### [](#header-3)Header 3
+From left to right: Ricardo Jesus, Diogo Ferreira, Leonardo Oliveira, Pedro
+Martins, ...
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+### Our Puppeteer
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+![Image of Diogo Gomes](https://avatars1.githubusercontent.com/u/137684?v=3&s=460){:height="120px" width="120px"}
+{:center}
 
-#### [](#header-4)Header 4
+Prof. Diogo Gomes
+{:center}
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+## Other Pages
 
-##### [](#header-5)Header 5
+If you are interested in learning more about _MakerLab_, do read the following
+pages:
+*   [User area](pages/user.html)
+*   [Specification area](pages/specification.html)
+*   [Developer area](pages/developer.html)
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+Further more, if you want to check our weekly progress, refer to
+[here](pages/log.html).
 
-###### [](#header-6)Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+{::comment}
+The section below is for ALDs definitions.
+{:/comment}
+{:center: style="text-align: center"}
