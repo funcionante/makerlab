@@ -51,11 +51,11 @@ Here follows a list of projects that power us:
 ![Image of Leonardo Oliveira](https://avatars0.githubusercontent.com/u/10348875?v=3&s=460){:height="120px" width="120px"}
 ![Image of Pedro Martins](https://avatars2.githubusercontent.com/u/10819202?v=3&s=460){:height="120px" width="120px"}
 ![Image of Duarte Henriques](https://avatars1.githubusercontent.com/u/14802516?v=3&s=460){:height="120px" width="120px"}
-![Image of ](https://octodex.github.com/images/original.png){:height="120px" width="120px"}
+![Image of Jorge Silva](https://avatars1.githubusercontent.com/u/25957117?v=3&s=460){:height="120px" width="120px"}
 {:center}
 
 From left to right: Ricardo Jesus, Diogo Ferreira, Leonardo Oliveira, Pedro
-Martins, Duarte Henriques and <>.
+Martins, Duarte Henriques and Jorge Silva.
 
 ### Puppeteer
 
