@@ -2,19 +2,37 @@
 layout: default
 ---
 
-# Week Log
+You can always go [back](../).
+
+# Weekly Log
 
 Where we keep a weekly progress of the project's development.
 
-**Disclaimer**: As MakerLab itself, this page will **not** follow any
-given structure. Only interesting aspects of a given week will be highlighted.
-Hopefully our issue tracking will give a deeper understanding of the project's
-development efforts.
-
-You can always go [back](../index.html).
-
 ## Week  1 (12-02-2017)
+
+Project was started. The team met and momentum was picked up.
+
+News (by team member):
+<dl>
+<dt>Diogo</dt>
+    <dd>Android app was started.</dd>
+    <dd>Already reades QR codes + barcodes.</dd>
+<dt>Leonardo</dt>
+    <dd>Wiki was started.</dd>
+    <dd>Gentelella template adapted to it.</dd>
+<dt>Pedro</dt>
+    <dd>Work on virtualizing the network started.</dd>
+    <dd>Entails study of Neutron/Open vSwitch.</dd>
+<dt>Ricardo</dt>
+    <dd>Elected project manager.</dd>
+    <dd>Project's site started.</dd>
+    <dd>First hand-out of tasks.</dd>
+    <dd>Docker container for the wiki started (waiting wiki completion).</dd>
+</dl>
+
 ## Week  2 (19-02-2017)
+
+{::comment}
 ## Week  3 (26-02-2017)
 ## Week  4 (05-03-2017)
 ## Week  5 (12-03-2017)
@@ -30,3 +48,4 @@ You can always go [back](../index.html).
 ## Week 15 (21-05-2017)
 ## Week 16 (28-05-2017)
 ## Week 17 (04-06-2017)
+{:/comment}
