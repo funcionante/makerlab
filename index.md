@@ -24,23 +24,51 @@ which called to our attention:
 *   **Don't reinvent the wheel**. Reuse existing projects.  
     Keep close to upstream, so that mantaining the project is painless.
 *   Make the system **autonomous**.  
-    _MakerLab_ shouldn't require a superviser, though one might exist.
+    _MakerLab_ shouldn't require a superviser, though one might (and will)
+    exist.
 *   Make the system **easy to use** and **fun**.  
     Management for the users, not for the manager.
 *   Plan for the **future**.  
     Don't make restrictions to what the system will be capable of providing.
 
+## Technical specs
+
+At least one of the follownig system specs are required be met in order to
+use DETI MakerLab:
+*   Android 4.4+
+*   Any recent browser (Firefox/Chrome/Safari/...)
+*   iOS (??)
+
+Despite this, some features are only available either in the mobile version
+(e.g. requisitions) or the web version (e.g. most administrative dashboards).
+
 ## The Sketch of a Solution
 
+Trying to solve to maximum the issues above (and others we left out of the
+list), the following components are queued for development:
+*   API dispatcher/orchestrator
+*   Wiki engine
+*   Semantic indexer
+*   Network manager
+*   Android app
+*   iOS app
+*   Web platform
+
+Rational behind our decisions and more elaboration on these components is
+provided on the specification pages.
 
 ## Technologies Used
 
 _MakerLab_ uses many technologies. One of our main mottoes is to "don't
-reinvent the wheel".
+reinvent the wheel". Besides, by utilizing these projects not only are we
+capable of contributing to them, but we also avoid the necessity to keep them
+ourselves.
 
-Here follows a list of projects that power us:
+Projects that power us (and to which we thank):
 *   django
 *   django-wiki
+*   python
+*   solr
 
 ## The Team
 
@@ -69,14 +97,14 @@ Prof. Diogo Gomes
 
 If you are interested in learning more about _MakerLab_, do read the following
 pages:
-*   [User area](pages/user.html)
-*   [Specification area](pages/specification.html)
-*   [Developer area](pages/developer.html)
+*   [User area](pages/user/)
+*   (New content!!) [Specification area](pages/specification/)
+*   [Developer area](pages/developer/)
 
-Further more, if you want to check our weekly progress, refer to
-[here](pages/log.html).
+Further more, if you want to check our weekly progress, refer
+[here](pages/team/).
 
 {::comment}
-The section below is for ALD definitions.
+The section below is for ALD definitions (if more are necessary).
 {:/comment}
 {:center: style="text-align: center"}

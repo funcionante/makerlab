@@ -1,8 +1,6 @@
 ---
-layout: default
+layout: pages
 ---
-
-You can always go [back](../).
 
 # Weekly Log
 
@@ -31,6 +29,19 @@ News (by team member):
 </dl>
 
 ## Week  2 (19-02-2017)
+
+Milestone 1 (M1) was prepared.
+
+<dl>
+<dt>Diogo</dt>
+<dt>Leonardo</dt>
+<dt>Pedro</dt>
+<dt>Ricardo</dt>
+    <dd>General architecture proposed.</dd>
+    <dd>First draft of API prepared.</dd>
+    <dd>(Solr) indexer roughly prepared (needing proper test cases).</dd>
+    <dd>Joining M1 components into a reasonable page.</dd>
+</dl>
 
 {::comment}
 ## Week  3 (26-02-2017)
