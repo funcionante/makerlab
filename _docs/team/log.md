@@ -1,5 +1,7 @@
 ---
-layout: pages
+layout: default
+category: Team
+order: 1
 ---
 
 # Weekly Log
@@ -33,9 +35,6 @@ News (by team member):
 Milestone 1 (M1) was prepared.
 
 <dl>
-<dt>Diogo</dt>
-<dt>Leonardo</dt>
-<dt>Pedro</dt>
 <dt>Ricardo</dt>
     <dd>General architecture proposed.</dd>
     <dd>First draft of API prepared.</dd>

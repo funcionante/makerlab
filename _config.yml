@@ -1,4 +1,5 @@
 # Site settings
+
 title: MakerLab
 email: makerlab@ua.pt
 description: >
@@ -10,8 +11,53 @@ owner_url: https://gitlab.com/makerlab
 repository_name: makerlab.gitlab.io
 repository_url: https://gitlab.com/makerlab/makerlab.gitlab.io
 
+show_full_navigation: true
+
 # Build settings
-markdown: kramdown
+
+permalink: pretty
+
+gems:
+  - jekyll-sitemap
+
 exclude:
   - Gemfile
   - Gemfile.lock
+  - LICENCE
+
+collections:
+  docs:
+    title: Documentation
+    permalink: /:path/
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+  -
+    scope:
+      path: ""
+      type: "docs"
+    values:
+      seo:
+        type: Article
+      _comments:
+        category: Group navigation links with this field
+        order: Used to sort links in the navigation
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      _comments:
+        type: Marks the impact of this release
+
+# -----------
+# CloudCannon
+
+types:
+  - minor
+  - major

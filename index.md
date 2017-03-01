@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Welcome
 ---
 
 # What is MakerLab?
@@ -57,6 +58,16 @@ list), the following components are queued for development:
 Rational behind our decisions and more elaboration on these components is
 provided on the specification pages.
 
+Here's how it looks like.
+
+![Mockup 01](images/mockups/mockups_v0_2_01.png){:width="360px"}
+![Mockup 12](images/mockups/mockups_v0_2_12.png){:width="360px"}
+{:center}
+
+![Mockup 02](images/mockups/mockups_v0_2_02.png){:width="360px"}
+![Mockup 10](images/mockups/mockups_v0_2_10.png){:width="360px"}
+{:center}
+
 ## Technologies Used
 
 _MakerLab_ uses many technologies. One of our main mottoes is to "don't
@@ -93,16 +104,8 @@ Martins, Duarte Henriques and Jorge Silva.
 Prof. Diogo Gomes
 {:center}
 
-## Other Pages
-
-If you are interested in learning more about _MakerLab_, do read the following
-pages:
-*   [User area](pages/user/)
-*   (New content!!) [Specification area](pages/specification/)
-*   [Developer area](pages/developer/)
-
-Further more, if you want to check our weekly progress, refer
-[here](pages/team/).
+--
+By the guys behind MakerLab™.
 
 {::comment}
 The section below is for ALD definitions (if more are necessary).

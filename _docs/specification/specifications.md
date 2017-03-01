@@ -1,5 +1,7 @@
 ---
-layout: pages
+layout: default
+category: Specifications
+order: 1
 ---
 
 # Specification Area
@@ -177,7 +179,7 @@ system will provide:
 Here is a simple illustration of how DETI MakerLab will look like once
 completed:
 
-![](img/dml-architecture.svg)
+![](../../images/specifications/dml-architecture.svg)
 {:center}
 
 Although not an extensive diagram, hopefully it will empower the reader with a
