@@ -6,9 +6,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jedy - Bootstrap Landing Page</title>
+        <title>DETI MakerLab</title>
 
         <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="jedy/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="jedy/font-awesome/css/font-awesome.min.css">
@@ -25,11 +26,39 @@
         <![endif]-->
 
         <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="jedy/ico/favicon.png">
+        <link rel="shortcut icon" href="jedy/img/logo_white.svg">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="jedy/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="jedy/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="jedy/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="jedy/ico/apple-touch-icon-57-precomposed.png">
+
+        <!-- Slideshow -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="jedy/js/responsiveslides.min.js"></script>
+ <script>
+
+   // You can also use "$(window).load(function() {"
+   jQuery(function ($) {
+
+     // Slideshow 1
+     $("#slider1").responsiveSlides({
+         auto: true,
+         pager: false,
+         nav: true,
+         speed: 500,
+         namespace: "callbacks",
+     });
+
+     // Slideshow 2
+     $("#slider2").responsiveSlides({
+       auto: false,
+       pager: false,
+       speed: 500,
+     });
+
+   });
+ </script>
+</head>
 
     </head>
 
@@ -50,15 +79,18 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">Jedy - Bootstrap Landing Page</a>
+					<a class="navbar-brand" href="index.html">DETI MakerLab</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
+						<li><a class="scroll-link" href="specification/specifications">Documentation</a></li>
 						<li><a class="scroll-link" href="#top-content">Top</a></li>
-						<li><a class="scroll-link" href="#features">Features</a></li>
-						<li><a class="scroll-link" href="#how-it-works">How it works</a></li>
-						<li><a class="scroll-link" href="#testimonials">Testimonials</a></li>
+						<li><a class="scroll-link" href="#features">Our Vision</a></li>
+						<li><a class="scroll-link" href="#more-features">Mobile App</a></li>
+						<li><a class="scroll-link" href="#great-support">Wiki</a></li>
+                        <li><a class="scroll-link" href="#how-it-works">Schedule</a></li>
+						<li><a class="scroll-link" href="#testimonials">Architecture</a></li>
 						<li><a class="scroll-link" href="#about-us">About</a></li>
 					</ul>
 				</div>
@@ -73,16 +105,18 @@
 
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1 class="wow fadeInLeftBig">Beautiful <strong>Landing Page</strong></h1>
+                            <img src="jedy/img/logo_white.svg" style="height: 200px; margin-bottom: 20px;"/>
+                            <h1 class="wow fadeInLeftBig">Welcome to <strong>DETI&nbsp;MakerLab</strong></h1>
                             <div class="description wow fadeInLeftBig">
                             	<p>
-	                            	This is a free responsive landing page made with the Bootstrap framework.
-	                            	Check it out now. Download it, customize and use it as you like!
+                                    DETI MakerLab is a system designed to manage a modern and innovative room.
+                                    This room is filled with electronic components and devices, such as Arduinos, Raspberries, 3D printers, a network closet and the like.
+                                    The space aims at being the room to carry on projects inside DETI.
                             	</p>
                             </div>
                             <div class="top-big-link wow fadeInUp">
-                            	<a class="btn btn-link-1" href="http://azmind.com">Download it</a>
-                            	<a class="btn btn-link-2 scroll-link" href="#features">Learn more</a>
+                            	<a class="btn btn-link-1 scroll-link" href="#features">Learn more</a>
+                            	<a class="btn btn-link-2" href="specification/specifications">Check documentation</a>
                             </div>
                         </div>
                     </div>
@@ -97,37 +131,54 @@
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-sm-12 features section-description wow fadeIn">
-	                    <h2><strong>Best</strong> features</h2>
+	                    <h2>Our Vision</h2>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
 	                </div>
 	            </div>
 	            <div class="row">
                 	<div class="col-sm-4 features-box wow fadeInUp">
 	                	<div class="features-box-icon">
-	                		<i class="fa fa-magic"></i>
+	                		<i class="fa fa-puzzle-piece"></i>
 	                	</div>
-	                    <h3>Easy To Use</h3>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                    <h3>All inpieces</h3>
+	                    <p> Make the system highly modularized and loosely coupled.
+                            Any component should be easily swaped (or removed).</p>
                     </div>
                     <div class="col-sm-4 features-box wow fadeInDown">
 	                	<div class="features-box-icon">
-	                		<i class="fa fa-thumbs-o-up"></i>
+	                		<i class="fa fa-refresh"></i>
 	                	</div>
-	                    <h3>Responsive Design</h3>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                        <h3>Don't reinvent the wheel</h3>
+                        <p> Reuse existing projects.
+                            Keep close to upstream, so that mantaining the project is painless.
+                        </p>
                     </div>
                     <div class="col-sm-4 features-box wow fadeInUp">
 	                	<div class="features-box-icon">
-	                		<i class="fa fa-cog"></i>
+	                		<i class="fa fa-paper-plane"></i>
 	                	</div>
-	                    <h3>Uses Bootstrap</h3>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                    <h3>Make the system autonomous</h3>
+	                    <p>MakerLab shouldn't require a superviser, though one might (and will) exist.</p>
                     </div>
 	            </div>
-	            <div class="row">
-	            	<div class="col-sm-12 section-bottom-button wow fadeInUp">
-                        <a class="btn btn-link-1 scroll-link" href="#more-features">Learn more</a>
-	            	</div>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                	<div class="col-sm-4 features-box wow fadeInUp">
+	                	<div class="features-box-icon">
+	                		<i class="fa fa-smile-o"></i>
+	                	</div>
+	                    <h3>easy to use and fun</h3>
+	                    <p> Management for the users, not for the manager.</p>
+                    </div>
+                    <div class="col-sm-4 features-box wow fadeInDown">
+	                	<div class="features-box-icon">
+	                		<i class="fa fa-flag"></i>
+	                	</div>
+                        <h3>Plan for the future</h3>
+                        <p> Don't make restrictions to what the system will be capable of providing.
+                        </p>
+                    </div>
+
 	            </div>
 	        </div>
         </div>
@@ -137,54 +188,73 @@
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-sm-12 more-features section-description wow fadeIn">
-	                    <h2><strong>More</strong> features</h2>
+	                    <h2>Mobile App</h2>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+                        <p>
+	                    	Our app will give you a complete and immersive experience in the lab.
+	                    </p>
 	                </div>
 	            </div>
 	            <div class="row">
-	            	<div class="col-sm-5 more-features-box wow fadeInLeft">
-	                    <img src="jedy/img/devices/iphone.png" alt="">
+	            	<div class="col-sm-4 more-features-box wow fadeInLeft">
+                        <div>
+                          <ul class="rslides" id="slider1">
+                            <li><img src="images/mockups/mockups_v0_2_01.png" alt=""></li>
+                            <li><img src="images/mockups/mockups_v0_2_12.png" alt=""></li>
+                            <li><img src="images/mockups/mockups_v0_2_02.png" alt=""></li>
+                            <li><img src="images/mockups/mockups_v0_2_03.png" alt=""></li>
+                            <li><img src="images/mockups/mockups_v0_2_04.png" alt=""></li>
+                            <li><img src="images/mockups/mockups_v0_2_10.png" alt=""></li>
+                            <li><img src="images/mockups/mockups_v0_2_05.png" alt=""></li>
+                            <li><img src="images/mockups/mockups_v0_2_06.png" alt=""></li>
+                            <li><img src="images/mockups/mockups_v0_2_07.png" alt=""></li>
+                            <li><img src="images/mockups/mockups_v0_2_08.png" alt=""></li>
+                            <li><img src="images/mockups/mockups_v0_2_09.png" alt=""></li>
+                            <li><img src="images/mockups/mockups_v0_2_11.png" alt=""></li>
+                          </ul>
+                        </div>
 	                </div>
+                    <div class="col-sm-1"></div>
 	                <div class="col-sm-7 more-features-box wow fadeInUp">
 
 	                    <div class="more-features-box-text">
 	                    	<div class="more-features-box-text-icon">
-	                    		<i class="fa fa-paperclip"></i>
+	                    		<i class="fa fa-barcode"></i>
 	                    	</div>
-	                    	<h3>Ut wisi enim ad minim</h3>
+	                    	<h3>Scan equipments</h3>
 	                    	<div class="more-features-box-text-description">
-	                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-	                    		Ut wisi enim ad minim veniam, quis nostrud.
-	                    	</div>
-	                    </div>
-	                    <div class="more-features-box-text">
-	                    	<div class="more-features-box-text-icon">
-	                    		<i class="fa fa-user"></i>
-	                    	</div>
-	                    	<h3>Quis nostrud exerci tat</h3>
-	                    	<div class="more-features-box-text-description">
-	                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-	                    		Ut wisi enim ad minim veniam, quis nostrud.
+	                    		All over the room the equipments will be labeled with barcodes and QR Codes.
+                                You can scan them to get to do requests or find more info on wiki.
 	                    	</div>
 	                    </div>
 	                    <div class="more-features-box-text">
 	                    	<div class="more-features-box-text-icon">
 	                    		<i class="fa fa-pencil"></i>
 	                    	</div>
-	                    	<h3>Sed do eiusmod tempor</h3>
+	                    	<h3>Manage your requisitions</h3>
 	                    	<div class="more-features-box-text-description">
-	                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-	                    		Ut wisi enim ad minim veniam, quis nostrud.
+	                    		You can control your requisitions in your app, having information of how long you are using an equipment.
+                                You will receive notifications to help you to know if you exceed your time.
 	                    	</div>
 	                    </div>
 	                    <div class="more-features-box-text">
 	                    	<div class="more-features-box-text-icon">
-	                    		<i class="fa fa-twitter"></i>
+	                    		<i class="fa fa-university"></i>
 	                    	</div>
-	                    	<h3>Minim veniam quis nostrud</h3>
+	                    	<h3>Manage your projects</h3>
 	                    	<div class="more-features-box-text-description">
-	                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-	                    		Ut wisi enim ad minim veniam, quis nostrud.
+	                    		Your projects requisitions are associated to projects on wiki.
+                                This way you can have a place where you can show everything you do, and help others to have an ideia of what have been done with some equipments, so they can develop new ideias.
+	                    	</div>
+	                    </div>
+	                    <div class="more-features-box-text">
+	                    	<div class="more-features-box-text-icon">
+	                    		<i class="fa fa-search"></i>
+	                    	</div>
+	                    	<h3>Search on wiki</h3>
+	                    	<div class="more-features-box-text-description">
+	                    		All the knowledge of the system is on the wiki.
+                                You can search by equipments, projects and users with the mobile version of the wiki.
 	                    	</div>
 	                    </div>
 
@@ -198,29 +268,22 @@
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-sm-12 great-support section-description wow fadeIn">
-	                    <h2><strong>Great</strong> support</h2>
+	                    <h2>Wiki</h2>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+                        <p>
+                            All the knowledge of the system is on the wiki.
+                            Wiki website provides all this information and also management tools.
+                        </p>
 	                </div>
 	            </div>
 	            <div class="row">
-	            	<div class="col-sm-7 great-support-box wow fadeInLeft">
-	                    <div class="great-support-box-text great-support-box-text-left">
-	                    	<h3>Ut wisi enim ad minim</h3>
-	                    	<p class="medium-paragraph">
-	                    		Lorem ipsum dolor sit amet, <span class="colored-text">consectetur adipisicing</span> elit,
-	                    		sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
-	                    	</p>
-	                    	<p>
-	                    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-	                    		Ut wisi enim ad minim veniam, quis nostrud.
-	                    		Exerci tation ullamcorper suscipit <span class="colored-text">lobortis nisl</span> ut aliquip ex ea commodo consequat.
-	                    		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
-	                    	</p>
-	                    </div>
-	                </div>
-	                <div class="col-sm-5 great-support-box wow fadeInUp">
-	                    <img src="jedy/img/devices/pc.png" alt="">
-	                </div>
+                    <div class="col-sm-12 more-features-box wow fadeInUp">
+                        <div class="rslides_container">
+                          <ul class="rslides" id="slider2">
+                            <li><img src="images/wiki/wiki_01.png" alt=""></li>
+                          </ul>
+                        </div>
+                    </div>
 	            </div>
 	        </div>
         </div>
@@ -230,38 +293,33 @@
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-sm-12 how-it-works section-description wow fadeIn">
-	                    <h2><strong>How</strong> it works</h2>
+	                    <h2>Schedule</h2>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
 	                </div>
 	            </div>
 	            <div class="row">
                 	<div class="col-sm-4 col-sm-offset-1 how-it-works-box wow fadeInUp">
-	                	<div class="how-it-works-box-icon">1</div>
-	                    <h3>Sign up</h3>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                	<div class="how-it-works-box-icon">M1</div>
+	                    <h3>March 1</h3>
+	                    <p>Project specification, general architecture, mockups and documentation.</p>
                     </div>
                     <div class="col-sm-4 col-sm-offset-2 how-it-works-box wow fadeInDown">
-	                	<div class="how-it-works-box-icon">2</div>
-	                    <h3>Make payment</h3>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                	<div class="how-it-works-box-icon">M2</div>
+	                    <h3>March 22</h3>
+	                    <p>Develop all the components separately with the vision of integrating them later: wiki, mobile app, index manager and network manager.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4 col-sm-offset-1 how-it-works-box wow fadeInUp">
-	                	<div class="how-it-works-box-icon">3</div>
-	                    <h3>Log in</h3>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                	<div class="how-it-works-box-icon">M3</div>
+	                    <h3>April 12</h3>
+	                    <p>Release a minimal viable product, with at least the basic features.</p>
                     </div>
                     <div class="col-sm-4 col-sm-offset-2 how-it-works-box wow fadeInDown">
-	                	<div class="how-it-works-box-icon">4</div>
-	                    <h3>Start learning</h3>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+	                	<div class="how-it-works-box-icon">M4</div>
+	                    <h3>May 3</h3>
+	                    <p>Improve user experience, correcting some bugs and polishing features, based on usage feedback.</p>
                     </div>
-	            </div>
-	            <div class="row">
-	            	<div class="col-sm-12 section-bottom-button wow fadeInUp">
-                        <a class="btn btn-link-1 scroll-link" href="#top-content">Sign up now</a>
-	            	</div>
 	            </div>
 	        </div>
         </div>
@@ -271,84 +329,17 @@
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-sm-12 testimonials section-description wow fadeIn">
-	                    <h2><strong>Our</strong> clients</h2>
+	                    <h2>Architecture</h2>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
 	                </div>
 	            </div>
 	            <div class="row">
-	                <div class="col-sm-10 col-sm-offset-1 testimonial-list wow fadeInUp">
-	                	<div role="tabpanel">
-	                		<!-- Tab panes -->
-	                		<div class="tab-content">
-	                			<div role="tabpanel" class="tab-pane fade in active" id="tab1">
-	                				<div class="testimonial-image">
-	                					<img src="jedy/img/testimonials/1.jpg" alt="" data-at2x="jedy/img/testimonials/1.jpg">
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
-		                                	<a href="#">Lorem Ipsum, dolor.co.uk</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                			<div role="tabpanel" class="tab-pane fade" id="tab2">
-	                				<div class="testimonial-image">
-	                					<img src="jedy/img/testimonials/2.jpg" alt="" data-at2x="jedy/img/testimonials/2.jpg">
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-		                                	<a href="#">Minim Veniam, nostrud.com</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                			<div role="tabpanel" class="tab-pane fade" id="tab3">
-	                				<div class="testimonial-image">
-	                					<img src="jedy/img/testimonials/3.jpg" alt="" data-at2x="jedy/img/testimonials/3.jpg">
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-		                                	Lorem ipsum dolor sit amet, consectetur..."<br>
-		                                	<a href="#">Lorem Ipsum, dolor.co.uk</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                			<div role="tabpanel" class="tab-pane fade" id="tab4">
-	                				<div class="testimonial-image">
-	                					<img src="jedy/img/testimonials/4.jpg" alt="" data-at2x="jedy/img/testimonials/4.jpg">
-	                				</div>
-	                				<div class="testimonial-text">
-		                                <p>
-		                                	"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-		                                	ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-		                                	lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-		                                	<a href="#">Minim Veniam, nostrud.com</a>
-		                                </p>
-	                                </div>
-	                			</div>
-	                		</div>
-	                		<!-- Nav tabs -->
-	                		<ul class="nav nav-tabs" role="tablist">
-	                			<li role="presentation" class="active">
-	                				<a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                			<li role="presentation">
-	                				<a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab"></a>
-	                			</li>
-	                		</ul>
-	                	</div>
+	                <div class="col-sm-12 testimonial-list wow fadeInUp">
+                        <p>
+                            Here is a simple illustration of how DETI MakerLab will look like once completed.
+	                    </p>
+                        <img src="images/specifications/dml-architecture.svg" alt="" style="margin-top: 30px;">
+
 	                </div>
 	            </div>
 	        </div>
@@ -359,17 +350,17 @@
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
-	                    <h2><strong>Call</strong> to action</h2>
+	                    <h2>Curious?</h2>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
 	                    <p>
-	                    	Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-	                    	aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
+	                    	This is a little brief of what we are doing.
+                            You can take a deeper look in the documentation section.
 	                    </p>
 	                </div>
 	            </div>
 	            <div class="row">
 	            	<div class="col-sm-12 section-bottom-button wow fadeInUp">
-                        <a class="btn btn-link-1 scroll-link" href="#top-content">Sign up now</a>
+                        <a class="btn btn-link-1 scroll-link" href="specification/specifications">Check documentation</a>
 	            	</div>
 	            </div>
 	        </div>
@@ -380,55 +371,81 @@
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-sm-12 about-us section-description wow fadeIn">
-	                    <h2><strong>About</strong> us</h2>
+	                    <h2>Puppets</h2>
 	                    <div class="divider-1 wow fadeInUp"><span></span></div>
 	                </div>
 	            </div>
 	            <div class="row">
 	                <div class="col-sm-4 about-us-box wow fadeInUp">
 		                <div class="about-us-photo">
-		                	<img src="jedy/img/about/1.jpg" alt="" data-at2x="jedy/img/about/1.jpg">
+		                	<img src="https://avatars1.githubusercontent.com/u/11319180?v=3&s=460" alt="" data-at2x="https://avatars1.githubusercontent.com/u/11319180?v=3&s=460">
 		                </div>
-	                    <h3>Jim Black</h3>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-	                    <div class="about-us-social">
-		                	<a href="#"><i class="fa fa-facebook"></i></a>
-		                	<a href="#"><i class="fa fa-dribbble"></i></a>
-		                    <a href="#"><i class="fa fa-twitter"></i></a>
-		                </div>
+	                    <h3>Ricardo Jesus</h3>
+	                    <p>ricardojesus@ua.pt, 76613</p>
 	                </div>
 	                <div class="col-sm-4 about-us-box wow fadeInDown">
 		                <div class="about-us-photo">
-		                	<img src="jedy/img/about/2.jpg" alt="" data-at2x="jedy/img/about/2.jpg">
+		                	<img src="https://avatars2.githubusercontent.com/u/11805521?v=3&s=460" alt="" data-at2x="https://avatars2.githubusercontent.com/u/11805521?v=3&s=460">
 		                </div>
-	                    <h3>Tom Brown</h3>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-	                    <div class="about-us-social">
-		                	<a href="#"><i class="fa fa-facebook"></i></a>
-		                	<a href="#"><i class="fa fa-dribbble"></i></a>
-		                    <a href="#"><i class="fa fa-twitter"></i></a>
-		                </div>
+	                    <h3>Diogo Ferreira</h3>
+	                    <p>pdiogoferreira@ua.pt, 76425</p>
 	                </div>
 	                <div class="col-sm-4 about-us-box wow fadeInUp">
 		                <div class="about-us-photo">
-		                	<img src="jedy/img/about/3.jpg" alt="" data-at2x="jedy/img/about/3.jpg">
+		                	<img src="https://avatars0.githubusercontent.com/u/10348875?v=3&s=460" alt="" data-at2x="https://avatars0.githubusercontent.com/u/10348875?v=3&s=460">
 		                </div>
-	                    <h3>Sarah Green</h3>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-	                    <div class="about-us-social">
-		                	<a href="#"><i class="fa fa-facebook"></i></a>
-		                	<a href="#"><i class="fa fa-dribbble"></i></a>
-		                    <a href="#"><i class="fa fa-twitter"></i></a>
+	                    <h3>Leonardo Oliveira</h3>
+	                    <p>leonardooliveira@ua.pt, 76725</p>
+	                </div>
+                    <div class="col-sm-4 about-us-box wow fadeInUp">
+		                <div class="about-us-photo">
+		                	<img src="https://avatars2.githubusercontent.com/u/10819202?v=3&s=460" alt="" data-at2x="https://avatars2.githubusercontent.com/u/10819202?v=3&s=460">
 		                </div>
+	                    <h3>Pedro Martins</h3>
+	                    <p>pbmartins@ua.pt, 76551</p>
+	                </div>
+                    <div class="col-sm-4 about-us-box wow fadeInUp">
+		                <div class="about-us-photo">
+		                	<img src="https://avatars1.githubusercontent.com/u/14802516?v=3&s=460" alt="" data-at2x="https://avatars0.githubusercontent.com/u/14802516?v=3&s=460">
+		                </div>
+	                    <h3>Duarte Ferreira</h3>
+	                    <p>dfh@ua.pt, 50676</p>
+	                </div>
+                    <div class="col-sm-4 about-us-box wow fadeInUp">
+		                <div class="about-us-photo">
+		                	<img src="https://avatars1.githubusercontent.com/u/25957117?v=3&s=460" alt="" data-at2x="https://avatars0.githubusercontent.com/u/25957117?v=3&s=460">
+		                </div>
+	                    <h3>Jorge Silva</h3>
+	                    <p>jorgeduartesilva@ua.pt, 68487</p>
 	                </div>
 	            </div>
 	        </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 about-us section-description wow fadeIn">
+                        <h2>Puppeteer</h2>
+                        <div class="divider-1 wow fadeInUp"><span></span></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4 about-us-box wow fadeInUp">
+                        <div class="about-us-photo">
+                            <img src="https://avatars1.githubusercontent.com/u/137684?v=3&s=460" alt="" data-at2x="https://avatars1.githubusercontent.com/u/137684?v=3&s=460">
+                        </div>
+                        <h3>Prof. Diogo Gomes</h3>
+                        <p>dgomes@ua.pt</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- Footer -->
         <footer>
 	        <div class="container">
-	        	<div class="row">
+	        	<!-- <div class="row">
                     <div class="col-sm-12 footer-social">
                     	<a href="#"><i class="fa fa-facebook"></i></a>
                     	<a href="#"><i class="fa fa-dribbble"></i></a>
@@ -436,10 +453,13 @@
                     	<a href="#"><i class="fa fa-instagram"></i></a>
                     	<a href="#"><i class="fa fa-pinterest"></i></a>
                     </div>
-	            </div>
+	            </div> -->
 	            <div class="row">
-                    <div class="col-sm-12 footer-copyright">
-                    	&copy; Jedy Bootstrap Template by <a href="http://azmind.com">Azmind</a>.
+                    <div class="col-sm-12">
+                    	&copy; DETI MakerLab 2017. Original template by <a href="http://azmind.com" target="_blank">Azmind</a>.
+                    </div>
+                    <div>
+                        <img src="jedy/img/ua_logo.png"/ style="height: 50px; margin-top:20px;">
                     </div>
                 </div>
 	        </div>
@@ -451,7 +471,6 @@
         <script src="jedy/bootstrap/js/bootstrap.min.js"></script>
         <script src="jedy/js/jquery.backstretch.min.js"></script>
         <script src="jedy/js/wow.min.js"></script>
-        <script src="jedy/js/retina-1.1.0.min.js"></script>
         <script src="jedy/js/waypoints.min.js"></script>
         <script src="jedy/js/scripts.js"></script>
 

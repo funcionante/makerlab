@@ -45,7 +45,7 @@ button.btn {
     margin: 0;
     padding: 0 20px;
     vertical-align: middle;
-    background: #66d6c5;
+    background: #00796B;
     border: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -62,7 +62,7 @@ button.btn:hover { opacity: 0.6; color: #fff; }
 
 button.btn:active { outline: 0; opacity: 0.6; color: #fff; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
 
-button.btn:focus { outline: 0; opacity: 0.6; background: #66d6c5; color: #fff; }
+button.btn:focus { outline: 0; opacity: 0.6; background: #00796B; color: #fff; }
 
-button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; background: #66d6c5; color: #fff; }
+button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; background: #00796B; color: #fff; }
 
