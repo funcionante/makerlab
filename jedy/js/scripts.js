@@ -30,8 +30,8 @@ jQuery(document).ready(function() {
         Background slideshow
     */
     $('.top-content').backstretch("jedy/img/backgrounds/deti4.jpg");
-    $('.how-it-works-container').backstretch("jedy/img/backgrounds/1.jpg");
-    $('.call-to-action-container').backstretch("jedy/img/backgrounds/1.jpg");
+    $('.how-it-works-container').backstretch("jedy/img/backgrounds/time.jpg");
+    $('.call-to-action-container').backstretch("jedy/img/backgrounds/documentation.jpg");
 
     $('#top-navbar-1').on('shown.bs.collapse', function(){
     	$('.top-content').backstretch("resize");

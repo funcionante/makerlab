@@ -48,6 +48,12 @@
                 </ul>
 
                 <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+
+                <ul>
                     <li class="nav-item top-level {% if page.url == '/changelog/' %}current{% endif %}">
                         {% assign changelog = site.html_pages | where: 'url', '/changelog/' | first %}
                         <a href="{{ base }}/changelog/">{{ changelog.title }}</a>

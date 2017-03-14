@@ -3,14 +3,15 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
-	.st1{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
-	.st2{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:30;stroke-miterlimit:10;}
-	.st3{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
-	.st4{display:none;}
-	.st5{display:inline;fill:#0F6B5D;stroke:#000000;stroke-miterlimit:10;}
-	.st6{display:inline;fill:none;stroke:#000000;stroke-miterlimit:10;}
-	.st7{display:inline;fill:none;stroke:#ED1C24;stroke-miterlimit:10;}
+	.st0{fill:#006A5C;}
+	.st1{fill:#0F6B5D;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:none;}
+	.st3{fill:none;stroke:#FFFFFF;stroke-width:30;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st5{display:none;}
+	.st6{display:inline;fill:#0F6B5D;stroke:#000000;stroke-miterlimit:10;}
+	.st7{display:inline;fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st8{display:inline;fill:none;stroke:#ED1C24;stroke-miterlimit:10;}
 </style>
 <g id="Layer_1_copy">
 </g>
@@ -72,11 +73,11 @@
 				C625,384.1,612.6,371.6,597.3,371.6z M597.3,371.6c-15.3,0-27.8,12.5-27.8,27.9c0,15.4,12.4,27.9,27.8,27.9
 				c15.3,0,27.8-12.5,27.8-27.9C625,384.1,612.6,371.6,597.3,371.6z"/>
 			<path id="XMLID_12_" class="st1" d="M722.6,380.9"/>
-			<path id="XMLID_25_" class="st0" d="M459.9,338c0,15.4-12.4,27.9-27.8,27.9c-15.3,0-27.8-12.5-27.8-27.9
+			<path id="XMLID_25_" class="st2" d="M459.9,338c0,15.4-12.4,27.9-27.8,27.9c-15.3,0-27.8-12.5-27.8-27.9
 				c0-15.4,12.5-27.9,27.8-27.9C447.4,310.1,459.9,322.6,459.9,338z"/>
-			<path id="XMLID_18_" class="st0" d="M127.4,340.3c0,15.4-12.4,27.9-27.8,27.9c-15.3,0-27.8-12.5-27.8-27.9
+			<path id="XMLID_18_" class="st2" d="M127.4,340.3c0,15.4-12.4,27.9-27.8,27.9c-15.3,0-27.8-12.5-27.8-27.9
 				c0-15.4,12.5-27.9,27.8-27.9C115,312.4,127.4,324.9,127.4,340.3z"/>
-			<path id="XMLID_96_" class="st0" d="M597.3,371.6c-15.3,0-27.8,12.5-27.8,27.9c0,15.4,12.4,27.9,27.8,27.9
+			<path id="XMLID_96_" class="st2" d="M597.3,371.6c-15.3,0-27.8,12.5-27.8,27.9c0,15.4,12.4,27.9,27.8,27.9
 				c15.3,0,27.8-12.5,27.8-27.9C625,384.1,612.6,371.6,597.3,371.6z M597.3,371.6c-15.3,0-27.8,12.5-27.8,27.9
 				c0,15.4,12.4,27.9,27.8,27.9c15.3,0,27.8-12.5,27.8-27.9C625,384.1,612.6,371.6,597.3,371.6z M374.1,496.2
 				c-15.3,0-27.8,12.5-27.8,27.9c0,15.4,12.5,27.9,27.8,27.9c15.3,0,27.8-12.5,27.8-27.9C401.9,508.7,389.5,496.2,374.1,496.2z
@@ -134,24 +135,24 @@
 			<path id="XMLID_19_" class="st0" d="M783.8,194.8c-7.8,7.8-24.6,5.1-45.5-5.6l-52.4,52.5l-9.7-3.5l-30.1-11L506,176.1l0-0.1
 				l-238.3,87L41,180.2c9-16.1,19.8-31.4,32.5-45.5C185.7,10,401.6,21.3,552.9,117.6L610.3,60c-9.9-20.1-12.2-36.2-4.6-43.8
 				C621.5,0.5,634.2-12.3,723.2,77C812.3,166.2,799.5,179,783.8,194.8z"/>
-			<path id="XMLID_21_" class="st2" d="M249,360.1"/>
-			<path id="XMLID_2_" class="st3" d="M249,360.1"/>
+			<path id="XMLID_21_" class="st3" d="M249,360.1"/>
+			<path id="XMLID_2_" class="st4" d="M249,360.1"/>
 		</g>
 	</g>
 	<g id="wirefinal">
 	</g>
 </g>
-<g id="Layer_1" class="st4">
-	<path id="XMLID_15_" class="st5" d="M769.5,205.5l-12,12c-9.3,9.3-24.6,9.3-33.9,0l-6.9-6.9l-38.9,38.7
+<g id="Layer_1" class="st5">
+	<path id="XMLID_15_" class="st6" d="M769.5,205.5l-12,12c-9.3,9.3-24.6,9.3-33.9,0l-6.9-6.9l-38.9,38.7
 		C702.2,294.1,716,345.4,716,400c0,174.5-141.5,316-316,316S84,574.5,84,400S225.5,84,400,84c55.2,0,107.1,14.2,152.3,39l38.5-38.3
 		l-7.3-7.3c-9.3-9.3-9.3-24.6,0-33.9l12-12c9.3-9.3,24.6-9.3,33.9,0l140,140C778.8,180.9,778.8,196.1,769.5,205.5z"/>
 </g>
-<g id="Layer_2" class="st4">
-	<line id="XMLID_1_" class="st6" x1="800" y1="0" x2="0" y2="800"/>
-	<rect id="XMLID_5_" x="43.5" y="43" class="st6" width="714" height="714"/>
-	<line id="XMLID_4_" class="st6" x1="800" y1="253.7" x2="-0.7" y2="39.2"/>
-	<line id="XMLID_7_" class="st7" x1="318.2" y1="318" x2="737.8" y2="470.8"/>
-	<line id="XMLID_33_" class="st7" x1="43.5" y1="244.2" x2="362.6" y2="128.1"/>
-	<line id="XMLID_34_" class="st7" x1="332.1" y1="427.2" x2="751.8" y2="580"/>
+<g id="Layer_2" class="st5">
+	<line id="XMLID_1_" class="st7" x1="800" y1="0" x2="0" y2="800"/>
+	<rect id="XMLID_5_" x="43.5" y="43" class="st7" width="714" height="714"/>
+	<line id="XMLID_4_" class="st7" x1="800" y1="253.7" x2="-0.7" y2="39.2"/>
+	<line id="XMLID_7_" class="st8" x1="318.2" y1="318" x2="737.8" y2="470.8"/>
+	<line id="XMLID_33_" class="st8" x1="43.5" y1="244.2" x2="362.6" y2="128.1"/>
+	<line id="XMLID_34_" class="st8" x1="332.1" y1="427.2" x2="751.8" y2="580"/>
 </g>
 </svg>
