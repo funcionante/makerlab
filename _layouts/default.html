@@ -26,9 +26,8 @@
 
             <nav {% if site.show_full_navigation %}class="full-navigation"{% endif %}>
                 <ul>
-                    <li class="nav-item top-level {% if page.url == '/' %}current{% endif %}">
-                        {% assign home = site.html_pages | where: 'url', '/' | first %}
-                        <a href="{{ base }}/">{{ home.title }}</a>
+                    <li class="nav-item top-level">
+                        <a href="{{ base }}/">Home</a>
                     </li>
                 </ul>
 
