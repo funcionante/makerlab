@@ -15,13 +15,13 @@ order: 1
 * Add/register and edit equipment’s info and their units.
 * Invite and remove collaborators to projects.
 * Generation of QR codes for unlabeled units (and RJ-45 sockets).
-* Search users/projects/equipment.
+* Search users/projects/equipments.
 * Request and return/release electronic equipment, VLANs and VMs for project
   development
 * Scanning QR/barcodes of equipment, VLANs (scanning QR code on the socket)
-  and VMs (scanning QR code available in the DML) using the mobile app
-* Web monitoring of equipment stock and VM’s and VLANs usage
-* Request new equipment (not existent in DML)
+  and VMs using the mobile app.
+* Web monitoring of equipment stock and VM’s and VLANs usage.
+* Request new equipment (not existent in DML).
 
 ### Scenarios
 
@@ -53,16 +53,16 @@ They soon find out that to properly access plenty of network services they
 need to be less restricted than what UA’s network allows. They want to take
 advantage of another DML networking service, which allows them to create a
 VLAN for the project, imposing less restrictions. Bob goes to scan with his
-phone a QR code existent in an ethernet cable nearby. Since this is the first
+phone a QR code existent in an ethernet socket nearby. Since this is the first
 time a team member does this, a new VLAN is assigned to the project and the
-port to which the cable connects to is automatically configured. Afterwards,
-Alice does the same thing with another cable nearby. DML network engine
+port is automatically configured. Afterwards,
+Alice does the same thing with another port nearby. DML network engine
 automatically configures the port to belong to the correct VLAN that was
 previously created (implicitly) by Bob. Both Alice and Bob can now use the
 services they wanted.
 
 After porting their project from the RPi to the VM, the team no longer needs
-their RPi. They thus hand it to Mr. faythe, DML’s staff. He scans the barcode
+their RPi. They thus hand it to Mr. Faythe, DML’s staff. He scans the barcode
 existent in the device’s box with his own phone. The project is no longer in
 possession of the RPi, which is reflected in the project’s page.
 
@@ -109,14 +109,10 @@ Galileo.
 Happy with the result, Mr. Faythe creates the Galileo’s product page.
 
 Now, he wants to make available the different units he received (the actual
-items). He picks his phone, goes to the Galileo’s page and chooses to add new
-units of the product. He is prompted for a barcode/QR code, with the option to
-generate (and print on a nearby printer) a new one. On each Galileo’s box he
-finds a unique barcode.  Happy to see that he will not have to have yet
-another code on the item’s box, he scans this barcode. As soon as this is
-done, he is prompted for another code, so as to add more exemplars to the
-product. Soon he has added all 10 new Galileos, and can make them available
-for students.
+items). He goes to the Galileo’s page and chooses to add new units of the
+product, by selecting the number of units he wants to add and all the codes are
+quickly generated so that Mr. Faythe can print them on a nearby printer.
+Soon he has added all 10 new Galileos, and can make them available for students.
 
 #### Administration
 
@@ -147,7 +143,7 @@ machines.
 The following requirements state the functions and capabilities that the DML
 system will provide:
 
-*   Integration with University of Aveiro’s services (UU and card scanning)  
+*   Integration with University of Aveiro’s services (UU)  
     For easier access and information retrieval.
 *   Wiki-based platform  
     Allowing more flexibility to content storing.
