@@ -10,7 +10,7 @@ order: 0
 
 * Project manager
 * Working on :
-    * API, Solr
+    * API, Solr, wiki parser, print util
 
 ### Diogo Ferreira
 ![Image of Diogo Ferreira](https://avatars2.githubusercontent.com/u/11805521?v=3&s=460){:height="120px" width="120px"}
