@@ -1,64 +1,75 @@
 ---
 layout: default
 category: Specifications
-order: 5
+order: 10
 ---
 
-Wiki is all about the knowledge off the system. And the domain of our system are equipments, projects, members, requisitions. All of this is kept in the wiki. But the domain could be other. The point of our system is to manage all the information in a dynamic way, regardless of the content. This is possible due to the flexibility and collaborative capabilities provided by our wiki engine. That's what happens with Python wiki, Ubuntu wiki, and, of course, Wikipedia.
+DML's wiki is all about the knowledge off the system. Its domain include equipments, projects, members and requisitions, although others could be added to the list. The point of the system is to manage all the information in a dynamic, unbounded way, regardless of the content. This is possible due to the flexibility and collaborative capabilities provided by our wiki engine. This follows with other wikis, such as Python's, Ubuntu's, and of course, Wikipedia's.
 
 
-# Roles
-Wiki aims to be available to all the users of the system, providing this integration at five main levels:
+## Roles
+
+The wiki divides its users into 5 different levels:
 * Administrator
 * Manager
 * Mentor/Teacher
 * User/Student
 * Visitor
 
-These levels are cumulative, witch means the higher ones have the capabilities of the lower ones. The Administrator is the higher level.
+These levels are cumulative, witch means the higher ones have the capabilities of the lower ones. The Administrator is the highest level.
 
-## Visitor
+### Visitor
+
 The visitors are all the users that access the wiki unauthenticated. They can see the content of equipments and projects, as long as they access the website inside the university network or via VPN.
 
-## Student
-The student can edit information of the wiki pages, participating in the collaborative ... He can also be part of projects. Finally, he can do requisitions of equipments, in the context of one project he belongs to. A Student as full access to its account as long as he has its UA credentials.
+### User/Student
 
-## Mentor/Teacher
-A teacher is the mentor of the projects running inside MakerLab. A project can only be created by a teacher. After that, he can add students to it, making possible to them to be part of one. This is a crucial role in the MakerLab environment. MakerLab wants to give a fast, easy and resourceful environment, but has to have a way of tracking what is going on. The teacher/mentor is the entity that aproves the projects that deserve to be played in the room.
+The student can edit information of most wiki pages, participating in the collaborative loop of information share. He can also be member of a (set of) project(s). Finally, he can do requisitions of equipments, in the context of one of the projects he belongs to. A student has full access to its account information as long as he has its UA credentials.
 
-## Manager
-The manager is the person that supervise the room. He is responsible to look after the material and help to keep the room an enjoyable space. He can mage all the equipment in the wiki, creating new pages for equipments. He can also manage add units of equipments. The requisitions are tracked by him and he can also manually edit requisitions, if he needs to. Because the teacher is a special role, after authenticating himself via UA, he needs to have the permissions granted by the manager.
+### Mentor/Teacher
 
-## Administrator
-The administration level is the primordial level. All the features are available to him. He can elect all the roles in the system, and automatically or manually edit any information.
+A teacher is the mentor of a project running inside MakerLab. Projects can be created by a teacher. After that, he can add students to it (who can also add other students), making them part of the project. This is MakerLab's way of assigning responsibility of the scientific value of a given project, in this case to its mentor.
 
+### Manager
 
-# Authentication
-Users can authenticate themselves in a transparent way, that being possible 
-using OAuth protocol . It's workflow is centralized in wiki side, so all the
-clients will need to pass this layer in order to login. 
-All the user needs to do is to have the University of Aveiro credentials.
-This means there is no need for registration, making the accounting something
-much more simple and fast. 
-The system will have access to user's informations, with his consensus, in order
-to populate it's profile page. Further permissions are granted by the manager.
+The manager is the person that supervises the room. He is responsible to look after the material and help to keep the room an enjoyable space. He can manage all the equipment in the wiki, creating/editing new pages for equipments, adding new units to them (the physical manifestation of a given item), and maintaining projects' pages if the need rises.
 
-# Management
-The management one of the main tools of the wiki. This chapter intends to develop the manager features.
+Requisitions are tracked by the manager, who is also capable of manually edit them.
 
-## equipments
-equipments, units, qrcodes, blank fields,...
+Being the mentor a special role, after authenticating himself via UA he needs to have this permission granted by the manager.
+
+### Administrator
+
+The administration level is the highest level of the system. All the features are available to users with this role. 
+
+## Authentication
+
+Users can authenticate themselves with the system in a transparent way by
+using OAuth1, provided by UA. Completing its workflow is a requirement in
+order to login to the platform (which assumes the existence of UA credentials)
+--- this means there is no need for an actual registration.
+
+## Management
+
+The management is one of the main tools of the wiki. This chapter intends to develop the manager features.
+
+### Equipments
+
+Equipments, units, qrcodes, blank fields,...
 [print]
 
-## requisitions
+### Requisitions
+
 manually edit, track pending requisitions,
 [print]
 
-## other stats
+### Other stats
+
 ?
 
-## Requisition Process
+### Requisition process
+
 Teacher elected by the manager becomes the mentor of a project and creates a page
 Invites one or more students
-The students can do requisitions (outside wiki) associated to projects
-The manager can control the flow, manually editing requisitions if it is needed to.
+The students can do requisitions (with an app) associating the items to the project
+The manager can control the flow, manually editing requisitions if he needs to
