@@ -4,49 +4,39 @@ category: Team
 order: 0
 ---
 
-### Ricardo Jesus
-![Image of Ricardo Jesus](https://avatars1.githubusercontent.com/u/11319180?v=3&s=460){:height="120px" width="120px"}
-{:center}
+<table>
+  <tr>
+    <th rowspan="3"><img src="https://avatars1.githubusercontent.com/u/11319180?v=3&s=460" alt="Ricardo's photo" style="width:120px;height:120px;"></th>
+    <th>Ricardo Jesus</th>
+  </tr>
+  <tr><td>Project manager</td></tr>
+  <tr><td>API, Solr, wiki parser, print util, servant (chatbot)</td></tr>
 
-* Project manager
-* Working on :
-    * API, Solr, wiki parser, print util
+  <tr>
+    <th rowspan="3"><img src="https://avatars2.githubusercontent.com/u/11805521?v=3&s=460" alt="Diogo's photo" style="width:120px;height:120px;"></th>
+    <th>Diogo Ferreira</th>
+  </tr>
+  <tr><td>Documentation manager</td></tr>
+  <tr><td>Android app</td></tr>
 
-### Diogo Ferreira
-![Image of Diogo Ferreira](https://avatars2.githubusercontent.com/u/11805521?v=3&s=460){:height="120px" width="120px"}
-{:center}
+  <tr>
+    <th rowspan="3"><img src="https://avatars0.githubusercontent.com/u/10348875?v=3&s=460" alt="Leonardo's photo" style="width:120px;height:120px;"></th>
+    <th>Leonardo Oliveira</th>
+  </tr>
+  <tr><td>Product manager</td></tr>
+  <tr><td>Brand, aesthetics, wiki</td></tr>
 
-* Documentation manager
-* Working on :
-    * Android app
+  <tr>
+    <th rowspan="3"><img src="https://avatars2.githubusercontent.com/u/10819202?v=3&s=460" alt="Pedro's photo" style="width:120px;height:120px;"></th>
+    <th>Pedro Martins</th>
+  </tr>
+  <tr><td>Infrastructure manager</td></tr>
+  <tr><td>Network</td></tr>
 
-### Leonardo Oliveira
-![Image of Leonardo Oliveira](https://avatars0.githubusercontent.com/u/10348875?v=3&s=460){:height="120px" width="120px"}
-{:center}
-* Product manager
-* Working on :
-    * Aesthetics, wiki
-
-### Pedro Martins
-![Image of Pedro Martins](https://avatars2.githubusercontent.com/u/10819202?v=3&s=460){:height="120px" width="120px"}
-{:center}
-* Infrastructure manager
-* Working on :
-    * Network
-
-### Duarte Henriques
-![Image of Duarte Henriques](https://avatars1.githubusercontent.com/u/14802516?v=3&s=460){:height="120px" width="120px"}
-{:center}
-* Developer
-* Working on :
-    * QR Code printing
-
-### Jorge Silva
-![Image of Jorge Silva](https://avatars1.githubusercontent.com/u/25957117?v=3&s=460){:height="120px" width="120px"}
-{:center}
-* Developer
-* Working on :
-    * iOS app
-
-<!-- -->
-{:center: style="text-align: center"}
+  <tr>
+    <th rowspan="3"><img src="https://avatars1.githubusercontent.com/u/25957117?v=3&s=460" alt="Jorge's photo" style="width:120px;height:120px;"></th>
+    <th>Jorge Silva</th>
+  </tr>
+  <tr><td>Developer</td></tr>
+  <tr><td>iOS app</td></tr>
+</table>
