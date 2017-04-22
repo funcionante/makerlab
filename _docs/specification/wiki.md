@@ -34,9 +34,14 @@ The administration level is the primordial level. All the features are available
 
 
 # Authentication
-Users can authenticate themselves in a transparent way, that being possible using UA OAuth tool. This means there is no need for registration. All the user needs to do is to have the UA credentials. This access gives permissions to the user/student level. Further permissions are granted by the Manager, to assign Mentors, or Administrator, to assign all roles.
-
-authentication centralized on wiki
+Users can authenticate themselves in a transparent way, that being possible 
+using OAuth protocol . It's workflow is centralized in wiki side, so all the
+clients will need to pass this layer in order to login. 
+All the user needs to do is to have the University of Aveiro credentials.
+This means there is no need for registration, making the accounting something
+much more simple and fast. 
+The system will have access to user's informations, with his consensus, in order
+to populate it's profile page. Further permissions are granted by the manager.
 
 # Management
 The management one of the main tools of the wiki. This chapter intends to develop the manager features.
