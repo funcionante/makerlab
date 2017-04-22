@@ -11,7 +11,7 @@ are using an equipment;
 * Manage projects you are attending;
 * Make item requisitions;
 
-![MobileApp 1](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/MobileApp-2.png?alt=media&token=1699ff29-c29e-48d0-bc9b-e1f73f2804ce)
+![MobileApp 1](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/MobileApp_2.png?alt=media&token=9603cce4-f46f-4bf9-b0bb-9bb0030fa288)
 
 ## Login
 
@@ -34,7 +34,7 @@ information and documentation in order to start his work as soon as possible.
 
 ## Requisitions
 
-![MobileApp 2](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/MobileApp-1.png?alt=media&token=34173a92-ebac-4e5f-919c-f548bc0bbee6)
+![MobileApp 2](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/MobileApp_1.png?alt=media&token=584bd6d4-34df-475d-9031-20dfb4aa5b1b)
 
 All over the room the equipments will be labeled with QR Codes. You will be able
 to point to them and sneak peek what are in front of you with an Augmented Reality
