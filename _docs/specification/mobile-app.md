@@ -40,7 +40,6 @@ project information and documentation in order to start their work in no time.
 ![MobileApp 2](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/MobileApp_1.png?alt=media&token=584bd6d4-34df-475d-9031-20dfb4aa5b1b)
 {:center}
 
-<<<<<<< HEAD
 The equipments spread across the room will be labeled with QR Codes.
 The users will be able to point to them and sneak peek what are in front of them 
 with an Augmented Reality touch, which is very useful if they're not familiar 
