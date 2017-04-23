@@ -12,6 +12,7 @@ are using an equipment;
 * Make item requisitions;
 
 ![MobileApp 1](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/MobileApp_2.png?alt=media&token=9603cce4-f46f-4bf9-b0bb-9bb0030fa288)
+{:center}
 
 ## Login
 
@@ -35,9 +36,15 @@ information and documentation in order to start his work as soon as possible.
 ## Requisitions
 
 ![MobileApp 2](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/MobileApp_1.png?alt=media&token=584bd6d4-34df-475d-9031-20dfb4aa5b1b)
+{:center}
 
 All over the room the equipments will be labeled with QR Codes. You will be able
 to point to them and sneak peek what are in front of you with an Augmented Reality
 touch, which is very usefull if you don't know the equipment. 
+
 If the item you are pointing is the right one, you can pick it and select
 the project name you want to associate this requisition.
+
+You can also make deliveries of items you had requested. The process is the same
+as to make a requisition. Simple point to the QR code pasted in the item, and
+click "Deliver it".

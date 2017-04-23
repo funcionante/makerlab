@@ -175,7 +175,7 @@ system will provide:
 Here is a simple illustration of how DETI MakerLab will look like once
 completed:
 
-![](../../images/specifications/dml-architecture.svg)
+![DML Architecture](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/dml-architecture.svg?alt=media&token=49f78fb4-81a8-408b-a82d-cc4fec9876a1)
 {:center}
 
 Although not an extensive diagram, hopefully it will empower the reader with a
