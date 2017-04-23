@@ -24,7 +24,7 @@ order: 0
     <th>Leonardo Oliveira</th>
   </tr>
   <tr><td>Product manager</td></tr>
-  <tr><td>Brand, aesthetics, wiki</td></tr>
+  <tr><td>Brand, aesthetics, wiki, API</td></tr>
 
   <tr>
     <th rowspan="3"><img src="https://avatars2.githubusercontent.com/u/10819202?v=3&s=460" alt="Pedro's photo" style="width:120px;height:120px;"></th>
