@@ -64,7 +64,7 @@ can be seen in the following image, where it is present a OvS bridge that will
 aggregate all the "router" containers and an individual bridge for a certain 
 project, with its VXLAN port and several containers connected.
 
-![](../../images/specifications/datacenter-architecture.png)
+![Datacenter Architecture](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/datacenter-architecture.png?alt=media&token=6a84f831-fb9f-4e0c-ae56-024df3e13db1)
 {:center}
 
 ## The Room
@@ -91,5 +91,5 @@ to the controller.
 
 A simple diagram of the network architecture is in the following image:
 
-![](../../images/specifications/network-architecture.png)
+![Network Architecture](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/network-architecture.png?alt=media&token=2d083793-1ecd-46c3-b481-fbc999b3bdf6)
 {:center}
