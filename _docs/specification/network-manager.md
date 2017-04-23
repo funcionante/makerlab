@@ -28,16 +28,18 @@ the Open vSwitch bridges and containers of the projects.
 ### NetManager API
 
 The API behind managing all the things at the Datacenter is simply an 
-HTTP Server (built on Flask). It's main purposes are:
+HTTP Server (built on Flask). Its main functionalities are:
 
 *   Creation and destruction of a project network - when the first container 
 is launched (within the scope of a project), an OvS bridge is created and 
 a router-like container is started;
 *   Creation and destruction of containers - either a pre-built container or 
 built with a Dockerfile provided by the user;
-*   Start and stop of containers;
+*   Change of state (start and stop) of containers;
 *   Association of RJ-45 sockets (based on a printed ID on them) to projects' 
-networks;
+networks (communication with the SDN controller);
+*   Information endpoint to platform API, to feed the mobile apps and the Wiki
+with all the info related to the network.
 
 ### Open vSwitch
 
