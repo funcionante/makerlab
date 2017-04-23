@@ -15,6 +15,7 @@ show_full_navigation: true
 
 # Build settings
 
+encoding: utf-8
 permalink: pretty
 
 gems:
@@ -47,17 +48,3 @@ defaults:
       _comments:
         category: Group navigation links with this field
         order: Used to sort links in the navigation
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      _comments:
-        type: Marks the impact of this release
-
-# -----------
-# CloudCannon
-
-types:
-  - minor
-  - major
