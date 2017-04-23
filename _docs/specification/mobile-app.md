@@ -13,6 +13,7 @@ is associated with a project;
 * Manage projects' private network (associate RJ-45 sockets to them).
 
 ![MobileApp 1](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/MobileApp_2.png?alt=media&token=9603cce4-f46f-4bf9-b0bb-9bb0030fa288)
+{:center}
 
 ## Login
 
@@ -37,10 +38,18 @@ project information and documentation in order to start their work in no time.
 ## Requisitions
 
 ![MobileApp 2](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/MobileApp_1.png?alt=media&token=584bd6d4-34df-475d-9031-20dfb4aa5b1b)
+{:center}
 
+<<<<<<< HEAD
 The equipments spread across the room will be labeled with QR Codes.
 The users will be able to point to them and sneak peek what are in front of them 
 with an Augmented Reality touch, which is very useful if they're not familiar 
 with the equipment. 
+
 If they are pointed to the pretended item, they can pick it and select
 the project name that this requisition will be associated to.
+
+The users will also be able to deliver items they previously requested through 
+the app. The process is the almost the same as to making a requisition. 
+Simply pointing to the QR code pasted in the item and clicking "Deliver it" will 
+do the trick.

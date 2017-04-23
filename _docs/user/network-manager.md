@@ -1,7 +1,7 @@
 ---
 layout: default
-category: Specifications
-order: 6
+category: User
+order: 2
 ---
 
 The network manager is in charge of all things network. It's main goal is to provide a private network to each project, with internet connectivity, aswell as the possibility of launching Docker containers for testing and deployment. All the traffic is completely isolated from each network and the users can access their projects' networks and containers by associating RJ-45 sockets at DML's room to them.
@@ -22,5 +22,5 @@ It'll be at DETI MakerLab that the users will connect to their projects' network
 
 A simple diagram of the network architecture is in the following image:
 
-![](../../images/specifications/network-architecture.png)
+![Network Architecture](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/network-architecture.png?alt=media&token=2d083793-1ecd-46c3-b481-fbc999b3bdf6)
 {:center}

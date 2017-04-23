@@ -89,7 +89,7 @@ useful knowledge about each equipment.
 For each equipment, it can be added several units, each one with a unique ID,
 that is used to generate the QR Code present in the unit.
 
-![Raspberry Pi 3 Wiki](../../images/specifications/rasp_wiki.png)
+![Raspberry Pi 3 Wiki](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/rasp_wiki.png?alt=media&token=0c186c12-9fdc-497d-a398-93945ebec154)
 
 ### Requisitions
 
@@ -98,8 +98,7 @@ track all the requisition process, tracking pending requisitions, and being able
 to contact the students via email. He can also manually edit requisitions, with
 a simple edit to the wiki's page of the given unit.
 
-![Raspberry Pi 3 Requisitions](../../images/specifications/rasp_requisitions.png)
-
+![Raspberry Pi 3 Requisitions](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/rasp_requisitions.png?alt=media&token=1c6b33f4-7890-4dbc-9bf2-f04c059f198e)
 
 ### Requisition process
 
@@ -112,7 +111,7 @@ The diagram below illustrates the procedure to do requisitions (inside the
 dashed box), as an easy and fast step, wrapped in a bigger process (the whole
 diagram).
 
-![Requisition process](../../images/specifications/requisition_process.png)
+![Requisition process](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/requisition_process.png?alt=media&token=cd385b83-31a1-40ce-8ef8-38170ed02628)
 
 Following all these steps we can trust in the paradigm of a system where
 everybody can enjoy learning and making, with the less bureaucracies possible.

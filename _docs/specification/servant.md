@@ -46,8 +46,9 @@ for example.
 Functions scheduled for development include:
 * Monitor a set of endpoints, informing if they fail/become inaccessible
   (partially complete);
-* Inform a user when a given item becomes available;
-* Inform users that have subscribed to a channel of new equipment available;
+* Inform a user when a given item he/she has marked becomes available;
+* Inform users that have subscribed to a given channel of new equipment
+  available;
 * Blame (eventually publicly) users that have failed to return a product in
   time;
 
