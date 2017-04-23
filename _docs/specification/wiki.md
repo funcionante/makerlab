@@ -4,14 +4,13 @@ category: Specifications
 order: 10
 ---
 
-DML's wiki is all about the knowledge of the system. Its domain include
+DML's wiki is all about the knowledge of the system. Its domain includes
 equipments, projects, members and requisitions, although others could be added
 to the list. The point of the system is to manage all the information in a
 dynamic, unbounded way, regardless of the content. This is possible due to the
 flexibility and collaborative capabilities provided by our wiki engine. This
 follows with other wikis, such as Python's, Ubuntu's, and of course,
 Wikipedia's.
-
 
 ## Roles
 
@@ -55,7 +54,7 @@ all the equipment in the wiki, creating/editing new pages for equipments, adding
 new units to them (the physical manifestation of a given item), and maintaining
 projects' pages if the need rises.
 
-Requisitions are tracked by the manager, who is also capable of manually edit
+Requisitions are tracked by the manager, who is also capable of manually editing
 them.
 
 Being the mentor a special role, after authenticating himself via UA he needs to
@@ -80,38 +79,42 @@ develop the manager features.
 
 ### Equipments
 
-Equipments are registered in the wiki. Wiki provides a page with a template that
-has the most used fields, but the manager can add or remove according fields to
-his needs. This avoids the existence of blank fields in a typical information
-system. For instance, it can be added links to images, datasheets and other
-useful knowledge about each equipment.
+Equipments are registered in the wiki, which provides a template page with the
+last used fields (although the manager can edit the entire page to his needs).
+This avoids the existence of blank fields in a typical information system. For
+instance, links to images or datasheets can be added to each equipment on
+demanded, that is, withouth assuming that all items should contain this time
+of information associated.
 
-For each equipment, it can be added several units, each one with a unique ID,
-that is used to generate the QR Code present in the unit.
+For each equipment, several units can be added, each with a unique ID that is
+used to generate the QR Code present in the unit's label.
 
 ![Raspberry Pi 3 Wiki](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/rasp_wiki.png?alt=media&token=0c186c12-9fdc-497d-a398-93945ebec154)
 
 ### Requisitions
 
-The requisition of units happens in the App side. Dispite this, the manager can
-track all the requisition process, tracking pending requisitions, and being able
-to contact the students via email. He can also manually edit requisitions, with
-a simple edit to the wiki's page of the given unit.
+The requisition of units happens through mobile apps. Despite this, the
+manager can track the complete requisition process, tracking pending
+requisitions, and being able to contact the students via email. He can also
+manually edit requisitions, with a simple edit to the wiki's page of the given
+unit.
 
 ![Raspberry Pi 3 Requisitions](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/rasp_requisitions.png?alt=media&token=1c6b33f4-7890-4dbc-9bf2-f04c059f198e)
 
 ### Requisition process
 
-The way the requisitions workflow processes is of extreme importance. We want to
-be sure that:
-* Equipments are safe and well maintained --- no damage, loss or thefts;
-* Equipments are used in valuable projects.
+The way the requisitions' workflow processes is of extreme importance. We want
+to be sure that:
+* Equipments are safe and well maintained --- no damage, loss or thefts. If
+  this happens someone needs to be responsibilized;
+* Equipments are used in deserving projects.
 
 The diagram below illustrates the procedure to do requisitions (inside the
-dashed box), as an easy and fast step, wrapped in a bigger process (the whole
+dashed box) as an easy and fast step, wrapped in a bigger process (the whole
 diagram).
 
-![Requisition process](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/requisition_process.png?alt=media&token=cd385b83-31a1-40ce-8ef8-38170ed02628)
+![Requisition process](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/Requisition%20Process.png?alt=media&token=5ca7bb92-a4c8-4b97-9340-5c03ee76a0ee)
 
 Following all these steps we can trust in the paradigm of a system where
-everybody can enjoy learning and making, with the less bureaucracies possible.
+everybody can enjoy learning and making, with the less bureaucracies possible,
+yet where when things go wrong the responsible doesn't get away.
