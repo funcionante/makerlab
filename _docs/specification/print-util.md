@@ -7,8 +7,8 @@ order: 10
 In order to identify items/services within Makerlab's context we use ids.
 These are printed as a QR code that is then placed on each item it refers to,
 making possible the automation and process simplification mentioned in other
-components (see [wiki](http://makerlab.gitlab.io/specification/wiki/) or
-[mobile-app](http://makerlab.gitlab.io/specification/mobile-app/).
+components (see [wiki](/specification/wiki/) or
+[mobile-app](/specification/mobile-app/)).
 
 This implies the existence of labels, and although for the platform itself the
 simple QR code would suffice, we had to cope with requirements imposed by
