@@ -4,9 +4,7 @@ category: Specifications
 order: 1
 ---
 
-## Features, system scenarios and processes
-
-### Features
+## Features
 
 * University of Aveiro’s UU authentication (implicit account creation);
 * Create, edit, close and delete projects;
@@ -21,12 +19,12 @@ order: 1
 * Web monitoring of equipment, VM’s and VLANs;
 * Request new equipment (not existent in DML).
 
-### Scenarios
+## Scenarios
 
 These were left out of this page in order to keep it consice. They can be
 found [here](/specification/scenarios/).
 
-### Requirements
+## Requirements
 
 The following requirements state the functions and capabilities that the DML
 system will provide, although some requirements may be stated on other pages:
