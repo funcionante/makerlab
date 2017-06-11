@@ -19,7 +19,8 @@ You will also see, on menu's header, your account details (name and email) and y
 photo, based on Gravatar, so you will need to [associate a photo](https://pt.gravatar.com/support/activating-your-account/)
 to your UA's email on Gravatar's platform, in order to be shown on the app.
 
-![Auth Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Fauth.gif?alt=media&token=e65759e4-dc20-49b7-858c-1851884bea7d){:center}
+![Auth Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Fauth.gif?alt=media&token=e65759e4-dc20-49b7-858c-1851884bea7d)
+{:center}
 
 # Projects
 
@@ -28,7 +29,8 @@ to start using the lab's features and equipments.
 For that just go to "Projectos" menu tab, click on the plus icon and then "Criar Projecto".
 After that fill the project's name and description and click on "Criar Projecto".
 
-![Create Project Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Fcreate-project.gif?alt=media&token=cfcf06f0-ce81-43d3-bec2-d7e39fa64b71){:center}
+![Create Project Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Fcreate-project.gif?alt=media&token=cfcf06f0-ce81-43d3-bec2-d7e39fa64b71)
+{:center}
 
 Now that we have a project, the user can start adding members to it so that the project
 begins to build itself. For that, select the project, click on settings icon, then
@@ -36,7 +38,8 @@ begins to build itself. For that, select the project, click on settings icon, th
 to be registered on Makerlab's platform (through the wiki or the mobile app) in order
 to appear on the list.
 
-![Add Member Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Fadd_members.gif?alt=media&token=b6fe4ab8-afd2-4cbb-b8b2-8b2a28c54f5d){:center}
+![Add Member Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Fadd_members.gif?alt=media&token=b6fe4ab8-afd2-4cbb-b8b2-8b2a28c54f5d)
+{:center}
 
 You can , at any time, see the project's page and it's members, by clicking on
 it's name.
@@ -54,7 +57,8 @@ need to click on it, else the requisition/delivery dialog will appear instantain
 If you want to make a requisition, just choose the project you want to associate it,
 the number of units you want to request and simple click on "Confirmar".
 
-![Requisition Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Frequisition.gif?alt=media&token=c7c5e8df-41ce-4d5d-b254-56fc7e939b5f){:center}
+![Requisition Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Frequisition.gif?alt=media&token=c7c5e8df-41ce-4d5d-b254-56fc7e939b5f)
+{:center}
 
 ## Deliveries
 If you want to make a item delivery, change the switch value on "Requisitar/Entregar",
@@ -62,7 +66,8 @@ select the project in which the requisition is associated (only projects with
 active requisitions for the equipment you are reading will appear), choose the
 number of units you want to deliver and click on "Confirmar"
 
-![Delivery Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Fdelivery.gif?alt=media&token=4e88f708-cbfe-4b7a-898c-74d4bb062e29){:center}
+![Delivery Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Fdelivery.gif?alt=media&token=4e88f708-cbfe-4b7a-898c-74d4bb062e29)
+{:center}
 
 ## Augmented Reality
 
@@ -72,7 +77,8 @@ familiar with the equipment. To use it, make sure "Augmented Reality" feature
 is enabled on "Definições" menu (it is enabled by default), point your camera
 to the QR code and a canvas with Makerlab's logo and item name will appear. 
 
-![Augmented Reality Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Faugmented_reality.gif?alt=media&token=70de4025-f59b-42ef-b15f-96947ea881f2){:center}
+![Augmented Reality Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Faugmented_reality.gif?alt=media&token=70de4025-f59b-42ef-b15f-96947ea881f2)
+{:center}
 
 # Requisitions
 
@@ -80,7 +86,8 @@ As long as you request more than one item, it is a good idea to maintain the
 history of the requisitions you made. This is done in "Requisições" menu tab,
 where you will find all your active requisitions grouped by the item and project name.
 
-![Requisition List Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Frequisitions_list.gif?alt=media&token=df63dd6b-e771-4898-9088-698fb0f8759b){:center}
+![Requisition List Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Frequisitions_list.gif?alt=media&token=df63dd6b-e771-4898-9088-698fb0f8759b)
+{:center}
 
-<!-- -->
-{:center: style="text-align: center"}
+<!-- Styles -->
+{:center: style="margin: 0 auto; display: block; width: 188px"}
