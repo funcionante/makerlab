@@ -1,6 +1,6 @@
 ---
 layout: default
-category: Specifications
+category: Developers
 order: 100
 ---
 
@@ -18,6 +18,17 @@ The file `docker-composer.yml` contains the docker specs for the node to
 create, which by default uses `/var/makerlab/solr/` to store the information.
 
 The script `setup.sh` handles the container's deployment.
+
+## Running everything
+
+The container itself should auto-load by itself (look into the installation
+guide for more details).
+
+The server (presented below), being a flask app, usually `python solr.py`
+suffices. This shoulld only be done for debug purposes though. For production,
+a `solr_uwsgi.ini` is included which handles the configuration in order to
+properly run the server. Again, refer to the installation guide for more
+details.
 
 ## Server
 
