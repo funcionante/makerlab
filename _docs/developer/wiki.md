@@ -4,7 +4,7 @@ category: Developers
 order: 100
 ---
 
-Wiki is the core of the system. There lives (almost) all the information of the system. On the one hand, wiki provides tools to manage equipments, projects and user. On the other, it gives to the users an environment of a wiki engine. Users can collaboratively edit articles, in a version controlled way, to fill with information about their projects and equipments.
+Wiki is the core of the system. There lives (almost) all the information of the system. On the one hand, wiki provides tools to manage equipments, projects and users. On the other, users can collaboratively edit articles, in a version controlled way, to document and share all the information that assists students making their projects happen.
 
 ## Context
 
