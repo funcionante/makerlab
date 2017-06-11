@@ -110,7 +110,7 @@ an error message is returned in case of failure, otherwise 200 is returned
 
 #### Add port
 
-Accepting a given user\_id, project\_id (id of a project) and a port number, 
+Accepting a given `user_id`, `project_id` (id of a project) and a port number, 
 adds that port to the VLAN of that project, using the SDN controller.
 
 ```
@@ -125,7 +125,7 @@ port_id: Ethernet socket port number that will be requested
 
 #### Remove port
 
-Accepting a given user\_id and a port number, removes that port to the VLAN 
+Accepting a given `user_id` and a port number, removes that port to the VLAN 
 of that project, using the SDN controller.
 
 ```
@@ -139,7 +139,7 @@ port_id: Ethernet socket port number that will be freed
 
 #### Create project bridge
 
-Accepting a given user\_id and a project\_id (id of a project), 
+Accepting a given` user_id` and a `project_id` (id of a project), 
 creates a new OvS bridge and launches its router-like container.
 
 ```
@@ -153,7 +153,7 @@ project_id: ID of the project that will have the bridge associated to
 
 #### Delete project bridge
 
-Accepting a given user\_id and a project\_id (id of a project), deletes 
+Accepting a given `user_id` and a `project_id` (id of a project), deletes 
 the corresponding OvS bridge and all its containers.
 
 ```
@@ -167,7 +167,7 @@ project_id: ID of the project that will have the bridge associated to
 
 #### New container
 
-Accepting a given user\_id, a project\_id (id of a project), and possibly 
+Accepting a given `user_id`, a `project_id` (id of a project), and possibly 
 a Dockerfile, launches a new container.
 
 ```
@@ -184,7 +184,8 @@ that'll be launched
 
 #### Update container
 
-Accepting a given user\_id, a docker\_id and a Dockerfile, updates the container.
+Accepting a given `user_id`, a `docker_id` and a Dockerfile, 
+updates the container.
 
 ```
 /update-container/<int:user_id>/<docker_id>/
@@ -199,7 +200,8 @@ that'll be launched.
 
 #### Delete container
 
-Given a user\_id and a docker\_id, stops and removes the corresponding container.
+Given a `user_id` and a `docker_id`, stops and removes 
+the corresponding container.
 
 ```
 /remove-container/<int:user_id>/<docker_id>/
@@ -212,7 +214,7 @@ docker_id: ID of the Docker container that will be updated
 
 #### Get project's containers
 
-Given a user\_id and a project\_id (id of a project), returns all the 
+Given a `user_id` and a `project_id` (id of a project), returns all the 
 containers info related to the project.
 
 ```
@@ -226,7 +228,7 @@ project_id: ID of the project
 
 #### Get container info
 
-Accepting a given user\_id, docker\_id, returns all info about it: 
+Accepting a given `user_id`, `docker_id`, returns all info about it: 
 IP, DockerID, status and CPU and memory usage stats.
 
 ```
@@ -241,7 +243,7 @@ docker_id: ID of the Docker container that the info is requested
 
 #### Get container logs
 
-Accepting a user\_id and a docker\_id, returns its last 50 lines of log.
+Accepting a `user_id` and a `docker_id`, returns its last 50 lines of log.
 
 ```
 /get-container-logs/<int:user_id>/<docker_id>/
@@ -254,7 +256,8 @@ docker_id: ID of the Docker container that the info is requested
 
 #### Start container
 
-Accepting a given user\_id, docker\_id, starts the corresponding container.
+Accepting a given `user_id` and `docker_id`, 
+starts the corresponding container.
 
 ```
 /start-container/<int:user_id>/<docker_id>/
@@ -267,7 +270,8 @@ docker_id: ID of the Docker container that'll be started
 
 #### Stop container
 
-Accepting a given user\_id, docker\_id, stops the corresponding container.
+Accepting a given `user_id` and `docker_id`,
+stops the corresponding container.
 
 ```
 /stop-container/<int:user_id>/<docker_id>/
@@ -280,7 +284,8 @@ docker_id: ID of the Docker container that'll be stoped
 
 #### Restart container
 
-Accepting a given user\_id, docker\_id, restarts the corresponding container.
+Accepting a given `user_id` and `docker_id`, restarts 
+the corresponding container.
 
 ```
 /restart-container/<int:user_id>/<docker_id>/
@@ -303,13 +308,133 @@ in order to work as intended, a SDN controller is also needed.
 
 This controller will be responsible for:
 *   Analyzing and redirecting packets that the Switch are not familiar with and
-to tell it where to forward them;
+to tell it where to forward them, may their destination be an host at the room
+or a VM through the VxLAN tunnel;
 *   Installing OpenFlow rules in the Switch, so that the packets with a similar
 destination would be automatically redirected without the need of sending them
 to the controller.
 
-Although the SDN controller initially provided an HTTP REST server, it's
-deprecated an not used at the moment, but in the future it might be useful.
+Although the SDN controller initially provided an HTTP REST endpoints, it's
+deprecated an not used at the moment, but in the future it might be useful. 
+With that in mind, the SDN controller runs an HTTP server, but without any 
+current endpoints.
+
+The SDN controller methods are the following:
+
+#### Get IP (class method)
+
+Returns the IP of a project VLAN given a certain `project_id`.
+
+```
+project_id: ID of the project
+
+    Returns: string containing the IP address.
+```
+
+#### Get VNI (class method)
+
+Returns the VLAN ID / VNI, which equals the `project_id', given an IP of a
+project VLAN.
+
+```
+ip: a given IP address
+
+    Returns: the VLAN ID / VNI of a project's network
+```
+
+#### Get All Reserved Ports
+
+Returns a list of all already reserved ports currently in the network database.
+
+```
+ip: a given IP address
+
+    Returns: list of integers - port numbers
+```
+
+#### Get VLAN Port
+
+Given a certain port number, returns the VLAN ID that's associated to.
+
+```
+port: ethernet port number
+
+    Returns: the VLAN ID / VNI of the network the given port is associated to
+```
+
+#### Switch Features Handler
+
+Receving an OpenFlow event as input, installs a table-miss flow entry.
+At the moment, if it specified a lesser number, e.g., 128, 
+OvS will send Packet-In with invalid `buffer_id` and truncated packet data. 
+In that case, it is not possible to output packets correctly.
+
+```
+ev: An OpenFlow event, that contains a packet message and the involved protocols
+
+    Returns: None
+```
+
+#### Add flow
+
+Creates a new OpenFlow flow in the current datapath (table 0).
+
+```
+datapath: Datapath of the OpenFlow controlled switch
+priority: Priority of the flow
+match: Packets matching conditions config
+actions: Actions to perform given the selected packets
+buffer_id: used Buffer ID
+    
+    Returns: None
+```
+
+#### Parse VxLAN Broadcast
+
+Given a certain packet message and its headers that comes from the VxLAN tunnel
+port and that the destination MAC address is the broadcast address, this method
+parses that packet, figuring out which VNI / VLAN ID the packet carries and send
+it to the correct ports.
+
+```
+msg: Message of a packet
+header_list: List of headers of the given message
+
+    Returns: None
+```
+
+#### Packet-In Handler
+
+Given an OpenFlow event, parses that event packet.
+
+According to the In-Packet origin, there are multiple alternitives:
+*   If the traffic comes from the VxLAN tunnel port with the broadcast MAC
+destination, calls the `_parse_vxlan_broadcast` method with the given packet 
+message and its headers;
+*   If the traffic comes from the VxLAN tunnel port with a destination IP 
+address, use the `get_vni` method to obtain the VLAN ID to forward to the 
+correct VLAN;
+*   If the traffic comes from an host directly connected to the switch, obtain
+its VLAN ID using the `get_port_to_vlan` method;
+
+According to the In-Packet destination:
+*   If the packet's destination MAC address is unknown (not present in the ARP
+table at the time), send the packet to all the VLAN ports, including the VxLAN
+tunnel port (flooding process);
+*   If the packet's destination MAC address is known, send it to the correct
+port and call the `add_flow` method to regist a new flow at the switch to 
+prevent these known "routes" to be constantly redirected to the SDN controller;
+
+It is worth poiting out that, if a packet is redirected to the VxLAN tunnel
+port, it's necessarily added a new OpenFlow message field with the corresponding
+VNI / VLAN ID.
+
+
+```
+ev: An OpenFlow event, that contains a packet message and the involved protocols
+
+    Returns: None
+```
 
 <!-- -->
 {:center: style="text-align: center"}
