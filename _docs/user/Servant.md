@@ -49,12 +49,16 @@ dml-servant projects ls
 `dml-servant` is smart enough to tell you about your projects inside the famous
 DETI MakerLab. No need to switch context!
 
+![projects-ls](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fprojects-ls.png?alt=media&token=ef6ba01c-3c57-489a-a084-7dbfca4ad9d8)
+
 ### Network
 
 ```
 dml-servant network add port <proj-id> <port-id>
 ```
 If you need to have your own private network (free from UA's constraints!).
+
+![network-add-port](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-add-port.png?alt=media&token=8858ec91-69c5-499f-826b-96983133c29f)
 
 ```
 dml-servant network create <proj-id> <dockerfile-url>
@@ -85,6 +89,8 @@ Removing is a classic, no explanation needed. Proceed with care.
 dml-servant network rm port <port-id>
 ```
 When you no longer need to have your own private network.
+
+![network-rm-port](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-rm-port.png?alt=media&token=33b1a500-3080-4e78-808c-f4bcbc142480)
 
 ```
 dml-servant network start <cont-id>
