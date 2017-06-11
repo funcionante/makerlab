@@ -25,21 +25,21 @@ other project used this device.
 
 Testing the platform with evermore colleagues, Alice and Bob need something
 with more power than a Raspberry. They decide to carry on tests using a DML
-VM. After opening the project’s page, Bob issues the creation of a VM. After a
-few minutes an email is sent to him, providing the machine’s IP address and
-credentials. Bob is liable for this VM.
+VM. With that in mind, Bob goes to DETI Slack to issue a VM creation with the 
+dml-servant. After a few seconds, the servant replies, providing the 
+machine’s IP address, credentials and DockerID. Bob is liable for this VM.
 
 They soon find out that to properly access plenty of network services they
 need to be less restricted than what UA’s network allows. They want to take
 advantage of another DML networking service, which allows them to create a
-VLAN for the project, imposing less restrictions. Bob goes to scan with his
-phone a QR code existent in an ethernet socket nearby. Since this is the first
-time a team member does this, a new VLAN is assigned to the project and the
-port is automatically configured. Afterwards,
-Alice does the same thing with another port nearby. DML network engine
-automatically configures the port to belong to the correct VLAN that was
-previously created (implicitly) by Bob. Both Alice and Bob can now use the
-services they wanted.
+VLAN for the project, imposing less restrictions. Bob gets the ID that is
+printed in the desired ethernet socket and requests to the servant to associate
+that port to the project's VLAN. Since this is the first time a team member 
+does this, a new VLAN is assigned to the project and the port is automatically 
+configured. Afterwards, Alice does the same thing with another port nearby. 
+DML network engine automatically configures the port to belong to the correct 
+VLAN that was previously created (implicitly) by Bob. Both Alice and Bob can 
+now use the services they wanted.
 
 After porting their project from the RPi to the VM, the team no longer needs
 their RPi. They thus hand it to Mr. Faythe, DML’s staff. He scans the barcode

@@ -89,5 +89,5 @@ where you will find all your active requisitions grouped by the item and project
 ![Requisition List Gif](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Frequisitions_list.gif?alt=media&token=df63dd6b-e771-4898-9088-698fb0f8759b)
 {:center}
 
-<!-- -->
-{:center: style="text-align:center; width: 188px"}
+<!-- Styles -->
+{:center: style="margin: 0 auto; display: block; width: 188px"}
