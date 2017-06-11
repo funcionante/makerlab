@@ -1,6 +1,6 @@
 ---
 layout: default
-category: Developer
+category: Developers
 order: 18
 ---
 
@@ -11,10 +11,12 @@ and deployment. All the traffic is completely isolated from each network
 and the users can access their projects' networks and containers by associating
 RJ-45 sockets at DML's room to them.
 
-A simplified vision of our network would be:
-![Network Architecture](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/network%2FNetwork%20Diagram.png?alt=media&token=7d139dc8-4a95-4986-b7ee-c1b023160c92)
+A simplified vision of our network architecture would be:
+
+![Network Architecture](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/network%2FNetwork%20Diagram.png?alt=media&token=8cb4994b-84d3-485f-b763-1ae706160b9d)
 {:center}
 
+## Before Starting
 
 The "core" of each project's network will be hosted on a datacenter, where
 the containers will be orchestrated and the NAT/PAT mechanisms will provide
@@ -43,24 +45,25 @@ At the moment, all the requests made to the NetManager come exclusively from the
 
 The controller behind managing all the things at the Datacenter is 
 a flask powered HTTP Server, with the assistance of a PostgreSQL database to
-store all the networking-relating information.
+store all the networking-relative information.
 Its main functionalities are:
 *   Creation and destruction of a project's network --- when the first container
-is launched (within the scope of a project), an OvS bridge is created and
-a router-like container is started;
+is launched (within the scope of a project) or a ethernet port is requested, 
+an OvS bridge is created and a router-like container is started;
 *   Creation and destruction of containers --- either a pre-built container or
 built with a Dockerfile provided by the user;
 *   Change of state (start and stop) of containers;
 *   Association of RJ-45 sockets (based on a printed ID on them) to projects'
-networks (communication with the SDN controller);
-*   Informational endpoints to the platform's API, mainly to the dml-servant,
+networks (in order to let the SDN controller know which ports belong to the
+projects' VLANs);
+*   Informational endpoints to the platform's API, mainly to the `dml-servant`,
 returning container's DockerIDs, IPs, status, logs and more.
 
 ### Project's vSwitch
 
 Project's vSwitch is nothing more than a virtual switch (using Open vSwitch), 
-created in the scope of each project (when the first container is created)
-and that will have two main purposes:
+created in the scope of each project (when the first container is created
+or a port is requested) and that will have two main purposes:
 *   Operate as a switch/bridge for attaching containers;
 *   Create a connection between the project's switch and the VTEP bridge to
 send the traffic trough the VxLAN tunnel, so that all containers and users' 
@@ -88,14 +91,15 @@ as well as a network interface of the deployment machine, allowing the routers
 to obtain a public IP address;
 *   VTEP bridge --- aggregates all the patch ports that connect directly to the
 projects' vSwitches. It'll operate as a OpenFlow virtual switch, since, by the
-time a project bridge is created, it is installed two flows on the bridge,
-for redirecting traffic incoming from the VxLAN tunnel to the project's vSwitch
-and vice-versa.
+time a project bridge is created, two flows are installed on the bridge,
+in order to redirect traffic coming from the VxLAN tunnel to the project's 
+vSwitch and vice-versa.
 
 ### Setup
 
 For the complete setup instructions, please look for the network installation 
-guide for more details.
+guide for detailed instructions of how to set up all the network related 
+components.
 
 ### Endpoints
 
@@ -299,7 +303,7 @@ docker_id: ID of the Docker container that'll be restarted
 
 ## SDN Controller
 
-It'll be at DETI MakerLab that the users will connect to their projects'
+It'll be at the DETI MakerLab room that the users will connect to their projects'
 networks, where there are several RJ-45 sockets and a OpenFlow enabled Switch to
 control all the traffic inside the room and forward it to the datacenter.
 
@@ -319,7 +323,9 @@ deprecated an not used at the moment, but in the future it might be useful.
 With that in mind, the SDN controller runs an HTTP server, but without any 
 current endpoints.
 
-The SDN controller methods are the following:
+To start the SDN controller, just use `ryu-manager sdn-controller/dml_switch_rest.py`. 
+
+The controller contains the following methods:
 
 #### Get IP (class method)
 
@@ -333,7 +339,7 @@ project_id: ID of the project
 
 #### Get VNI (class method)
 
-Returns the VLAN ID / VNI, which equals the `project_id', given an IP of a
+Returns the VLAN ID / VNI, which equals the `project_id`, given an IP of a
 project VLAN.
 
 ```
@@ -389,7 +395,7 @@ buffer_id: used Buffer ID
     Returns: None
 ```
 
-#### Parse VxLAN Broadcast
+#### Parse VxLAN broadcast
 
 Given a certain packet message and its headers that comes from the VxLAN tunnel
 port and that the destination MAC address is the broadcast address, this method
@@ -403,16 +409,16 @@ header_list: List of headers of the given message
     Returns: None
 ```
 
-#### Packet-In Handler
+#### Packet-In handler
 
 Given an OpenFlow event, parses that event packet.
 
-According to the In-Packet origin, there are multiple alternitives:
+According to the In-Packet origin, there are multiple alternatives:
 *   If the traffic comes from the VxLAN tunnel port with the broadcast MAC
 destination, calls the `_parse_vxlan_broadcast` method with the given packet 
 message and its headers;
 *   If the traffic comes from the VxLAN tunnel port with a destination IP 
-address, use the `get_vni` method to obtain the VLAN ID to forward to the 
+address, use the `get_vni` method to obtain the VLAN ID to forward it to the 
 correct VLAN;
 *   If the traffic comes from an host directly connected to the switch, obtain
 its VLAN ID using the `get_port_to_vlan` method;
