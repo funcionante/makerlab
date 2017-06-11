@@ -21,7 +21,7 @@ echo <text>
     reply back with <text>
 ```
 
-![echo](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fecho.png?alt=media&token=c7d6c24f-0fb2-4bca-8e8e-231623bacdb6)
+![echo](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fecho.png?alt=media&token=4616a041-346b-4ac5-a4e3-0d897c71dc7a)
 
 ```
 ping
