@@ -25,7 +25,7 @@ The container itself should auto-load by itself (look into the installation
 guide for more details).
 
 The server (presented below), being a flask app, usually `python solr.py`
-suffices. This shoulld only be done for debug purposes though. For production,
+suffices. This should only be done for debug purposes though. For production,
 a `solr_uwsgi.ini` is included which handles the configuration in order to
 properly run the server. Again, refer to the installation guide for more
 details.
