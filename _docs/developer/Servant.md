@@ -19,16 +19,18 @@ the rules
 ```
 echo <text>
     reply back with <text>
+```
 
->>> dml-servant echo As armas e os barões assinalados, Que da ocidental praia Lusitana, Por mares nunca de antes navegados, Passaram ainda além da Taprobana (...)
-As armas e os barões assinalados, Que da ocidental praia Lusitana, Por mares nunca de antes navegados, Passaram ainda além da Taprobana (...)
--------------------------------------------------------------------------------
+![echo](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fecho.png?alt=media&token=c7d6c24f-0fb2-4bca-8e8e-231623bacdb6)
+
+```
 ping
     reply with pong
-
->>> dml-servant ping
-PONG
 ```
+
+![ping](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fping.png?alt=media&token=8a0aff86-9b4d-4b14-bf87-0ad46ea13ff3)
+
+### Help
 
 ```
 dml-servant help - Displays all of the help commands that Hubot knows about.
