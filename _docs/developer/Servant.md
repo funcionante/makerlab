@@ -10,13 +10,9 @@ order: 20
 ```
 the rules
     returns the rules dml-servant follows
-
->>> dml-servant the rules
-. A robot may not harm humanity, or, by inaction, allow humanity to come to harm.
-1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.
-2. A robot must obey any orders given to it by human beings, except where such orders would conflict with the First Law.
-3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
 ```
+
+![the-rules](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fthe-rules.png?alt=media&token=c7bfd5d4-bdc6-4831-80de-5571f36df397)
 
 ### Debug
 
