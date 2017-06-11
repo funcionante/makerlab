@@ -6,6 +6,8 @@ order: 1
 
 ## Features
 
+DETI MakerLab (DML) platform will address the following features:
+
 * University of Aveiro’s UU authentication (implicit account creation);
 * Create, edit, close and delete projects;
 * Add/register and edit equipment’s info and their units;
@@ -14,8 +16,8 @@ order: 1
 * Search users/projects/equipments;
 * Request and return/release electronic equipment, VLANs and VMs for project
   development;
-* Scanning QR of equipment, VLANs (scanning QR code on the socket) and VMs
-  using the mobile app;
+* Scanning QR of equipments using the mobile app;
+* Request VLANs and VMs creation through the DETI MakerLab Servant;
 * Web monitoring of equipment, VM’s and VLANs;
 * Request new equipment (not existent in DML).
 
@@ -36,7 +38,7 @@ system will provide, although some requirements may be stated on other pages:
 * Android and iOS apps --- full functionality (e.g. requisitioning items) plus
   scanning QR codes for requests;
 * Self-managed network --- able to satisfy the users’ requests to VM’s and
-  VLANs autonomously;
+  VLANs autonomously, in order to overcome UA's network constraints;
 * Highly modularized and loosely coupled --- components must be easily swapped
   in or out;
 * Reuse existing projects and frameworks --- keep project maintenance to a
