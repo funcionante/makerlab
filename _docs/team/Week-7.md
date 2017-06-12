@@ -25,3 +25,6 @@ Hopefully, though, the STIC have finally delivered us our server (although
 with an odd name). During the next few days we will start migrations, although
 we expect things to go smoothly (it now feels good to be using Docker, since
 most things are automatic).
+
+-------------------------------------------------------------------------------
+*Published at 26-03-2017*

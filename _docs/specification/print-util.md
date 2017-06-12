@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Specifications
-order: 5
+order: 7
 ---
 
 In order to identify items/services within Makerlab's context we use ids.

@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Specifications
-order: 2
+order: 1
 ---
 
 ## Features

@@ -15,3 +15,6 @@ site's front page much friendlier and useful.
 On other news, our wiki went from english to portuguese, at least for its
 first version. This also meant start indexing articles in portuguese. This is
 mostly solved now.
+
+-------------------------------------------------------------------------------
+*Published at 26-02-2017*

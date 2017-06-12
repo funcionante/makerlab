@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Specifications
-order: 4
+order: 6
 ---
 
 The network manager is in charge of all things network. It's main goal is to

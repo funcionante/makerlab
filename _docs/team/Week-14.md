@@ -28,3 +28,6 @@ Also, we have recently found another use case for one of our components
 shows that one of the project's goals (the possibility of using its components
 outside the project's scope) is in fact a reality --- this being the first
 example of a situation where this will be done.
+
+-------------------------------------------------------------------------------
+*Published at 14-05-2017*
