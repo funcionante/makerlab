@@ -1,7 +1,7 @@
 ---
 layout: default
-category: Developers
-order: 20
+category: Developer
+order: 7
 ---
 
 

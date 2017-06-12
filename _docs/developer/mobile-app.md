@@ -1,7 +1,7 @@
 ---
 layout: default
-category: Developers
-order: 10
+category: Developer
+order: 3
 ---
 
 # Authentication
