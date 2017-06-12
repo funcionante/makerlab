@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Developer
-order: 10
+order: 1
 ---
 
 In order to overcome the need for students and professors to have another account to manage,
@@ -20,7 +20,7 @@ For an application to communicate with OAuth server, it must be registered and a
 by [requesting a Consumer and Secret Key](http://identity.ua.pt/oauth/) and wait
 for the application to be approved.
 
-The OAuth service of the University of Aveiro is composed of four steps, namely:
+The OAuth service of the University of Aveiro is composed of four steps, namely :
 
 1. Request Token : after the Consumer Key and Secret have been obtained, we can begin
 using the OAuth protocol to access restricted services. The first step is to require
