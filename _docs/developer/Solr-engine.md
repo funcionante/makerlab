@@ -1,7 +1,7 @@
 ---
 layout: default
-category: Developers
-order: 100
+category: Developer
+order: 8
 ---
 
 Solr's engine provides an interface to solr queries, hiding the otherwise

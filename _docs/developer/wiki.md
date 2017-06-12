@@ -1,7 +1,7 @@
 ---
 layout: default
-category: Developers
-order: 100
+category: Developer
+order: 9
 ---
 
 Wiki is the core of the system. There lives (almost) all the information of the system. On the one hand, wiki provides tools to manage equipments, projects and users. On the other, users can collaboratively edit articles, in a version controlled way, to document and share all the information that assists students making their projects happen.

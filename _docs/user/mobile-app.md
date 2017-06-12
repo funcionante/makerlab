@@ -1,7 +1,7 @@
 ---
 layout: default
 category: User
-order: 2
+order: 1
 ---
 
 The app provides for a more user-centered experience within the lab and by having

@@ -1,7 +1,7 @@
 ---
 layout: default
-category: Users
-order: 20
+category: User
+order: 3
 ---
 
 Here follows the language `dml-servant` has so far learned.
