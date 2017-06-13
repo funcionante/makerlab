@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Developer
-order: 1
+order: 3
 ---
 
 This guide explains how an installation of the core components of MakerLab can

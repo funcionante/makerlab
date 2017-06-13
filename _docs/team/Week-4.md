@@ -15,3 +15,6 @@ With the most recent wiki updates, we are close to being capable of releasing
 the *Phase 1* of the wiki's delivering schedule. We hope this is possible next
 week. By then we will also start adding images (like print screens and such)
 to these devlogs.
+
+-------------------------------------------------------------------------------
+*Published at 05-03-2017*

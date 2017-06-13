@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Specifications
-order: 12
+order: 10
 ---
 
 Requirements such as the use of a wiki-based platform and high flexibility

@@ -42,16 +42,15 @@ VLAN that was previously created (implicitly) by Bob. Both Alice and Bob can
 now use the services they wanted.
 
 After porting their project from the RPi to the VM, the team no longer needs
-their RPi. They thus hand it to Mr. Faythe, DML’s staff. He scans the barcode
-existent in the device’s box with his own phone. The project is no longer in
+their RPi. They thus scan the QR code existent in the device's box with DETI-MakerLab
+mobile app and hand it to Mr. Faythe, DML’s staff. The project is no longer in
 possession of the RPi, which is reflected in the project’s page.
 
 Carol, a friend of Alice, has become interested in the project after testing
 it. She wants to help the team, which is happy to accept her especially since
 she knows more about electronics than they do. To give Carol access to the DML
-services the team is using, Alice goes to the project’s page and adds Carol to
-the project, sending her an invitation. After receiving the notification,
-Carol accepts it and is now member of the team.
+services the team is using, Alice goes to DETI-MakerLab mobile app and adds Carol to
+the project.
 
 Alice and Bob soon find that explaining Carol how to use the VM they have
 access to is tiresome (recall that Carol is more electronic-centric). To help

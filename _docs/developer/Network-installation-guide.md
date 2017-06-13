@@ -1,14 +1,23 @@
 ---
 layout: default
 category: Developer
-order: 2
+order: 5
 ---
 
 This guide explains how an installation of the network components of MakerLab 
-can be accomplished. We suggest that this installation be done in a different 
-machine than where the core components are installed and on a machine with
-good CPU performance, a lot of storage space and two network interfaces
-(alternatively create two virtual interfaces) and a lot of storage space. 
+can be accomplished. 
+
+We suggest that this installation be done in a different machine than where 
+the core components are installed and on one with good CPU performance, 
+a lot of storage space and at least two network interfaces (alternatively create 
+two virtual interfaces) and a lot of storage space. Also, make sure you have 
+port 22 (for SSH interaction with the `dml-servant`), 4789 (for the VxLAN tunnel)
+and 6653 (for OpenFlow packets).
+
+This guide covers the installation of the datacenter side only, since the
+switch at the DETI MakerLab room may be OpenFLow switch ou simply a computer
+with multiple ethernet interfaces and Open vSwitch running.
+
 These instructions are also at the `network` repository, as well as the code 
 to run everything. We also recommend that you perform this installation on 
 a Debian Jessie machine, since it's the only distro where we guarantee 

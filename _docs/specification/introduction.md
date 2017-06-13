@@ -14,11 +14,10 @@ DETI MakerLab (DML) platform will address the following features:
 * Invite and remove collaborators to projects;
 * Generation of QR codes for unlabeled units (and RJ-45 sockets);
 * Search users/projects/equipments;
-* Request and return/release electronic equipment, VLANs and VMs for project
-  development;
-* Scanning QR of equipments using the mobile app;
-* Request VLANs and VMs creation through the DETI MakerLab Servant;
-* Web monitoring of equipment, VM’s and VLANs;
+* Request and return/release electronic equipment;
+* Scanning QR codes of equipments using the mobile app;
+* Request or deliver VLANs and create or destroy VMs through the DETI MakerLab Servant;
+* Web monitoring of equipments, VM’s and VLANs;
 * Request new equipment (not existent in DML).
 
 ## Scenarios

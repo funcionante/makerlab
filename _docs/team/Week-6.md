@@ -19,3 +19,6 @@ On other news, everything is mostly ready to support requisitions. We are
 simply waiting to have items on the wiki so that we can test our new features
 before releasing them to public. With the improvements above, hopefully these
 shouldn't take too long.
+
+-------------------------------------------------------------------------------
+*Published at 19-03-2017*

@@ -1,12 +1,11 @@
 ---
 layout: default
 category: User
-order: 2
+order: 1
 ---
 
-The app provides for a more user-centered experience within the lab and by having
-all the tools in order to start using it as fast as possible.
-
+The app provides for a more user-centered experience within the lab and have 
+all necessary tools to start using it's features as fast as possible.
 
 # Authentication
 

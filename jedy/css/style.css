@@ -580,3 +580,17 @@ footer {
 #slider3-pager a {
   display: inline-block;
 }
+
+.dml_video_container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.dml_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

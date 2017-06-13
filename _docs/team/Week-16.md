@@ -27,3 +27,6 @@ Oh, and we also developed a nice poster for the students@deti event.
 
 There's still a not so small path till we can see this project's completion,
 though we are heading full power mode aiming towards a strong finish!
+
+-------------------------------------------------------------------------------
+*Published at 28-05-2017*

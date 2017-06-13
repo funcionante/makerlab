@@ -1,7 +1,7 @@
 ---
 layout: default
-category: Users
-order: 20
+category: User
+order: 4
 ---
 
 All the knowledge of the system is on the wiki. On the one hand, wiki provides tools to manage equipments, projects and users. On the other, users can collaboratively edit articles, in a version controlled way, to document and share all the information that assists students making their projects happen.

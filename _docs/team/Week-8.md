@@ -22,3 +22,6 @@ to fill in the wiki with some information. This enables us to test what we
 were missing, making it possible to schedule the releases we have been holding
 on. Expect big updates soon, although we will also be busy documenting
 everything.
+
+-------------------------------------------------------------------------------
+*Published at 02-04-2017*

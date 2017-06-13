@@ -17,7 +17,7 @@ order: 0
     <th>Diogo Ferreira</th>
   </tr>
   <tr><td>Documentation manager</td></tr>
-  <tr><td>Android app, Authentication System</td></tr>
+  <tr><td>Android app, authentication System</td></tr>
 
   <tr>
     <th rowspan="3"><img src="https://avatars0.githubusercontent.com/u/10348875?v=3&s=460" alt="Leonardo's photo" style="width:120px;height:120px;"></th>
