@@ -1,6 +1,6 @@
 ---
 layout: default
-category: Developers
+category: Developer
 order: 100
 ---
 
