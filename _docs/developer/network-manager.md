@@ -18,6 +18,10 @@ A simplified vision of our network architecture would be:
 
 ## Before Starting
 
+We recommend having a small knowledge base on Software Defined Networks (SDN),
+OpenFlow, Open vSwitch, Docker and overall networking before diving into this 
+section. 
+
 The "core" of each project's network will be hosted on a datacenter, where
 the containers will be orchestrated and the NAT/PAT mechanisms will provide
 internet access to all the hosts across the private networks.
@@ -76,6 +80,9 @@ Each private network, after the creation of its OvS bridge, will be provided
 with a container that will operate like a router, creating the "bridge" between
 this network and the internet, using NAT/PAT mechanisms, and operating like
 a DHCP server, providing IP addresses to all the hosts within that network.
+
+The router container runs a Alpine Linux distro with IPTables for NAT/PAT and
+ISC DHCP server for the DHCP service.
 
 ### Container Orchestration Architecture
 

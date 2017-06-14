@@ -6,28 +6,6 @@ order: 1
 
 ![MakerLab 3D Logo](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/IMG_20170614_195527.jpg?alt=media&token=555809ac-e4e4-4cc2-985e-074ba8724e11)
 
-## Features
-
-DETI MakerLab (DML) platform addresses the following features:
-
-* Create, edit and delete projects;
-* Register and edit equipment’s info and their quantity;
-* Invite and remove collaborators to projects;
-* Generation of QR codes for unlabeled units;
-* Search users/projects/equipments;
-* Document users/projects/equipments with text, images and file attachments;
-* Version controlled documentation;
-* Let teachers approve projects;
-* Request and return/release electronic equipment in the context of approved projects;
-* Scanning QR codes of equipments using the mobile app in order to do requests;
-* Notify requisitions by email;
-* Request and release VLANs and create or destroy VMs through the DETI MakerLab Servant.
-
-## Scenarios
-
-These were left out of this page in order to keep it concise. They can be
-found [here](/specification/scenarios/).
-
 ## Requirements
 
 The following requirements state the functions and capabilities that the DML
@@ -49,6 +27,28 @@ not affect neither the core nor other plugins;
 * Statistics about the room's usage (count people);
 * The system must provide APIs for easy expansion --- this is a multi-year
 project.
+
+## Scenarios
+
+These were left out of this page in order to keep it concise. They can be
+found [here](/specification/scenarios/).
+
+## Features
+
+DETI MakerLab (DML) platform addresses the following features:
+
+* Create, edit and delete projects;
+* Register and edit equipment’s info and their quantity;
+* Invite and remove collaborators to projects;
+* Generation of QR codes for unlabeled units;
+* Search users/projects/equipments;
+* Document users/projects/equipments with text, images and file attachments;
+* Version controlled documentation;
+* Let teachers approve projects;
+* Request and return/release electronic equipment in the context of approved projects;
+* Scanning QR codes of equipments using the mobile app in order to do requests;
+* Notify requisitions by email;
+* Request and release VLANs and create or destroy VMs through the DETI MakerLab Servant.
 
 ## Architecture
 

@@ -15,7 +15,7 @@ port 22 (for SSH interaction with the `dml-servant`), 4789 (for the VxLAN tunnel
 and 6653 (for OpenFlow packets).
 
 This guide covers the installation of the datacenter side only, since the
-switch at the DETI MakerLab room may be OpenFLow switch ou simply a computer
+switch at the DETI MakerLab room may be OpenFlow switch ou simply a computer
 with multiple ethernet interfaces and Open vSwitch running.
 
 These instructions are also at the `network` repository, as well as the code 
