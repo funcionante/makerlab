@@ -7,7 +7,7 @@ order: 4
 This guide explains how an installation of the network components of MakerLab 
 can be accomplished. 
 
-We suggest that this installation be done in a different machine than where 
+We suggest that this installation be performed on a different machine than where 
 the core components are installed and on one with good CPU performance, 
 a lot of storage space and at least two network interfaces (alternatively create 
 two virtual interfaces) and a lot of storage space. Also, make sure you have 
