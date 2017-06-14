@@ -1,9 +1,3 @@
----
-layout: default
-category: Specifications
-order: 9
----
-
 DML's wiki is all about the knowledge of the system. Its domain includes
 equipments, projects, members and requisitions, although others could be added
 to the list. The point of the system is to manage all the information in a

@@ -1,9 +1,3 @@
----
-layout: default
-category: Specifications
-order: 7
----
-
 In order to identify items/services within Makerlab's context we use ids.
 These are printed as a QR code that is then placed on each item it refers to,
 making possible the automation and process simplification mentioned in other

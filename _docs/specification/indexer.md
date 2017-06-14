@@ -1,9 +1,3 @@
----
-layout: default
-category: Specifications
-order: 4
----
-
 Since most of the knowledge of the system is kept within our wiki, in a
 mostly unstructured manner, our architecture was drawn taking into
 consideration that we needed a way to sanitize its storage and its accessing.

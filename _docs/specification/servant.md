@@ -1,9 +1,3 @@
----
-layout: default
-category: Specifications
-order: 8
----
-
 Given that most tasks carried by DML require little to no human interaction, a
 unified way of outputting/communicating information to the outside world is
 required.

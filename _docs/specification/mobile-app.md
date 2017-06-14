@@ -1,9 +1,3 @@
----
-layout: default
-category: Specifications
-order: 5
----
-
 The `mobile app` will be the main bridge between the users and the system.
 It'll provide the possibility to:
 * Manage pending requisitions, providing information of the project to which it is

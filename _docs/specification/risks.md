@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Specifications
-order: 2
+order: 5
 ---
 
 * Although all the requests of equipment, VMs, VLANs and the like are
