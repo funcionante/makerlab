@@ -4,6 +4,14 @@ category: Team
 order: 16
 ---
 
+## #17
+
+Looking at the horizon with the feeling of having the job done.
+
+![Team](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/File_000%20(1).jpeg?alt=media&token=a34b76e4-4ffa-438f-8c5c-587f2e7c4a16)
+
+*Published at 12-06-2017*
+
 ## #16
 
 The week started with the first "full project" demo. Its our opinion that
