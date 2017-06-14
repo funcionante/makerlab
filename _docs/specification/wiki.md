@@ -84,22 +84,18 @@ last used fields (although the manager can edit the entire page to his needs).
 This avoids the existence of blank fields in a typical information system. For
 instance, links to images or datasheets can be added to each equipment on
 demanded, that is, withouth assuming that all items should contain this time
-of information associated.
+of information associated. For each equipment, several units can be added.
 
-For each equipment, several units can be added, each with a unique ID that is
-used to generate the QR Code present in the unit's label.
-
-![Raspberry Pi 3 Wiki](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/wiki%2Fwiki_01.png?alt=media&token=39cc8a73-d720-4263-81a9-dee60ea0067f)
+![Raspberry Pi 3 Wiki](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/wiki%2Fv05%2Fwiki_06.png?alt=media&token=9690ccc8-6fad-4ae3-a7ab-c57a3e660566)
 
 ### Requisitions
 
 The requisition of units happens through mobile apps. Despite this, the
 manager can track the complete requisition process, tracking pending
-requisitions, and being able to contact the students via email. He can also
-manually edit requisitions, with a simple edit to the wiki's page of the given
-unit.
+requisitions and the requisition history, being able to contact the students via
+email.
 
-![Raspberry Pi 3 Requisitions](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/wiki%2Fwiki_05.png?alt=media&token=528f0b94-badb-42e2-b3d0-477d939f6150)
+![Raspberry Pi 3 Management](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/wiki%2Fv05%2Fwiki_02.png?alt=media&token=fbbed565-9910-4a1d-af99-0d1867238404)
 
 ### Requisition process
 
