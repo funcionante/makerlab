@@ -102,222 +102,47 @@ A user profile saves some personal data like NMEC and course. It also registers 
 </wiki>
 ```
 
-## API
-
-Wiki has an API that is available to be used for any developer that wishes to, but was originally designed to be used and integrated with our mobile app. With the evolution of the project it was also used by our chatbot and even by some particular features of the wiki. Above are the endpoints available and its usage
-
-### Articles
+## environ.json
+Wiki has a configuration file some environment variables. Those value vary from installation to installation. This is an example of a setup of this file:
 
 ```
-/api/articles
+{
+    "HOST": "https://deti-makerlab.ua.pt/",
 
-    GET: Returns the list of all the articles (all types)
-    Permissions: Administrator
+    "ALLOWED_HOSTS": "188.166.77.53 127.0.0.1",
+    "DEBUG": true,
+    "SECRET_KEY": "1234567890qwertyuiopasdfghjklzxc",
+
+    "DATABASE_HOST": "127.0.0.1",
+    "DATABASE_PASSWORD": "password",
+    "DATABASE_PORT": "5432",
+
+    "WIKI_URL": "http://127.0.0.1:80",
+    "SOLR_URL": "http://127.0.0.1:5000",
+
+    "MEDIA_ROOT": "/var/www/makerlab/media/",
+    "STATIC_ROOT": "/var/www/makerlab/static/",
+
+    "DML_AUTH_KEY": "_1234abcd",
+    "DML_AUTH_SECRET": "_5678efgh",
+
+    "DML_EMAIL_HOST": "noreply@deti-makerlab.ua.pt",
+    "DML_EMAILS_ADMIN": "admin@example.com",
+    "DML_EMAILS_MANAGER": "manager@example.com, manager2@example.com"
+}
 ```
 
-```
-/api/articles/<int:article_id>
+The parameters without the `DML_ prefix` are mapping configuration parameters original from django, used in a `settings.py` file. Bellow is an explanation of the others:
 
-article_id: article id
+* `HOST`: Wiki MakerLab base url;
+* `DML_AUTH_KEY` and `DML_AUTH_SECRET`: Parameters from UA OAuth [ver aqui](http://api.web.ua.pt/pt/services/universidade_de_aveiro/oauth);
+* `DML_EMAIL_HOST`: email to appear in the sender field of MakerLab's automatic emails
+* `DML_EMAILS_ADMIN`: list of emails to where are sent a copy of all emails sent by the system (usually the administrator of the system)
+* `DML_EMAILS_MANAGER`: list of emails to where are sent all requisitions/deliveries (usually the managers of the system)
 
-    GET: Returns a article
-    Permissions: Administrator
-```
+## Wiki roles
+When developing new features to the wiki, be attentive to the existent user roles, explained in detail [here](/specification/wiki/).  
 
-### Equipments
+## django-wiki
 
-```
-/api/equipments
-
-    GET: Returns the list of all the equipments
-    Permissions: Everyone
-```
-
-```
-/api/equipments/<int:equipment_id>
-
-equipment_id: equipment id
-
-    GET: Returns an equipment
-    Permissions: Everyone
-```
-
-```
-/api/equipments/<int:equipment_id>/quantity/<int:quantity>
-
-equipment_id: equipment id
-quantity: quantity to add/subtract to the equipment's stock
-
-    PUT: Adds quantity to the equipment
-    DELETE: Subtracts quantity to the equipment
-    Permissions: Manager
-```
-
-```
-/api/equipments/<int:equipment_id>/project_id/<int:project_id>/user_id/<int:user_id>/timestamp/<timestamp:timestamp>/lost
-
-equipment_id: equipment id
-project_id: project id associated to the requisition
-user_id: user id associated to the requisition
-timestamp: momment when the requisition occured
-
-    DELETE: Marks a pending unit (with an active requisition) as lost, subtracting it from the stock
-    Permissions: Manager
-```
-
-### Projects
-
-```
-/api/projects
-
-    GET: Returns the list of all the projects of the logged user
-    Permissions: Everyone
-```
-
-```
-/api/projects/<int:user_id>
-
-user_id: user id
-
-    GET: Returns the list of all the projects of the given user
-    Permissions: Everyone
-```
-
-```
-/api/projects/new
-
-title: project's title
-content: project's content
-
-    GET: Creates a new project
-    Permissions: User
-```
-
-```
-/api/projects/<int:project_id>/mentor
-
-project_id: project id
-
-    GET: Assigns the logged user as mentor of the given project
-    Permissions: Teacher
-```
-
-```
-/api/projects/<int:project_id>/member/<int:user_id>
-
-project_id: project id
-user_id: user id
-
-    PUT: Adds the given user to the given project
-    DELETE: Removes the given user from the given project
-    Permissions: User belonging to the given project (PUT) or owner of the given project (DELETE)
-```
-
-```
-/api/projects/<int:project_id>/requisitions/<int:equipment_id>
-
-project_id: project id
-equipment_id: equipment id
-
-    PUT: Adds a requisition to the given equipment associated to the given project and the logged user
-    DELETE: Removes a requisition from the given equipment associated to the given project and the logged user
-    Permissions: User (PUT) or user in the possession of the active requisition (DELETE)
-```
-
-```
-/api/projects/<int:project_id>/invite_mentor/<email:email>
-
-project_id: project id
-email: destinatary's email
-
-    PUT: Sends an email to the given destinatary with and invitation to visit and become a mentor of the given project
-    Permissions: User
-```
-
-### Requisitions
-
-```
-/api/requisitions
-
-    GET: Returns the list equipments with requisitions from the logged user
-    Permissions: User
-```
-
-```
-/api/requisitions/active
-
-    GET: Returns the list equipments with active requisitions from the logged user
-    Permissions: User
-```
-
-#### Profiles
-
-```
-/api/profiles
-
-    GET: Returns the list of all the user profiles
-    Permissions: Everyone
-```
-
-```
-/api/profile
-
-    GET: Returns the profile  of the logged user
-    Permissions: User
-```
-
-```
-/api/profiles/<int:user_id>
-
-user_id: user id
-
-    GET: Returns the profile of the given user
-    Permissions: Everyone
-```
-
-```
-/api/profiles/<int:user_email>
-
-user_email: user email
-
-    GET: Returns the profile of the given user by its email
-    Permissions: Everyone
-```
-
-```
-/api/profiles/<int:user_id>/teacher
-
-user_id: user id
-
-    PUT: Assigs the given user as teacher
-    Permissions: Manager
-```
-
-### Solr
-
-```
-/api/solr/update/all
-
-user_id: user id
-
-    GET: Sends to solr all the articles in the system
-    Permissions: Administrator
-```
-
-```
-/api/solr/update/<int:article_id>
-
-article_id: article id
-
-    GET: Sends to solr the given article
-    Permissions: Administrator
-```
-
-```
-/api/solr/raw/<string:path>
-
-path: complete path to the solr original API. Example: "/api/solr/raw/api/pt/user/1/projects"
-
-    GET: Calls the solr API's endpoint correspondent to the given path
-    Permissions: Administrator
-```
+Along the development of MakerLab Wiki, we maintained our repository fork updated with the new versions coming from django-wiki ([here](https://github.com/django-wiki/django-wiki)), the wiki that is in the origin of ours. All the development made in MakerLab Wiki was done with that in mind, supporting new changes from the original project, MakerLab Wiki up to date with the new features and fixes that came from the original project. So, please keep these efforts in your development, don't forget to merge new django-wiki versions with ours.
