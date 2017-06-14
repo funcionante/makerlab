@@ -4,104 +4,100 @@ category: Developer
 order: 8
 ---
 
+The commands the servant answers to are already discussed in the [user
+area](../../user/Servant/).
 
-### Servant's rules
+## Introduction
 
+The servant is a [hubot](https://hubot.github.com/) chatbot that uses the
+[hubot-slack](https://www.npmjs.com/package/hubot-slack) adapter to interact
+with [DETI's Slack](https://detiuaveiro.slack.com).
+
+It runs in Node.js and accepts scripts in either coffeescript or javascript.
+
+The repo which hosts the projects code is `dml-servant`.
+
+To interact with slack, the bot needs a secret token generated at the
+department's slack page.
+
+Besides answering to the already mentioned commands, the bot is also capable of
+periodically checking a set of endpoints and reporting their results (through
+slack).
+
+The logged user's email is used to request information from the wiki (which in
+turn also uses the same email). This makes transparent (to the user) the
+integration of both services.
+
+## Details
+
+The following details are given per directory or file of the repo.
+
+### `assets/`
+
+This directory includes relevant files for the bot's execution.
+
+The most useful one is `endpoints.txt`, which includes a set of endpoints to
+periodically try to reach.
+
+### `lib/constants.js`
+
+Defines constants used through the rest of the code.
+
+The most relevant portion of it is included:
 ```
-the rules
-    returns the rules dml-servant follows
-```
+DML_NM_HOST: '192.168.1.128',
+DML_NM_PORT: '22',
+DML_NM_URL: 'http://127.0.0.1:5000',
+DML_NM_USERNAME: 'dml-datacenter',
 
-![the-rules](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fthe-rules.png?alt=media&token=c7bfd5d4-bdc6-4831-80de-5571f36df397)
+DML_DEV_API_HOST: '188.166.77.53',
+DML_DEV_SSL_CERT: fs.readFileSync('assets/nginx-selfsigned_dev.crt', {encoding: 'utf-8'}),
 
-### Debug
+DML_PING_CHANNEL: '#makerlab-reports',
+DML_PING_ENDPOINTS: 'assets/endpoints.txt',
+DML_PING_MIN_PATTERN: '*/30',  // every 30 minutes
 
-```
-echo <text>
-    reply back with <text>
-```
-
-![echo](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fecho.png?alt=media&token=4616a041-346b-4ac5-a4e3-0d897c71dc7a)
-
-```
-ping
-    reply with pong
-```
-
-![ping](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fping.png?alt=media&token=8a0aff86-9b4d-4b14-bf87-0ad46ea13ff3)
-
-### Help
-
-```
-dml-servant help
-    displays all of the help commands that Hubot knows about
-```
-
-![help](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fhelp.png?alt=media&token=7d057d40-be12-4655-b7e9-6023aed68a31)
-
-```
-dml-servant help <query>
-    displays all help commands that match <query>
-```
-
-![help-query](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fhelp-query.png?alt=media&token=597dffba-7a9a-47f5-8e18-e2228e741adc)
-
-### Projects
-
-```
-dml-servant projects ls
-    returns the list of projects the logged user belongs to
-```
-
-### Network
-
-```
-dml-servant network add port <proj-id> <port-id>
-    associate port `port-id` with the VLAN of the project `proj-id`
-```
-
-```
-dml-servant network create <proj-id> <dockerfile-url>
-    create a VM, associated to the user's project `proj-id`, according to the
-    specs in `dockerfile-url` (the url of the docker file)
+DML_PRIVATE_KEY: fs.readFileSync('assets/id_rsa'),
+DML_SSL_CERT: fs.readFileSync('assets/nginx-selfsigned.crt', {encoding: 'utf-8'})
 ```
 
-```
-dml-servant network log <cont-id>
-    show the log of the container with id `cont-id`
-```
+* `DML_NM_*` constants relevant to the bot's interaction with the network manager.
+* `DML_DEV_*` define constants used when referencing the development server.
+* `DML_PING_*` constants used regarding the "test endpoints" function.
+* `DML_PRIVATE_KEY` key used by the bot in ssh sessions.
+* `DML_SSL_CERT` certificate the bot expects from the main server.
 
-```
-dml-servant network ls <proj-id>
-    list the containers (along some extra info) associated with `proj-id`
-```
+### `scripts/crontab.js`
 
-```
-dml-servant network restart <cont-id>
-    restart the container with id `cont-id`
-```
+Handles testing endpoints in a cron-like approach.
 
-```
-dml-servant network rm <cont-id>
-    remove the container with id `cont-id`
-```
+Non of its methods are callable from the outside world, since they only output
+information.
 
-```
-dml-servant network rm port <port-id>
-    disassociate port `port-id` from the VLAN it is connected to
-```
+### `scripts/projects.js`
 
-```
-dml-servant network start <cont-id>
-    start the container with id `cont-id`
-```
+Contains functions regarding projects.
 
-```
-dml-servant network stat <cont-id>
-    show the status of the container with id `cont-id`
-```
+Currently one chat listener is registered, which is used to display information
+about the logged user's projects.
 
-```
-dml-servant network stop <cont-id>
-    stop the container with id `cont-id`
-```
+### `scripts/network.js`
+
+The main script used by the bot.
+
+All the `network` endpoints registered in the bot are written in this file.
+
+#### Major warning
+
+The way the servant authenticates with the network, for security reasons, is
+through ssh. This means that the servant effectively ssh's into the machine
+running the network's server in order to issue requests.
+
+This is transparent to the developers by the use of
+[http-ssh-agent](https://www.npmjs.com/package/http-ssh-agent), which enables
+the creation of an agent used to proxy requests.
+
+### `setup/`
+
+A directory containing information/scripts on how to generate the initial
+version of the bot.
