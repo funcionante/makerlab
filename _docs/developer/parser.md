@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Developer
-order: 7
+order: 8
 ---
 
 The parser can be logically divided into 4 stages:

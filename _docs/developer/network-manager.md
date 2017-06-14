@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Developer
-order: 6
+order: 7
 ---
 
 The network manager is in charge of all things network. It's main goal is to
