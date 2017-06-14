@@ -28,3 +28,6 @@ delivery schedule.
 
 Next week: Requisitions!
 ![Week 5, Diagram 1](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/Wk05-01.jpg?alt=media&token=68c4e521-4649-492c-8e6a-024c302735e4)
+
+-------------------------------------------------------------------------------
+*Published at 12-03-2017*

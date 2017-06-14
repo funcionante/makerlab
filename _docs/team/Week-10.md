@@ -15,3 +15,6 @@ already deployed:
   nginx;
 * Got a few servant's features introduced (such as a ping-like command).
 This is not meant to be an extensive list.
+
+-------------------------------------------------------------------------------
+*Published at 16-04-2017*

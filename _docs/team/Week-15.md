@@ -17,3 +17,6 @@ outside world, in a pretty and informative way.
 We are adding features, improving old ones and bugfixing errors that appear
 along the way. We are building towards DETI MakerLab completion one step at a
 time (now aiming to the soon to come full demo).
+
+-------------------------------------------------------------------------------
+*Published at 21-05-2017*

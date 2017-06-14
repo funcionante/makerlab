@@ -29,3 +29,6 @@ Some mockups for the mobile app were also prepared:
 ![Mobile App - 1](../../images/mockups/mockups_v0_2_08.png){:width="180px"}
 ![Mobile App - 1](../../images/mockups/mockups_v0_2_09.png){:width="180px"}
 ![Mobile App - 1](../../images/mockups/mockups_v0_2_11.png){:width="180px"}
+
+-------------------------------------------------------------------------------
+*Published at 19-02-2017*

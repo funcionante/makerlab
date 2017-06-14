@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Specifications
-order: 14
+order: 4
 ---
 
 Since most of the knowledge of the system is kept within our wiki, in a

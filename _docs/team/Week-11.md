@@ -33,3 +33,6 @@ maintaining what has already been developed/deployed).
 As a sneak peek, we have planned the development of a "How many people in the
 room?" feature, as well as having the chatbot handling the interface with the
 datacenter's management API.
+
+-------------------------------------------------------------------------------
+*Published at 23-04-2017*

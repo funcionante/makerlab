@@ -15,3 +15,6 @@ the requisition platform (after that last minute change we were imposed).
 
 As an addition, we have also started experimenting with ideas for people
 counting. We expect to have it working soon.
+
+-------------------------------------------------------------------------------
+*Published at 30-04-2017*
