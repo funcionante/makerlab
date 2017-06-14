@@ -35,7 +35,7 @@ found [here](/specification/scenarios/).
 
 ## Features
 
-DETI MakerLab (DML) platform addresses the following features:
+DETI MakerLab (DML) platform includes the following features:
 
 * Create, edit and delete projects;
 * Register and edit equipment’s info and their quantity;
@@ -54,7 +54,7 @@ DETI MakerLab (DML) platform addresses the following features:
 
 Here is a simple illustration of how DETI MakerLab looks like:
 
-![DML Architecture](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/dml-architecture.svg?alt=media&token=49f78fb4-81a8-408b-a82d-cc4fec9876a1)
+![DML Architecture](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/Architecture.png?alt=media&token=4fe547e4-ce7c-4458-a2b1-dda5ee212d47)
 {:center}
 
 Although not an extensive diagram, hopefully it will empower the reader with a
