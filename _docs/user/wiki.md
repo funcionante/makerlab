@@ -8,7 +8,7 @@ All the knowledge of the system is on the wiki. On the one hand, wiki provides t
 
 ### Login
 
-Forget the accounts. Wiki comes with UA's authentication system.
+To avoid the constraints of having multiple accounts, wiki comes with UA's authentication system, integrating it with the whole system.
 
 ![acocunts](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/wiki%2Fv05%2Fwiki_00.png?alt=media&token=a028710c-4194-472d-89c8-9c15c1662280)
 

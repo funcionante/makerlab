@@ -168,6 +168,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Edit `environ.json` with the installation specific configurations. You can find more information about this file [here](/developer/wiki/).
+
 #### Gentelella
 
 ```bash
