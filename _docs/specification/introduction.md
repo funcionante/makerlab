@@ -4,25 +4,28 @@ category: Specifications
 order: 1
 ---
 
+![MakerLab 3D Logo](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/IMG_20170614_195527.jpg?alt=media&token=555809ac-e4e4-4cc2-985e-074ba8724e11)
+
 ## Features
 
-DETI MakerLab (DML) platform will address the following features:
+DETI MakerLab (DML) platform addresses the following features:
 
-* University of Aveiro’s UU authentication (implicit account creation);
-* Create, edit, close and delete projects;
-* Add/register and edit equipment’s info and their units;
+* Create, edit and delete projects;
+* Register and edit equipment’s info and their quantity;
 * Invite and remove collaborators to projects;
-* Generation of QR codes for unlabeled units (and RJ-45 sockets);
+* Generation of QR codes for unlabeled units;
 * Search users/projects/equipments;
-* Request and return/release electronic equipment;
-* Scanning QR codes of equipments using the mobile app;
-* Request or deliver VLANs and create or destroy VMs through the DETI MakerLab Servant;
-* Web monitoring of equipments, VM’s and VLANs;
-* Request new equipment (not existent in DML).
+* Document users/projects/equipments with text, images and file attachments;
+* Version controlled documentation;
+* Let teachers approve projects;
+* Request and return/release electronic equipment in the context of approved projects;
+* Scanning QR codes of equipments using the mobile app in order to do requests;
+* Notify requisitions by email;
+* Request and release VLANs and create or destroy VMs through the DETI MakerLab Servant.
 
 ## Scenarios
 
-These were left out of this page in order to keep it consice. They can be
+These were left out of this page in order to keep it concise. They can be
 found [here](/specification/scenarios/).
 
 ## Requirements
@@ -31,38 +34,31 @@ The following requirements state the functions and capabilities that the DML
 system will provide, although some requirements may be stated on other pages:
 * Integration with University of Aveiro’s services (UU) --- for easier access
   and information retrieval;
-* Wiki-based platform --- allowing more flexibility to content storing;
-* Web platform --- information query and simple tasks (creating projects,
-  inviting collaborators, etc.);
-* Android and iOS apps --- full functionality (e.g. requisitioning items) plus
-  scanning QR codes for requests;
+* Wiki-based platform --- imposed by stakeholders --- search for information in
+the system and manage equipments and their requisitions, projects and users;
+* Android and iOS apps --- manage projects and request equipments using their QR
+codes to make the requisition process agile;
 * Self-managed network --- able to satisfy the users’ requests to VM’s and
   VLANs autonomously, in order to overcome UA's network constraints;
-* Highly modularized and loosely coupled --- components must be easily swapped
-  in or out;
-* Reuse existing projects and frameworks --- keep project maintenance to a
-  minimum;
-* History of equipment usage  (owner and associated project) --- keep a log of
-  users who might have broken it + statistics;
-* Overview of statistics --- providing insights for example about equipment's
-  use and topics of projects;
-* The system should be autonomous --- human interaction (and worries with the
-  system) to the minimum;
-* The system must be fun and effortless for the average user --- implicit
-  value;
-* The system must be ready to be expanded and scalable in the future --- this
-  is a multi-year project, must be easily expanded.
+* Components must be independent --- the failure of a plugin component must
+not affect neither the core nor other plugins;
+* History of equipment usage (owner and associated project) --- keep a log of
+  users who might have broken it;
+* Ability to automatically test the reachability of a set of endpoints;
+* Interface to manage the room's network;
+* Statistics about the room's usage (count people);
+* The system must provide APIs for easy expansion --- this is a multi-year
+project.
 
 ## Architecture
 
-Here is a simple illustration of how DETI MakerLab will look like once
-completed:
+Here is a simple illustration of how DETI MakerLab looks like:
 
 ![DML Architecture](https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/dml-architecture.svg?alt=media&token=49f78fb4-81a8-408b-a82d-cc4fec9876a1)
 {:center}
 
 Although not an extensive diagram, hopefully it will empower the reader with a
-more top-level understanding of the DML's internals.
+top-level understanding of the DML's internals.
 
 ### Components
 
@@ -70,7 +66,7 @@ The components illustrated above are documented within each one's page. Yet,
 a succinct description of each component will be provided for completeness'
 sake.
 
-#### API
+#### API provider
 
 This is the component responsible for programmatically interfacing with the
 outside world --- with apps or the lab's servant, for example.
@@ -82,20 +78,30 @@ and validating (authentication-wise) the access to wiki pages.
 
 For more information see [here](/specification/wiki/).
 
+#### App
+
 #### Index Manager
 
-Answers performance concerns that could rise due to our data organizational
-mode (which in turn is based on requirements such as the use of a wiki-based
+Answers performance concerns that could rise due to our data organization
+model (which in turn is based on requirements such as the use of a wiki-based
 system). Facades the interaction with an indexer, abstracting the build of
 queries that would otherwise require extensive knowledge about the indexer's
 internals.
 
 For more information see [here](/specification/indexer/).
 
+#### Wiki Parser
+
+The component responsible for processing the (unstructured) structure of the
+wiki into a more well-defined form.
+
+It handles the different stages of organization discussed in
+[data-structure](/developer/data-structure/).
+
 #### Network Manager
 
-Gives answer to the network matters of the lab. Abstracts the issuing of
-VLANs, the creation/removal of VMs, and NAT/PAT mechanisms.
+Answers to the network matters of the lab. Abstracts the issuing of
+VLANs and the creation/removal of VMs.
 
 For more information see [here](/specification/network-manager/).
 
