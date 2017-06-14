@@ -80,6 +80,11 @@ For more information see [here](/specification/wiki/).
 
 #### App
 
+The app provides for a more user-centered experience within the lab and have 
+all necessary tools to start using it's features as fast as possible.
+
+For more information see [here](/specification/mobile-app/).
+
 #### Index Manager
 
 Answers performance concerns that could rise due to our data organization

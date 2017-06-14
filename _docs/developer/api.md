@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Developer
-order: 10
+order: 1
 ---
 
 Wiki has an API that is available to be used for any developer that wishes to, but was originally designed to be used and integrated with our mobile app. With the evolution of the project it was also used by our chatbot and even by some particular features of the wiki. Above are the endpoints available and their usage.

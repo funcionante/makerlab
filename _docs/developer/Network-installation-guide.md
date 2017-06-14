@@ -1,7 +1,7 @@
 ---
 layout: default
 category: Developer
-order: 5
+order: 6
 ---
 
 This guide explains how an installation of the network components of MakerLab 
