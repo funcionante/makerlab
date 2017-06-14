@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 Requirements such as the use of a wiki-based platform and high flexibility
 demands made us adopt the data organization discussed
 [here](/data-structure/).

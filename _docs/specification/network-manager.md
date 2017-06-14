@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 The network manager is in charge of all things network. It's main goal is to
 provide a private network to each project, with internet connectivity,
 as well as the possibility of launching Docker containers for testing
