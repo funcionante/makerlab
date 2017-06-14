@@ -10,7 +10,7 @@ order: 0
     <th>Ricardo Jesus</th>
   </tr>
   <tr><td>Project manager</td></tr>
-  <tr><td>API, Solr, wiki parser, print util, servant (chatbot)</td></tr>
+  <tr><td>API, Solr, wiki parser, print util, servant (chatbot), counting people</td></tr>
 
   <tr>
     <th rowspan="3"><img src="https://avatars2.githubusercontent.com/u/11805521?v=3&s=460" alt="Diogo's photo" style="width:120px;height:120px;"></th>
@@ -24,7 +24,7 @@ order: 0
     <th>Leonardo Oliveira</th>
   </tr>
   <tr><td>Product manager</td></tr>
-  <tr><td>Brand, aesthetics, wiki, API</td></tr>
+  <tr><td>Brand, aesthetics, wiki, API, counting people</td></tr>
 
   <tr>
     <th rowspan="3"><img src="https://avatars2.githubusercontent.com/u/10819202?v=3&s=460" alt="Pedro's photo" style="width:120px;height:120px;"></th>
