@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item current"><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>Developer</h2>
+                <h3>Wiki</h3>
+            </div>
+            <article class="content">
+                <p>Wiki is the core of the system. There lives (almost) all the information of the system. On the one hand, wiki provides tools to manage equipments, projects and users. On the other, users can collaboratively edit articles, in a version controlled way, to document and share all the information that assists students making their projects happen.</p>
+
+<h2 id="context">Context</h2>
+
+<p>To avoid some misunderstandings, we want to give you a few words about the wiki’s concept. Wiki is primarily… a Wiki, like Wikipedia. There are articles on users, projects and equipments. But, due to the requirements for management, it  provides the capabilities of an information system. A wiki is primarily a place to store flexible content, that can be indexed in a dynamic way. For example, each equipment, in its article, saves the requisitions’ logs in a XML structure, along with the content of the article itself.</p>
+
+<h2 id="before-starting">Before starting</h2>
+
+<p>Before you continue, here are some recommendations for where to start if you need to develop new features over the wiki. Wiki is a fork of the django-wiki project, developed in django, a Python’s web framework. So, first you need to be familiar with Python, witch we assume you are. Second, you will need to be familiar with django, witch we assume you aren’t. In order to achieve that, we recommend you the beginners tutorial available on django’s documentation, <a href="https://docs.djangoproject.com/en/1.11/intro/tutorial01/">here</a>. It will give you a fast and complete way to understand the django’s basics. We really recommend you to follow this tutorial, otherwise it will be chaotic for you too understand what is going on in the project’s structure. After performing this, be sure that words like models, views, urls and templates are not weird for you in the context of django. To conclude, as we said, django-wiki (the original project from where we forked our own) is developed in django. This is not specially important to know, but if you are curious, take a few seconds to visit their repository <a href="https://github.com/django-wiki/django-wiki">here</a>.</p>
+
+<h2 id="database-model">Database model</h2>
+<p>The system is based in the database that was originally developed in the django-wiki. The database has all the logic to manage articles, article’s revisions and a few other things. The database model is presented bellow, and it will be very useful for you when you start manipulating the source code. Use it to guide yourself when building your queries.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/wiki%2Fwiki_model.png?alt=media&amp;token=e5ffe110-3fec-4a75-87ad-1070d737bbab" alt="Wiki models" /></p>
+
+<p>The database model is 100% kept like the original. This has to do with our vision to build a dynamic and flexible system. The database serves the low level logic to manage the basic functionalities of a wiki: the articles. All the logic we needed to implement in each article type (equipments, projects, users), was done in the article content. Each article has in its content a XML structure. That XML provides everything we need to store information in a structured way. The wiki, supported with an indexer and a parser, can interpret all this information in a dynamically.</p>
+
+<p>The tag ‘type’ specifies the article type. The article’s content, displayed to the users when they surf on the wiki, is saved in the ‘content’ tag, using markdown. Other tags are present according to the article type.</p>
+
+<h3 id="equipments-structure">Equipment’s structure</h3>
+
+<p>Each equipment has tags for quantity, active requisitions and requisition logs.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;wiki&gt;
+    &lt;content&gt;
+        # Ficha Técnica
+        * ** Família: ** Microcomputador
+        * ** Sub-Família: ** Raspberry
+        * ** Código: ** 640522710850
+        * ** Preço (c/ IVA): ** 38.63€
+        * ** Fornecedor: ** Farnell
+        * ** Localização: ** N/A
+        * ** Data Última Aquisição: ** 2016/11/03
+
+        # Imagens
+        [image:4 align:left size:orig]
+
+        ...
+    &lt;/content&gt;
+    &lt;type&gt;equipment&lt;/type&gt;
+    &lt;quantity&gt;20&lt;/quantity&gt;
+    &lt;active_requisitions&gt;1&lt;/active_requisitions&gt;
+    &lt;requisitions&gt;
+        &lt;requisition&gt;
+            &lt;project&gt;42&lt;/project&gt;
+            &lt;member&gt;1&lt;/member&gt;
+            &lt;begin&gt;2017-06-11T17:35:22.773391Z&lt;/begin&gt;
+            &lt;end&gt;2017-06-11T17:35:33.716983Z&lt;/end&gt;
+        &lt;/requisition&gt;
+        &lt;requisition&gt;
+            &lt;project&gt;42&lt;/project&gt;
+            &lt;member&gt;1&lt;/member&gt;
+            &lt;begin&gt;2017-06-11T17:35:24.551744Z&lt;/begin&gt;
+        &lt;/requisition&gt;
+    &lt;/requisitions&gt;
+&lt;/wiki&gt;
+</code></pre>
+</div>
+
+<h3 id="projects-structure">Project’s structure</h3>
+
+<p>A project has tags for members.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;wiki&gt;
+    &lt;content&gt;
+        # Descrição
+        O DETI MakerLab é um sistema projetado para gerir a nova sala do DETI.
+        ...
+    &lt;/content&gt;
+    &lt;type&gt;project&lt;/type&gt;
+    &lt;members&gt;
+        &lt;owner&gt;4&lt;/owner&gt;
+        &lt;mentor&gt;2&lt;/mentor&gt;
+        &lt;member&gt;5&lt;/member&gt;
+        &lt;member&gt;8&lt;/member&gt;
+    &lt;/members&gt;
+&lt;/wiki&gt;
+</code></pre>
+</div>
+
+<h2 id="user-profiles-structure">User profile’s structure</h2>
+
+<p>A user profile saves some personal data like NMEC and course. It also registers if a user is a teacher.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;wiki&gt;
+    &lt;content&gt;
+        # Sobre mim
+        ![Foto](https://qph.ec.quoracdn.net/main-thumb-t-47219-200-krmazzslyzgyzmjogyetrglpdgxnodob.jpeg)
+
+        Esta página é reservada a ti. Edita-a a teu gosto.
+        ...
+    &lt;/content&gt;
+    &lt;type&gt;profile&lt;/type&gt;
+    &lt;is_teacher&gt;True&lt;/is_teacher&gt;
+&lt;/wiki&gt;
+</code></pre>
+</div>
+
+<h2 id="environjson">environ.json</h2>
+<p>Wiki has a configuration file some environment variables. Those value vary from installation to installation. This is an example of a setup of this file:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"HOST"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://deti-makerlab.ua.pt/"</span><span class="p">,</span><span class="w">
+
+    </span><span class="nt">"ALLOWED_HOSTS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"188.166.77.53 127.0.0.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"DEBUG"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"SECRET_KEY"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567890qwertyuiopasdfghjklzxc"</span><span class="p">,</span><span class="w">
+
+    </span><span class="nt">"DATABASE_HOST"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"DATABASE_PASSWORD"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"DATABASE_PORT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5432"</span><span class="p">,</span><span class="w">
+
+    </span><span class="nt">"WIKI_URL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://127.0.0.1:80"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"SOLR_URL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://127.0.0.1:5000"</span><span class="p">,</span><span class="w">
+
+    </span><span class="nt">"MEDIA_ROOT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/var/www/makerlab/media/"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"STATIC_ROOT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/var/www/makerlab/static/"</span><span class="p">,</span><span class="w">
+
+    </span><span class="nt">"DML_AUTH_KEY"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_1234abcd"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"DML_AUTH_SECRET"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_5678efgh"</span><span class="p">,</span><span class="w">
+
+    </span><span class="nt">"DML_EMAIL_HOST"</span><span class="p">:</span><span class="w"> </span><span class="s2">"noreply@deti-makerlab.ua.pt"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"DML_EMAILS_ADMIN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"DML_EMAILS_MANAGER"</span><span class="p">:</span><span class="w"> </span><span class="s2">"manager@example.com, manager2@example.com"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>The parameters without the <code class="highlighter-rouge">DML_ prefix</code> are mapping configuration parameters original from django, used in a <code class="highlighter-rouge">settings.py</code> file. Bellow is an explanation of the others:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">HOST</code>: Wiki MakerLab base url;</li>
+  <li><code class="highlighter-rouge">DML_AUTH_KEY</code> and <code class="highlighter-rouge">DML_AUTH_SECRET</code>: Parameters from UA OAuth <a href="http://api.web.ua.pt/pt/services/universidade_de_aveiro/oauth">ver aqui</a>;</li>
+  <li><code class="highlighter-rouge">DML_EMAIL_HOST</code>: email to appear in the sender field of MakerLab’s automatic emails</li>
+  <li><code class="highlighter-rouge">DML_EMAILS_ADMIN</code>: list of emails to where are sent a copy of all emails sent by the system (usually the administrator of the system)</li>
+  <li><code class="highlighter-rouge">DML_EMAILS_MANAGER</code>: list of emails to where are sent all requisitions/deliveries (usually the managers of the system)</li>
+</ul>
+
+<h2 id="wiki-roles">Wiki roles</h2>
+<p>When developing new features to the wiki, be attentive to the existent user roles, explained in detail <a href="/specification/wiki/">here</a>.</p>
+
+<h2 id="django-wiki">django-wiki</h2>
+
+<p>Along the development of MakerLab Wiki, we maintained our repository fork updated with the new versions coming from django-wiki (<a href="https://github.com/django-wiki/django-wiki">here</a>), the wiki that is in the origin of ours. All the development made in MakerLab Wiki was done with that in mind, supporting new changes from the original project, MakerLab Wiki up to date with the new features and fixes that came from the original project. So, please keep these efforts in your development, don’t forget to merge new django-wiki versions with ours.</p>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

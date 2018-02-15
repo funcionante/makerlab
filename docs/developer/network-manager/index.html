@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item current"><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>Developer</h2>
+                <h3>Network Manager</h3>
+            </div>
+            <article class="content">
+                <p>The network manager is in charge of all things network. It’s main goal is to
+provide a private network to each project, with internet connectivity,
+as well as the possibility of launching Docker containers for testing
+and deployment. All the traffic is completely isolated from each network
+and the users can access their projects’ networks and containers by associating
+RJ-45 sockets at DML’s room to them.</p>
+
+<p>A simplified vision of our network architecture would be:</p>
+
+<p style="text-align: center"><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/network%2FNetwork%20Diagram.png?alt=media&amp;token=8cb4994b-84d3-485f-b763-1ae706160b9d" alt="Network Architecture" /></p>
+
+<h2 id="before-starting">Before Starting</h2>
+
+<p>We recommend having a small knowledge base on Software Defined Networks (SDN),
+OpenFlow, Open vSwitch, Docker and overall networking before diving into this 
+section.</p>
+
+<p>The “core” of each project’s network will be hosted on a datacenter, where
+the containers will be orchestrated and the NAT/PAT mechanisms will provide
+internet access to all the hosts across the private networks.</p>
+
+<p>In order to fulfill time milestones, it was decided that this 
+implementation of the container orchestration will be focused on a single-host
+datacenter architecture, <strong>rather than</strong> a swarm-like implementation.</p>
+
+<p>The datacenter will be running an HTTP server (NetManager), that will fulfill 
+all the requests of the DML’s API, and will be responsible for managing all
+the Open vSwitch bridges, containers and the associated ports of the projects.</p>
+
+<p>The datacenter will also be running the SDN Controller responsible for 
+controlling the switch’s traffic at the DETI MakerLab room.</p>
+
+<p>Both the NetManager and SDN Controller will be using the same PostgreSQL
+database, where it’ll be stored all the information relative to the network.
+At the moment, all the requests made to the NetManager come exclusively from the 
+<code class="highlighter-rouge">dml-servant</code>. The following image describes the current architecture in place:</p>
+
+<p style="text-align: center"><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/network%2FDatacenter%20Diagram.png?alt=media&amp;token=800c6687-1d66-489e-ab87-53fba4ae46b0" alt="Datacenter Architecture" /></p>
+
+<h2 id="netmanager">NetManager</h2>
+
+<p>The controller behind managing all the things at the Datacenter is 
+a flask powered HTTP Server, with the assistance of a PostgreSQL database to
+store all the networking-relative information.
+Its main functionalities are:</p>
+<ul>
+  <li>Creation and destruction of a project’s network — when the first container
+is launched (within the scope of a project) or a ethernet port is requested, 
+an OvS bridge is created and a router-like container is started;</li>
+  <li>Creation and destruction of containers — either a pre-built container or
+built with a Dockerfile provided by the user;</li>
+  <li>Change of state (start and stop) of containers;</li>
+  <li>Association of RJ-45 sockets (based on a printed ID on them) to projects’
+networks (in order to let the SDN controller know which ports belong to the
+projects’ VLANs);</li>
+  <li>Informational endpoints to the platform’s API, mainly to the <code class="highlighter-rouge">dml-servant</code>,
+returning container’s DockerIDs, IPs, status, logs and more.</li>
+</ul>
+
+<h3 id="projects-vswitch">Project’s vSwitch</h3>
+
+<p>Project’s vSwitch is nothing more than a virtual switch (using Open vSwitch), 
+created in the scope of each project (when the first container is created
+or a port is requested) and that will have two main purposes:</p>
+<ul>
+  <li>Operate as a switch/bridge for attaching containers;</li>
+  <li>Create a connection between the project’s switch and the VTEP bridge to
+send the traffic trough the VxLAN tunnel, so that all containers and users’ 
+terminals (laptops, etc.) at DML coexist inside the same Layer 2 network 
+(private network of each project).</li>
+</ul>
+
+<h3 id="router-container">“Router” container</h3>
+
+<p>Each private network, after the creation of its OvS bridge, will be provided
+with a container that will operate like a router, creating the “bridge” between
+this network and the internet, using NAT/PAT mechanisms, and operating like
+a DHCP server, providing IP addresses to all the hosts within that network.</p>
+
+<p>The router container runs a Alpine Linux distro with IPTables for NAT/PAT and
+ISC DHCP server for the DHCP service.</p>
+
+<h3 id="container-orchestration-architecture">Container Orchestration Architecture</h3>
+
+<p>A more comprehensive view on the internal works of the datacenter orchestration
+can be seen in the following image.</p>
+
+<p style="text-align: center"><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/network%2FOvS%20Diagram.png?alt=media&amp;token=93e0456f-c34c-4f50-9a5b-8dd0cff272ef" alt="Container Architecture" /></p>
+
+<p>There are two main bridges that are created with the system deployment:</p>
+<ul>
+  <li>Routing bridge — aggregates all the public routers’ interfaces,
+as well as a network interface of the deployment machine, allowing the routers
+to obtain a public IP address;</li>
+  <li>VTEP bridge — aggregates all the patch ports that connect directly to the
+projects’ vSwitches. It’ll operate as a OpenFlow virtual switch, since, by the
+time a project bridge is created, two flows are installed on the bridge,
+in order to redirect traffic coming from the VxLAN tunnel to the project’s 
+vSwitch and vice-versa.</li>
+</ul>
+
+<h3 id="setup">Setup</h3>
+
+<p>For the complete setup instructions, please look for the network installation 
+guide for detailed instructions of how to set up all the network related 
+components.</p>
+
+<h3 id="endpoints">Endpoints</h3>
+
+<p>The <code class="highlighter-rouge">datacenter-master/server.py</code> contains a flask app which provides a set of 
+endpoints to manage all the networking. These are described below. However, there 
+are other auxiliary methods that are not displayed here, but they are well
+documented in the code.</p>
+
+<p>In all endpoints, json is returned. A return code of 400 or 500 along the with
+an error message is returned in case of failure, otherwise 200 is returned 
+(unless something unexpected happens).</p>
+
+<h4 id="add-port">Add port</h4>
+
+<p>Accepting a given <code class="highlighter-rouge">user_id</code>, <code class="highlighter-rouge">project_id</code> (id of a project) and a port number, 
+adds that port to the VLAN of that project, using the SDN controller.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/add-port/&lt;int:user_id&gt;/&lt;int:project_id&gt;/&lt;int:port_id&gt;/
+
+user_id: ID of the user on the platform
+project_id: ID of the project that the port will be associated to
+port_id: Ethernet socket port number that will be requested
+
+    POST: Returns a successful HTTP response
+</code></pre>
+</div>
+
+<h4 id="remove-port">Remove port</h4>
+
+<p>Accepting a given <code class="highlighter-rouge">user_id</code> and a port number, removes that port to the VLAN 
+of that project, using the SDN controller.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/remove-port/&lt;int:user_id&gt;/&lt;int:port_id&gt;/
+
+user_id: ID of the user on the platform
+port_id: Ethernet socket port number that will be freed
+
+    POST: Returns a successful HTTP response
+</code></pre>
+</div>
+
+<h4 id="create-project-bridge">Create project bridge</h4>
+
+<p>Accepting a given<code class="highlighter-rouge"> user_id</code> and a <code class="highlighter-rouge">project_id</code> (id of a project), 
+creates a new OvS bridge and launches its router-like container.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/create-bridge/&lt;int:user_id&gt;/&lt;int:project_id&gt;/
+
+user_id: ID of the user on the platform
+project_id: ID of the project that will have the bridge associated to
+
+    POST: Returns a successful HTTP response
+</code></pre>
+</div>
+
+<h4 id="delete-project-bridge">Delete project bridge</h4>
+
+<p>Accepting a given <code class="highlighter-rouge">user_id</code> and a <code class="highlighter-rouge">project_id</code> (id of a project), deletes 
+the corresponding OvS bridge and all its containers.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/delete-bridge/&lt;int:user_id&gt;/&lt;int:project_id&gt;/
+
+user_id: ID of the user on the platform
+project_id: ID of the project that will have the bridge associated to
+
+    POST: Returns a successful HTTP response
+</code></pre>
+</div>
+
+<h4 id="new-container">New container</h4>
+
+<p>Accepting a given <code class="highlighter-rouge">user_id</code>, a <code class="highlighter-rouge">project_id</code> (id of a project), and possibly 
+a Dockerfile, launches a new container.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/new-container/&lt;int:user_id&gt;/&lt;int:project_id&gt;/
+
+user_id: ID of the user on the platform.
+project_id: ID of the project (bridge) that the new container will be 
+attached to
+dockerfile: In attachment might be a dockerfile, describing the container
+that'll be launched
+
+    POST: Returns a dictionary with {success, container_name, ip, docker_id}
+</code></pre>
+</div>
+
+<h4 id="update-container">Update container</h4>
+
+<p>Accepting a given <code class="highlighter-rouge">user_id</code>, a <code class="highlighter-rouge">docker_id</code> and a Dockerfile, 
+updates the container.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/update-container/&lt;int:user_id&gt;/&lt;docker_id&gt;/
+
+user_id: ID of the user on the platform.
+docker_id: ID of the Docker container that will be updated 
+dockerfile: In attachment, it should be a dockerfile, describing the container
+that'll be launched.
+
+    POST: Returns a dictionary with {success, container_name, ip, docker_id}
+</code></pre>
+</div>
+
+<h4 id="delete-container">Delete container</h4>
+
+<p>Given a <code class="highlighter-rouge">user_id</code> and a <code class="highlighter-rouge">docker_id</code>, stops and removes 
+the corresponding container.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/remove-container/&lt;int:user_id&gt;/&lt;docker_id&gt;/
+
+user_id: ID of the user on the platform.
+docker_id: ID of the Docker container that will be updated 
+
+    POST: Returns a successful HTTP response
+</code></pre>
+</div>
+
+<h4 id="get-projects-containers">Get project’s containers</h4>
+
+<p>Given a <code class="highlighter-rouge">user_id</code> and a <code class="highlighter-rouge">project_id</code> (id of a project), returns all the 
+containers info related to the project.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/get-project-containers/&lt;int:user_id&gt;/&lt;int:project_id&gt;/
+
+user_id: ID of the user on the platform.
+project_id: ID of the project 
+
+    GET: Returns a dictionary with {success, containers}
+</code></pre>
+</div>
+
+<h4 id="get-container-info">Get container info</h4>
+
+<p>Accepting a given <code class="highlighter-rouge">user_id</code>, <code class="highlighter-rouge">docker_id</code>, returns all info about it: 
+IP, DockerID, status and CPU and memory usage stats.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/get-container-info/&lt;int:user_id&gt;/&lt;docker_id&gt;/
+
+user_id: ID of the user on the platform.
+docker_id: ID of the Docker container that the info is requested
+
+    GET: Returns a dictionary with {success, stats={id, docker_id, status, 
+    cpu, mem_used, mem_limit, mem_perc}}
+</code></pre>
+</div>
+
+<h4 id="get-container-logs">Get container logs</h4>
+
+<p>Accepting a <code class="highlighter-rouge">user_id</code> and a <code class="highlighter-rouge">docker_id</code>, returns its last 50 lines of log.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/get-container-logs/&lt;int:user_id&gt;/&lt;docker_id&gt;/
+
+user_id: ID of the user on the platform.
+docker_id: ID of the Docker container that the info is requested
+
+    GET: Returns a dictionary with {success, logs}
+</code></pre>
+</div>
+
+<h4 id="start-container">Start container</h4>
+
+<p>Accepting a given <code class="highlighter-rouge">user_id</code> and <code class="highlighter-rouge">docker_id</code>, 
+starts the corresponding container.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/start-container/&lt;int:user_id&gt;/&lt;docker_id&gt;/
+
+user_id: ID of the user on the platform.
+docker_id: ID of the Docker container that'll be started
+
+    GET: Returns a dictionary with {success, ip, docker_id}
+</code></pre>
+</div>
+
+<h4 id="stop-container">Stop container</h4>
+
+<p>Accepting a given <code class="highlighter-rouge">user_id</code> and <code class="highlighter-rouge">docker_id</code>,
+stops the corresponding container.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/stop-container/&lt;int:user_id&gt;/&lt;docker_id&gt;/
+
+user_id: ID of the user on the platform.
+docker_id: ID of the Docker container that'll be stoped
+
+    GET: Returns a successful HTTP response
+</code></pre>
+</div>
+
+<h4 id="restart-container">Restart container</h4>
+
+<p>Accepting a given <code class="highlighter-rouge">user_id</code> and <code class="highlighter-rouge">docker_id</code>, restarts 
+the corresponding container.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/restart-container/&lt;int:user_id&gt;/&lt;docker_id&gt;/
+
+user_id: ID of the user on the platform.
+docker_id: ID of the Docker container that'll be restarted
+
+    GET: Returns a dictionary with {success, ip, docker_id}
+</code></pre>
+</div>
+
+<h2 id="sdn-controller">SDN Controller</h2>
+
+<p>It’ll be at the DETI MakerLab room that the users will connect to their projects’
+networks, where there are several RJ-45 sockets and a OpenFlow enabled Switch to
+control all the traffic inside the room and forward it to the datacenter.</p>
+
+<p>To connect all the hosts at DML, a OpenFlow enabled Switch must exist but,
+in order to work as intended, a SDN controller is also needed.</p>
+
+<p>This controller will be responsible for:</p>
+<ul>
+  <li>Analyzing and redirecting packets that the Switch are not familiar with and
+to tell it where to forward them, may their destination be an host at the room
+or a VM through the VxLAN tunnel;</li>
+  <li>Installing OpenFlow rules in the Switch, so that the packets with a similar
+destination would be automatically redirected without the need of sending them
+to the controller.</li>
+</ul>
+
+<p>Although the SDN controller initially provided an HTTP REST endpoints, it’s
+deprecated an not used at the moment, but in the future it might be useful. 
+With that in mind, the SDN controller runs an HTTP server, but without any 
+current endpoints.</p>
+
+<p>To start the SDN controller, just use <code class="highlighter-rouge">ryu-manager sdn-controller/dml_switch_rest.py</code>.</p>
+
+<p>The controller contains the following methods:</p>
+
+<h4 id="get-ip-class-method">Get IP (class method)</h4>
+
+<p>Returns the IP of a project VLAN given a certain <code class="highlighter-rouge">project_id</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>project_id: ID of the project
+
+    Returns: string containing the IP address.
+</code></pre>
+</div>
+
+<h4 id="get-vni-class-method">Get VNI (class method)</h4>
+
+<p>Returns the VLAN ID / VNI, which equals the <code class="highlighter-rouge">project_id</code>, given an IP of a
+project VLAN.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ip: a given IP address
+
+    Returns: the VLAN ID / VNI of a project's network
+</code></pre>
+</div>
+
+<h4 id="get-all-reserved-ports">Get All Reserved Ports</h4>
+
+<p>Returns a list of all already reserved ports currently in the network database.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ip: a given IP address
+
+    Returns: list of integers - port numbers
+</code></pre>
+</div>
+
+<h4 id="get-vlan-port">Get VLAN Port</h4>
+
+<p>Given a certain port number, returns the VLAN ID that’s associated to.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>port: ethernet port number
+
+    Returns: the VLAN ID / VNI of the network the given port is associated to
+</code></pre>
+</div>
+
+<h4 id="switch-features-handler">Switch Features Handler</h4>
+
+<p>Receving an OpenFlow event as input, installs a table-miss flow entry.
+At the moment, if it specified a lesser number, e.g., 128, 
+OvS will send Packet-In with invalid <code class="highlighter-rouge">buffer_id</code> and truncated packet data. 
+In that case, it is not possible to output packets correctly.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ev: An OpenFlow event, that contains a packet message and the involved protocols
+
+    Returns: None
+</code></pre>
+</div>
+
+<h4 id="add-flow">Add flow</h4>
+
+<p>Creates a new OpenFlow flow in the current datapath (table 0).</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>datapath: Datapath of the OpenFlow controlled switch
+priority: Priority of the flow
+match: Packets matching conditions config
+actions: Actions to perform given the selected packets
+buffer_id: used Buffer ID
+    
+    Returns: None
+</code></pre>
+</div>
+
+<h4 id="parse-vxlan-broadcast">Parse VxLAN broadcast</h4>
+
+<p>Given a certain packet message and its headers that comes from the VxLAN tunnel
+port and that the destination MAC address is the broadcast address, this method
+parses that packet, figuring out which VNI / VLAN ID the packet carries and send
+it to the correct ports.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>msg: Message of a packet
+header_list: List of headers of the given message
+
+    Returns: None
+</code></pre>
+</div>
+
+<h4 id="packet-in-handler">Packet-In handler</h4>
+
+<p>Given an OpenFlow event, parses that event packet.</p>
+
+<p>According to the In-Packet origin, there are multiple alternatives:</p>
+<ul>
+  <li>If the traffic comes from the VxLAN tunnel port with the broadcast MAC
+destination, calls the <code class="highlighter-rouge">_parse_vxlan_broadcast</code> method with the given packet 
+message and its headers;</li>
+  <li>If the traffic comes from the VxLAN tunnel port with a destination IP 
+address, use the <code class="highlighter-rouge">get_vni</code> method to obtain the VLAN ID to forward it to the 
+correct VLAN;</li>
+  <li>If the traffic comes from an host directly connected to the switch, obtain
+its VLAN ID using the <code class="highlighter-rouge">get_port_to_vlan</code> method;</li>
+</ul>
+
+<p>According to the In-Packet destination:</p>
+<ul>
+  <li>If the packet’s destination MAC address is unknown (not present in the ARP
+table at the time), send the packet to all the VLAN ports, including the VxLAN
+tunnel port (flooding process);</li>
+  <li>If the packet’s destination MAC address is known, send it to the correct
+port and call the <code class="highlighter-rouge">add_flow</code> method to regist a new flow at the switch to 
+prevent these known “routes” to be constantly redirected to the SDN controller;</li>
+</ul>
+
+<p>It is worth poiting out that, if a packet is redirected to the VxLAN tunnel
+port, it’s necessarily added a new OpenFlow message field with the corresponding
+VNI / VLAN ID.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ev: An OpenFlow event, that contains a packet message and the involved protocols
+
+    Returns: None
+</code></pre>
+</div>
+
+<!-- -->
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

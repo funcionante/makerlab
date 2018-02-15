@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item current"><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>MakerLab</h2>
+                <h3>Indexer</h3>
+            </div>
+            <article class="content">
+                <p>Since most of the knowledge of the system is kept within our wiki, in a
+mostly unstructured manner, our architecture was drawn taking into
+consideration that we needed a way to sanitize its storage and its accessing.
+The first topic is covered <a href="/developer/data-structure/">here</a>, where we discus
+decisions about the data organization we adopted. This page continues this
+documentation effort by targeting the data access with an indexer.</p>
+
+<p>By including in our architecture ways of handling data from different layers,
+we have supported requirements such as: high flexibility, wiki based approach.</p>
+
+<p>Yet, this alone hinders the performance of the platform since the only way of
+finding a piece of information not within the database/structured layer is by
+iterating through the many existing articles, interpreting and evaluating
+them. The situation worsens as one realises that at times we also need to
+evaluate not only the current articles, but also each article’s past
+revisions.</p>
+
+<p>We address this issue by including a block (the indexer) that captiously
+indexes our interpretation of each article, as they are updated.</p>
+
+<p>We can then query the indexer for features of our interest, and it will search
+its index for them. This solves our performance worries since by design the
+indexer is implemented with optimizations and efficiency in mind.</p>
+
+<p>Although not meant to be an extensive list, a few queries that are/will be
+supported include:</p>
+<ul>
+  <li>Active requisitions, filtered by date range, project, etc;</li>
+  <li>Projects a user belongs to (and vice-versa);</li>
+  <li>Users that were with the item between a range of dates;</li>
+  <li>Other queries necessary for the wiki’s operation;</li>
+</ul>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item current"><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>Developer</h2>
+                <h3>Api</h3>
+            </div>
+            <article class="content">
+                <p>Wiki has an API that is available to be used for any developer that wishes to, but was originally designed to be used and integrated with our mobile app. With the evolution of the project it was also used by our chatbot and even by some particular features of the wiki. Above are the endpoints available and their usage.</p>
+
+<h3 id="articles">Articles</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/articles
+
+    GET: Returns the list of all the articles (all types)
+    Permissions: Administrator
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/articles/&lt;int:article_id&gt;
+
+article_id: article id
+
+    GET: Returns a article
+    Permissions: Administrator
+</code></pre>
+</div>
+
+<h3 id="equipments">Equipments</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/equipments
+
+    GET: Returns the list of all the equipments
+    Permissions: Everyone
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/equipments/&lt;int:equipment_id&gt;
+
+equipment_id: equipment id
+
+    GET: Returns an equipment
+    Permissions: Everyone
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/equipments/&lt;int:equipment_id&gt;/quantity/&lt;int:quantity&gt;
+
+equipment_id: equipment id
+quantity: quantity to add/subtract to the equipment's stock
+
+    PUT: Adds quantity to the equipment
+    DELETE: Subtracts quantity to the equipment
+    Permissions: Manager
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/equipments/&lt;int:equipment_id&gt;/project_id/&lt;int:project_id&gt;/user_id/&lt;int:user_id&gt;/timestamp/&lt;timestamp:timestamp&gt;/lost
+
+equipment_id: equipment id
+project_id: project id associated to the requisition
+user_id: user id associated to the requisition
+timestamp: momment when the requisition occured
+
+    DELETE: Marks a pending unit (with an active requisition) as lost, subtracting it from the stock
+    Permissions: Manager
+</code></pre>
+</div>
+
+<h3 id="projects">Projects</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/projects
+
+    GET: Returns the list of all the projects of the logged user
+    Permissions: Everyone
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/projects/&lt;int:user_id&gt;
+
+user_id: user id
+
+    GET: Returns the list of all the projects of the given user
+    Permissions: Everyone
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/projects/new
+
+title: project's title
+content: project's content
+
+    GET: Creates a new project
+    Permissions: User
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/projects/&lt;int:project_id&gt;/mentor
+
+project_id: project id
+
+    GET: Assigns the logged user as mentor of the given project
+    Permissions: Teacher
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/projects/&lt;int:project_id&gt;/member/&lt;int:user_id&gt;
+
+project_id: project id
+user_id: user id
+
+    PUT: Adds the given user to the given project
+    DELETE: Removes the given user from the given project
+    Permissions: User belonging to the given project (PUT) or owner of the given project (DELETE)
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/projects/&lt;int:project_id&gt;/requisitions/&lt;int:equipment_id&gt;
+
+project_id: project id
+equipment_id: equipment id
+
+    PUT: Adds a requisition to the given equipment associated to the given project and the logged user
+    DELETE: Removes a requisition from the given equipment associated to the given project and the logged user
+    Permissions: User (PUT) or user in the possession of the active requisition (DELETE)
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/projects/&lt;int:project_id&gt;/invite_mentor/&lt;email:email&gt;
+
+project_id: project id
+email: destinatary's email
+
+    PUT: Sends an email to the given destinatary with and invitation to visit and become a mentor of the given project
+    Permissions: User
+</code></pre>
+</div>
+
+<h3 id="requisitions">Requisitions</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/requisitions
+
+    GET: Returns the list equipments with requisitions from the logged user
+    Permissions: User
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/requisitions/active
+
+    GET: Returns the list equipments with active requisitions from the logged user
+    Permissions: User
+</code></pre>
+</div>
+
+<h4 id="profiles">Profiles</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/profiles
+
+    GET: Returns the list of all the user profiles
+    Permissions: Everyone
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/profile
+
+    GET: Returns the profile  of the logged user
+    Permissions: User
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/profiles/&lt;int:user_id&gt;
+
+user_id: user id
+
+    GET: Returns the profile of the given user
+    Permissions: Everyone
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/profiles/&lt;int:user_email&gt;
+
+user_email: user email
+
+    GET: Returns the profile of the given user by its email
+    Permissions: Everyone
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/profiles/&lt;int:user_id&gt;/teacher
+
+user_id: user id
+
+    PUT: Assigs the given user as teacher
+    Permissions: Manager
+</code></pre>
+</div>
+
+<h3 id="solr">Solr</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/solr/update/all
+
+user_id: user id
+
+    GET: Sends to solr all the articles in the system
+    Permissions: Administrator
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/solr/update/&lt;int:article_id&gt;
+
+article_id: article id
+
+    GET: Sends to solr the given article
+    Permissions: Administrator
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/api/solr/raw/&lt;string:path&gt;
+
+path: complete path to the solr original API. Example: "/api/solr/raw/api/pt/user/1/projects"
+
+    GET: Calls the solr API's endpoint correspondent to the given path
+    Permissions: Administrator
+</code></pre>
+</div>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

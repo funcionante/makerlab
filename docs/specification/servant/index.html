@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item current"><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>MakerLab</h2>
+                <h3>Servant</h3>
+            </div>
+            <article class="content">
+                <p>Given that most tasks carried by DML require little to no human interaction, a
+unified way of outputting/communicating information to the outside world is
+required.</p>
+
+<p><code class="highlighter-rouge">dml-servant</code> is the entity responsible for this, built in an independent and
+decoupled manner — also illustrating our plugin architecture.</p>
+
+<p>Its top level features include:</p>
+<ul>
+  <li>Provisioning diagnostic tools;</li>
+  <li>Providing a cli-like interface with which users can interact with;</li>
+  <li>Monitoring services, e.g. giving information about the state of things;</li>
+</ul>
+
+<p>The first bullet is aimed more at the development team, while the last two
+targets most users.</p>
+
+<p>In essence, <code class="highlighter-rouge">dml-servant</code> tries to bring to Makerlab the chatops-like bot it
+needed in order to interact with the outside world and inform its masters if
+it finds any problems. Better, only if it solved the problems itself (future
+work).</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/DML-Servant.png?alt=media&amp;token=610bac92-12b6-4224-a673-1db53ddc6d06" alt="DML-Servant" /></p>
+
+<p>It is accessible through DETI’s <a href="https://detiuaveiro.slack.com/messages/@dml-servant/">Slack</a>.</p>
+
+<h2 id="diagnostic-services">Diagnostic services</h2>
+
+<p>These services give the development team a simpler interface in order to track
+down and isolate problems, leveraging the knowledge required to successfully
+do this (e.g. the team doesn’t need to know about the location of all the
+services that are running in order to test them).</p>
+
+<p>Tasks so far scheduled for development include:</p>
+<ul>
+  <li>Test reachability of set of endpoints (partially complete);</li>
+</ul>
+
+<h2 id="monitoring-services">Monitoring services</h2>
+
+<p>Run tasks regularly and inform users (the team or otherwise) of their result,
+for example.</p>
+
+<p>Functions scheduled for development include:</p>
+<ul>
+  <li>Monitor a set of endpoints, informing if they fail/become inaccessible
+(partially complete);</li>
+  <li>Inform a user when a given item he/she has marked becomes available;</li>
+  <li>Inform users that have subscribed to a given channel of new equipment
+available;</li>
+  <li>Blame (eventually publicly) users that have failed to return a product in
+time;</li>
+</ul>
+
+<h2 id="cli-interface">CLI interface</h2>
+
+<p>Interface through which users/the team can interact with the servant. These
+include endpoints to make available the functionality described in the
+services above, as well as an interface to manage the state of virtual
+machines within the datacenter (although this is still open for discussion).</p>
+
+<p>Once the documentation of the endpoints being developed is complete, which
+will be available through the servant’s <code class="highlighter-rouge">help</code> command (see the image above),
+this section will see further extension with such information.</p>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

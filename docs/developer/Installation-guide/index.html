@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item current"><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>Developer</h2>
+                <h3>Installation Guide</h3>
+            </div>
+            <article class="content">
+                <p>This guide explains how an installation of the core components of MakerLab can
+be accomplished. In many cases, each repository’s <code class="highlighter-rouge">README</code> contains similar (or
+even more complete) information. Regarding this, the <code class="highlighter-rouge">setup</code> repo contains many
+markdown files and other files which are used in a setup (hence its name).</p>
+
+<h2 id="updates">Updates</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get update
+sudo apt-get -y upgrade
+</code></pre>
+</div>
+
+<h2 id="python">Python</h2>
+
+<p>This installation handles system-wide packages used by DML’s core. The
+<code class="highlighter-rouge">requirements.txt</code> is from the <code class="highlighter-rouge">setup</code> repo.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install -y python3 python3-pip
+sudo pip3 install -r requirements.txt
+</code></pre>
+</div>
+
+<h2 id="uwsgi">uWSGI</h2>
+
+<p>Setup</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo mkdir -p /etc/uwsgi/vassals
+</code></pre>
+</div>
+
+<p>Start at boot</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># Edit /etc/rc.local and add</span>
+/usr/local/bin/uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data --daemonize /var/log/uwsgi-emperor.log
+<span class="c"># before the line "exit 0".</span>
+</code></pre>
+</div>
+
+<p>This will make both <code class="highlighter-rouge">uwsgi</code>’s emperor start at boot, as well as load and keep
+the vassals deployed running continuously. Even in case of failure they are
+restarted.</p>
+
+<h2 id="docker">Docker</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get -y install <span class="se">\</span>
+    apt-transport-https <span class="se">\</span>
+    ca-certificates <span class="se">\</span>
+    curl <span class="se">\</span>
+    software-properties-common
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo add-apt-repository <span class="se">\</span>
+    <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/debian </span><span class="se">\</span><span class="s2">
+    </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> </span><span class="se">\</span><span class="s2">
+    stable"</span>
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get update
+sudo apt-get -y install docker-ce
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo service docker start
+sudo usermod -aG docker <span class="nv">$USER</span>
+sudo systemctl <span class="nb">enable </span>docker
+</code></pre>
+</div>
+
+<h3 id="docker-compose">Docker Compose</h3>
+
+<p>The link below was used in the last deploy issued at the time of this writing.
+Newer versions may exist.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo su -
+curl -L https://github.com/docker/compose/releases/download/1.12.0/docker-compose-<span class="sb">`</span>uname -s<span class="sb">`</span>-<span class="sb">`</span>uname -m<span class="sb">`</span> &gt; /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+<span class="nb">logout</span>
+</code></pre>
+</div>
+
+<h2 id="postgres">Postgres</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install -y postgresql-client
+
+<span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span><span class="k">****</span> <span class="se">\</span>
+    docker run --restart<span class="o">=</span>always --name dml-postgres -p 127.0.0.1:5432:5432 <span class="se">\</span>
+    -e <span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span><span class="s2">"</span><span class="nv">$POSTGRES_PASSWORD</span><span class="s2">"</span> -d postgres
+
+psql -h 127.0.0.1 -p 5432 -U postgres postgres &lt; initial.db
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">initial.db</code> file referenced comes from the <code class="highlighter-rouge">setup</code> repo. It contains a
+based structure necessary to make the wiki function properly.</p>
+
+<p>Although probably obvious, <code class="highlighter-rouge">POSTGRES_PASSWORD</code> should be replaced with the
+password desired.</p>
+
+<p>The command will start a docker container running Postgres, open only locally
+(i.e. <code class="highlighter-rouge">localhost</code>) and that will auto-spawn and restart at boot and in case of
+failure.</p>
+
+<h2 id="nodejs">Node.js</h2>
+
+<p>The url below was up-to-date when written. May be outdated by now.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo su root
+curl -sL https://deb.nodesource.com/setup_7.x | bash -
+apt-get install -y nodejs
+<span class="nb">logout</span>
+</code></pre>
+</div>
+
+<h2 id="services">Services</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>mkdir <span class="nv">$HOME</span>/dml
+</code></pre>
+</div>
+
+<p>This is the directory where the core’s and other services’ repos live.</p>
+
+<h3 id="solr">Solr</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> <span class="nv">$HOME</span>/dml
+git clone git@gitlab.com:makerlab/solr-engine.git
+<span class="nb">cd </span>solr-engine
+virtualenv --python<span class="o">=</span>python3 venv
+<span class="nb">source </span>venv/bin/activate
+pip install -r requirements.txt
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>./setup.sh
+</code></pre>
+</div>
+
+<p>The script above will handle the creation of necessary directories, setting
+permissions and launching a docker container running Solr (with sensible
+settings to be used alongside the wiki).</p>
+
+<h4 id="uwsgi-1">uWSGI</h4>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo ln -s <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/solr_uwsgi.ini /etc/uwsgi/vassals/
+</code></pre>
+</div>
+
+<p>By linking Solr’s <code class="highlighter-rouge">uwsgi</code> configuration to file in the vassals directory, the
+<code class="highlighter-rouge">uwsgi</code> emperor will look after Solr’s proxy server process.</p>
+
+<h3 id="wiki">Wiki</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> <span class="nv">$HOME</span>/dml
+git clone git@gitlab.com:makerlab/dml-django-wiki.git
+<span class="nb">cd </span>dml-django-wiki
+virtualenv --python<span class="o">=</span>python3 venv
+<span class="nb">source </span>venv/bin/activate
+pip install -r requirements.txt
+</code></pre>
+</div>
+
+<p>Edit <code class="highlighter-rouge">environ.json</code> with the installation specific configurations. You can find more information about this file <a href="/developer/wiki/">here</a>.</p>
+
+<h4 id="gentelella">Gentelella</h4>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo npm install -g bower
+bower install
+</code></pre>
+</div>
+
+<h4 id="dependencies">Dependencies</h4>
+
+<p>This section is fuzzy and might bring headcases (though nothing seriously
+concerning).</p>
+
+<p>Simply, different dependencies might be needed. It shouldn’t be too difficult
+to track, but as platforms change, so do the dependencies. Maybe a docker
+container for the wiki might be generated at a later time.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> <span class="nv">$HOME</span>/dml/dml-django-wiki
+sudo apt-get install -y gettext
+<span class="nb">cd </span>dml
+python manage.py compilemessages
+</code></pre>
+</div>
+
+<h4 id="static-files">Static files</h4>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> <span class="nv">$HOME</span>/dml/dml-django-wiki
+sudo mkdir -p <span class="s1">'/var/www/makerlab/'</span>
+sudo cp -a <span class="s1">'dml/media'</span> <span class="s1">'/var/www/makerlab/'</span>
+sudo chown -R www-data:www-data /var/www/makerlab/
+<span class="nb">cd </span>dml
+sudo -u www-data -E env <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span> python manage.py collectstatic
+</code></pre>
+</div>
+
+<h4 id="nginx">Nginx</h4>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install -y nginx
+<span class="nb">cd</span> <span class="nv">$HOME</span>/dml/dml-django-wiki
+sudo ln -s <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/wiki_nginx.conf /etc/nginx/sites-enabled/
+sudo rm /etc/nginx/sites-enabled/default
+sudo /etc/init.d/nginx restart
+</code></pre>
+</div>
+
+<p>Notice that we link the wiki’s nginx config file to a nginx directory. This way
+we can keep the file locally without, though changes reflect upstream.</p>
+
+<h4 id="uwsgi-2">uWSGI</h4>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> <span class="nv">$HOME</span>/dml/dml-django-wiki
+sudo ln -s <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/wiki_uwsgi.ini /etc/uwsgi/vassals/
+</code></pre>
+</div>
+
+<p>Same model as with Solr.</p>
+
+<p>Keep the <code class="highlighter-rouge">uwsgi</code> config file locally but link it with the vassals directory.
+This was the emperor will look after the wiki’s process.</p>
+
+<h3 id="ssl">SSL</h3>
+
+<p>Create a self-signed key and certificate pair</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
+</code></pre>
+</div>
+
+<p>Create a strong Diffie-Hellman group</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+</code></pre>
+</div>
+
+<p>Create the <code class="highlighter-rouge">self-signed.conf</code> snippet</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>cat <span class="sh">&lt;&lt; EOT | sudo tee /etc/nginx/snippets/self-signed.conf &gt; /dev/null
+ssl_certificate /etc/ssl/certs/nginx-selfsigned.crt;
+ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
+EOT
+</span></code></pre>
+</div>
+
+<p>Create the <code class="highlighter-rouge">ssl-params.conf</code> snippet</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>cat <span class="sh">&lt;&lt; EOT | sudo tee /etc/nginx/snippets/ssl-params.conf &gt; /dev/null
+# from https://cipherli.st/
+# and https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html
+
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+ssl_prefer_server_ciphers on;
+ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
+ssl_ecdh_curve secp384r1;
+ssl_session_cache shared:SSL:10m;
+ssl_session_tickets off;
+ssl_stapling on;
+ssl_stapling_verify on;
+resolver 8.8.8.8 8.8.4.4 valid=300s;
+resolver_timeout 5s;
+# Disable preloading HSTS for now.  You can use the commented out header line that includes
+# the "preload" directive if you understand the implications.
+#add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
+add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
+add_header X-Frame-Options DENY;
+add_header X-Content-Type-Options nosniff;
+
+ssl_dhparam /etc/ssl/certs/dhparam.pem;
+EOT
+</span></code></pre>
+</div>
+
+<h3 id="servant">Servant</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> <span class="nv">$HOME</span>/dml
+git clone git@gitlab.com:makerlab/dml-servant.git
+<span class="nb">cd </span>dml-servant
+nohup env <span class="nv">HUBOT_SLACK_TOKEN</span><span class="o">=</span>XXXX bin/hubot --adapter slack &amp;
+</code></pre>
+</div>
+
+<p>This will keep the servant’s process running detached in the background,
+without preventing it from being killed.</p>
+
+<h2 id="mail-configuration">Mail configuration</h2>
+
+<p>We used <code class="highlighter-rouge">exim</code>. Its configuration follows.</p>
+
+<p>To start the configuration wizard issue</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>dpkg-reconfigure exim4-config
+</code></pre>
+</div>
+
+<p>The options with which <code class="highlighter-rouge">exim</code> was configured follow (the numbers refer to the
+screens where they were selected).</p>
+
+<ol>
+  <li>internet site; mail is sent and received directly using SMTP</li>
+  <li>deti-makerlab.ua.pt</li>
+  <li>127.0.0.1 ; ::1</li>
+  <li>deti-makerlab.ua.pt; deti-makerlab; localhost</li>
+  <li>Relay options
+    <ol>
+      <li>empty</li>
+      <li>empty</li>
+    </ol>
+  </li>
+  <li>no</li>
+  <li>mbox format in /var/mail/</li>
+  <li>no</li>
+</ol>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

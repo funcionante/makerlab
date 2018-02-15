@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item current"><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>MakerLab</h2>
+                <h3>Mobile App</h3>
+            </div>
+            <article class="content">
+                <p>The <code class="highlighter-rouge">mobile app</code> will be the main bridge between the users and the system.
+It’ll provide the possibility to:</p>
+<ul>
+  <li>Manage pending requisitions, providing information of the project to which it is
+associated and the number of units requested;</li>
+  <li>Create and manage projects with which the user is involved and add new members
+to them.</li>
+  <li>Make item requisitions and deliveries.</li>
+</ul>
+
+<p style="text-align: center"><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2FScreenshot_2017-06-11-22-27-41.png?alt=media&amp;token=8c84f0c5-600d-4799-8a20-e4997b6fdd11" alt="MobileApp 1" /></p>
+
+<h2 id="login">Login</h2>
+
+<p>The users will be able to login into the app with their University of Aveiro’s
+credentials, and , in order to automate and make things easier, it will have an
+auto-login feature, so that the users don’t have to keep filling the login form 
+every time they want to use the app.</p>
+
+<h2 id="projects">Projects</h2>
+
+<p>There is a place where the users can show to others everything that
+has been done on a project and, in the case of equipments, give them ideas of
+how to use them, leading them to develop new ideas and continuing the loop.</p>
+
+<p>In order to populate and maintain this important space, the app will allow them
+to manage the two most important parts - projects and their participants.
+By creating and manage projects and adding a colleague to a project, 
+users will be able to access all project information and documentation in order
+to start their work in no time.</p>
+
+<h2 id="requisitions">Requisitions</h2>
+
+<p style="text-align: center"><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/app%2Fframe_14_delay-0.1s.gif?alt=media&amp;token=e501d29a-1ed1-4ca1-82a3-4145c30a9311" alt="MobileApp 2" /></p>
+
+<p>The equipments spread across the lab will be labeled with QR Codes.
+The users will be able to point to them and sneak peek some information about
+them with an Augmented Reality touch, which is particularly useful if they’re
+not familiar with the equipment.</p>
+
+<p>If they are pointing to the intended item, they can select it and choose the
+project name that the requisition will be associated to.</p>
+
+<p>The users will also be able to deliver items they previously requested
+through the app. The process is almost the same as to making a requisition.
+Simply pointing the phone’s camera to the QR code pasted in the item and
+clicking “Deliver” will do the trick.</p>
+
+<!-- -->
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

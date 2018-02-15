@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="icon" type="image/png" href="../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../"><img src="../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>MakerLab</h2>
+                <h3>Design Conventions</h3>
+            </div>
+            <article class="content">
+                <p>Along the several MakerLab’s visual components there are some design conventions
+we established in order to make it uniform. While there are some exceptions,
+the standards are defined below.</p>
+
+<h2 id="logo">Logo</h2>
+<p>Our logo represents a flask, or maybe something that can explode, a bomb.
+This is intended to recall to a lab environment. The symbols printed in the
+surface intended to represent electronic circuits, binary and networking.  The
+default colour is teal, but there are also black and white variants.</p>
+
+<p><img src="../images/logo/dml_logo.svg" alt="DML Logo Default" width="100px" />
+<img src="../images/logo/dml_logo_black.svg" alt="DML Logo Black" width="100px" />
+<img src="../images/logo/dml_logo_white.svg" alt="DML Logo White" width="100px" style="background-color:#e0e0e0" /></p>
+
+<h2 id="colors">Colors</h2>
+<p>MakerLab colors are in shades of teal.</p>
+<ul>
+  <li>Teal:       <code style="background-color:#00796B" class="highlighter-rouge">#00796B</code> (logo, titles)</li>
+  <li>Light Teal: <code style="background-color:#4DB6AC" class="highlighter-rouge">#4DB6AC</code> (backgrounds)</li>
+  <li>Dark Teal:  <code style="background-color:#004D40" class="highlighter-rouge">#004D40</code> (not recommended, but used in some scenarios, like text
+in diagrams)</li>
+</ul>
+
+<h2 id="fonts">Fonts</h2>
+<p>We use two font families, for titles and normal text.</p>
+<ul>
+  <li>Default: <a href="https://fonts.google.com/specimen/Roboto">Roboto</a> <code style="font-family:Roboto" class="highlighter-rouge">Lorem ipsum dolor sit amet.</code></li>
+  <li>Titles: <a href="https://fonts.google.com/specimen/Ruda">Ruda</a> <code style="font-family:Ruda" class="highlighter-rouge">Lorem ipsum dolor sit amet.</code></li>
+</ul>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

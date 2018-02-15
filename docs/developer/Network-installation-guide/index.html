@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item current"><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>Developer</h2>
+                <h3>Network Installation Guide</h3>
+            </div>
+            <article class="content">
+                <p>This guide explains how an installation of the network components of MakerLab 
+can be accomplished.</p>
+
+<p>We suggest that this installation be performed on a different machine than where 
+the core components are installed and on one with good CPU performance, 
+a lot of storage space and at least two network interfaces (alternatively create 
+two virtual interfaces) and a lot of storage space. Also, make sure you have 
+port 22 (for SSH interaction with the <code class="highlighter-rouge">dml-servant</code>), 4789 (for the VxLAN tunnel)
+and 6653 (for OpenFlow packets).</p>
+
+<p>This guide covers the installation of the datacenter side only, since the
+switch at the DETI MakerLab room may be OpenFlow switch ou simply a computer
+with multiple ethernet interfaces and Open vSwitch running.</p>
+
+<p>These instructions are also at the <code class="highlighter-rouge">network</code> repository, as well as the code 
+to run everything. We also recommend that you perform this installation on 
+a Debian Jessie machine, since it’s the only distro where we guarantee 
+full compatibility.</p>
+
+<h2 id="updates">Updates</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get update
+sudo apt-get -y upgrade
+</code></pre>
+</div>
+
+<h2 id="necessary-packets">Necessary packets</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get -y install <span class="se">\</span>
+    apt-transport-https <span class="se">\</span>
+    ca-certificates <span class="se">\</span>
+    curl <span class="se">\</span>
+    software-properties-common <span class="se">\</span>
+    vim <span class="se">\</span>
+    git <span class="se">\</span>
+    python3-dev <span class="se">\</span>
+    python3-pip <span class="se">\</span>
+    linux-image-amd64 <span class="se">\</span>
+    uuid-runtime <span class="se">\</span>
+    libpq-dev <span class="se">\</span>
+    postgresql-client <span class="se">\</span>
+    gcc <span class="se">\</span>
+    automake <span class="se">\</span>
+    make
+</code></pre>
+</div>
+
+<h2 id="adding-debian-testing-repository">Adding Debian testing repository</h2>
+
+<p>It’s necessary to add the <code class="highlighter-rouge">testing</code> repository in order to update to the latest
+kernel version, due to Open vSwitch compatibility.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'deb http://http.us.debian.org/debian testing main non-free contrib'</span> &gt;&gt; /etc/apt/sources.list
+<span class="nb">echo</span> <span class="s1">'deb-src http://http.us.debian.org/debian testing main non-free contrib'</span> &gt;&gt; /etc/apt/sources.list
+</code></pre>
+</div>
+
+<h2 id="update-kernel-version">Update Kernel version</h2>
+
+<p>In order to support VxLAN tunnels, Open vSwitch requires the most up to date
+kernel image.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get update
+
+sudo apt-get install linux-headers-4.9.0-3-amd64 linux-image-4.9.0-3-amd64
+sudo reboot
+</code></pre>
+</div>
+
+<h2 id="open-vswitch">Open vSwitch</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>wget http://openvswitch.org/releases/openvswitch-2.7.0.tar.gz
+tar -xf openvswitch-2.7.0.tar.gz
+<span class="nb">cd </span>openvswitch-2.7.0/
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>./configure
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make install
+</code></pre>
+</div>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/share/openvswitch/scripts
+ovs-ctl --system-id<span class="o">=</span>random start
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span>
+</code></pre>
+</div>
+
+<h2 id="docker">Docker</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get -y install <span class="se">\</span>
+    apt-transport-https <span class="se">\</span>
+    ca-certificates <span class="se">\</span>
+    curl <span class="se">\</span>
+    software-properties-common
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo add-apt-repository <span class="se">\</span>
+    <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/debian </span><span class="se">\</span><span class="s2">
+    </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> </span><span class="se">\</span><span class="s2">
+    stable"</span>
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get update
+sudo apt-get -y install docker-ce
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo service docker start
+sudo usermod -aG docker <span class="nv">$USER</span>
+sudo systemctl <span class="nb">enable </span>docker
+</code></pre>
+</div>
+
+<p>Docker fix</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo <span class="nb">echo</span> <span class="s1">'GRUB_CMDLINE_LINUX_DEFAULT="quiet cgroup_enable=memory swapaccount=1" '</span> &gt;&gt; /etc/default/grub
+sudo update-grub
+sudo reboot
+</code></pre>
+</div>
+
+<h2 id="network-repo">Network repo</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone git@gitlab.com:makerlab/network.git
+</code></pre>
+</div>
+
+<h2 id="ovs-docker">OvS-Docker</h2>
+
+<p>This script contains a command-line interface to attack containers to 
+Open vSwitch bridges.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo cp network/datacenter-master/ovs-docker /usr/bin
+sudo chmod a+rwx /usr/bin/ovs-docker
+</code></pre>
+</div>
+
+<h2 id="ryu-openflow-controller">Ryu OpenFlow controller</h2>
+
+<p>Installation of the OpenFlow SDN controller framework.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone git://github.com/osrg/ryu.git
+<span class="nb">cd </span>ryu
+pip3 install .
+</code></pre>
+</div>
+
+<h2 id="python">Python</h2>
+
+<p>This installation handles system-wide packages used by DML’s network.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo pip3 install flask docker psycopg2
+</code></pre>
+</div>
+
+<h2 id="open-vswitch-bridges">Open vSwitch bridges</h2>
+
+<p>Install the needed bridges. It requires at least two network interfaces.</p>
+
+<p>Routing bridge</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo ovs-vsctl add-br br-routing
+sudo ovs-vsctl add-port br-routing eth1
+</code></pre>
+</div>
+
+<p>VTEP bridge</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nv">DML_IP</span><span class="o">=</span>x.x.x.x
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo ovs-vsctl add-br br-vtep
+sudo ovs-vsctl <span class="nb">set</span>-fail-mode br-vtep secure <span class="c"># make flows permanent</span>
+</code></pre>
+</div>
+
+<p>Add and configure VxLAN VTEP</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo ovs-vsctl add-port br-vtep vxlan-vtep
+sudo ovs-vsctl <span class="nb">set </span>bridge br-vtep <span class="nv">protocols</span><span class="o">=</span>OpenFlow10,OpenFlow11,OpenFlow12,OpenFlow13
+sudo ovs-vsctl <span class="nb">set </span>interface vxlan-vtep <span class="nb">type</span><span class="o">=</span>vxlan options:remote_ip<span class="o">=</span><span class="k">${</span><span class="nv">DML_IP</span><span class="k">}</span> options:key<span class="o">=</span>flow
+</code></pre>
+</div>
+
+<h2 id="containers">Containers</h2>
+
+<p>Build pre-defined Docker containers.</p>
+
+<p>Router container</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> ~/network/datacenter-master/router-container/
+docker build -t router -f Dockerfile .
+</code></pre>
+</div>
+
+<p>Ubuntu with SSH server container</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> ../ubuntu-ssh-container/
+docker build -t ubuntu_ssh -f Dockerfile .
+</code></pre>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> ..
+</code></pre>
+</div>
+
+<h2 id="postgres">Postgres</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span><span class="k">****</span> <span class="se">\</span>
+    docker run --restart<span class="o">=</span>always --name dml-postgres -p 127.0.0.1:5433:5432 <span class="se">\</span>
+    -e <span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span><span class="s2">"</span><span class="nv">$POSTGRES_PASSWORD</span><span class="s2">"</span> -d postgres
+
+psql -h 127.0.0.1 -p 5432 -U postgres postgres &lt; db.sql
+</code></pre>
+</div>
+
+<h2 id="startup-script">Startup script</h2>
+
+<p>This script will automatically start OvS, Docker and all the containers that
+were running when the system went down.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo cp /home/dml-net/network/datacenter-master/dml_startup.sh /etc/init.d/
+sudo chmod +x /etc/init.d/dml_startup.sh
+sudo update-rc.d dml_startup.sh defaults
+</code></pre>
+</div>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

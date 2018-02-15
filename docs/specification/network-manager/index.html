@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item current"><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>MakerLab</h2>
+                <h3>Network Manager</h3>
+            </div>
+            <article class="content">
+                <p>The network manager is in charge of all things network. It’s main goal is to
+provide a private network to each project, with internet connectivity,
+as well as the possibility of launching Docker containers for testing
+and deployment. All the traffic is completely isolated from each network
+and the users can access their projects’ networks and containers by associating
+RJ-45 sockets at DML’s room to them.</p>
+
+<p>A simplified vision of our network architecture would be:</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/network%2FNetwork%20Diagram.png?alt=media&amp;token=8cb4994b-84d3-485f-b763-1ae706160b9d" alt="Network Architecture" /></p>
+
+<p>The “core” of each project’s network will be hosted on a datacenter, where
+the containers will be orchestrated and the NAT/PAT mechanisms will provide
+internet access to all the hosts across the private networks.</p>
+
+<p>In order to fulfill time milestones, it was decided that this 
+implementation of the container orchestration will be focused on a single-host
+datacenter architecture, <strong>rather than</strong> a swarm-like implementation.</p>
+
+<p>The datacenter will also be running the SDN Controller responsible for 
+controlling the switch’s traffic at the DETI MakerLab room.</p>
+
+<h2 id="netmanager">NetManager</h2>
+
+<p>The datacenter will host a controller that will manage all the networking
+information.
+Its main functionalities are:</p>
+<ul>
+  <li>Creation and destruction of a project’s network;</li>
+  <li>Creation and destruction of containers;</li>
+  <li>Change of state (start and stop) of containers;</li>
+  <li>Association of RJ-45 sockets (based on a printed ID on them) to projects’
+networks;</li>
+  <li>Informational endpoints to the platform’s API, mainly to the <code class="highlighter-rouge">dml-servant</code>.</li>
+</ul>
+
+<h2 id="sdn-controller">SDN Controller</h2>
+
+<p>It’ll be at the DETI MakerLab room that the users will connect to their projects’
+networks, where there are several RJ-45 sockets and a OpenFlow enabled Switch to
+control all the traffic inside the room and forward it to the datacenter.</p>
+
+<p>To connect all the hosts at DML, a OpenFlow enabled Switch must exist but,
+in order to work as intended, a SDN controller is also needed.</p>
+
+<p>This controller will be responsible for:</p>
+<ul>
+  <li>Analyzing and redirecting packets that the Switch are not familiar with and
+to tell it where to forward them, may their destination be an host at the room
+or a VM through the VxLAN tunnel;</li>
+  <li>Installing OpenFlow rules in the Switch, so that the packets with a similar
+destination would be automatically redirected without the need of sending them
+to the controller.</li>
+</ul>
+
+<!-- -->
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

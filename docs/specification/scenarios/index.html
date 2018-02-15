@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item current"><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>Specifications</h2>
+                <h3>Scenarios</h3>
+            </div>
+            <article class="content">
+                <p>With the best possible representation of the DML purpose in mind, the
+following scenarios should illustrate the interaction users should have with
+the system. It is not intended to be fully complete, nor is necessarily to be
+addressed within this year.</p>
+
+<h2 id="user-scenarios">User scenarios</h2>
+
+<p>Alice and Bob decided to start a service to do animal inferring from photos.
+They need to do image processing for this, and they are interested in finding
+out whether a Raspberry Pi is capable of such task. With this in mind they
+create a project on DETI MakerLab (DML) and explain their goals and purposes.
+After a professor approves their project, they’re ready to make requisitions.</p>
+
+<p>They then use Alice’s phone to request a Raspberry by scanning a QR code
+existent in the device’s box. The team’s project is automatically updated, now
+stating that a Raspberry was requested for the project and that it is
+currently at Alice’s responsibility. Meanwhile, the Raspberry’s page is also
+updated, indicating that one is being used in this project.</p>
+
+<p>Testing the platform with evermore colleagues, Alice and Bob need something
+with more power than a Raspberry. They decide to carry on tests using a DML
+VM. With that in mind, Bob goes to DETI Slack to issue a VM creation with the 
+<code class="highlighter-rouge">dml-servant</code>. After a few seconds, the servant replies, providing the 
+machine’s IP address, credentials and DockerID, and thus creating a VLAN
+for that project, eliminating the restrictions of UA’s network.</p>
+
+<p>In order to access the recently created VM, Bob gets the ID of a ethernet socket
+at DETI MakerLab and issues the <code class="highlighter-rouge">dml-servant</code> to associate it to their project’s
+network. Bob is liable for this VM.</p>
+
+<p>After porting their project from the RPi to the VM, the team no longer needs
+their RPi. They thus scan the QR code existent in the device’s box with 
+DETI-MakerLab mobile app and hand it to Mr. Arez, DML’s staff. The project is 
+no longer in possession of the RPi, which is reflected in the project’s
+and RPi’s page.</p>
+
+<p>Carol, a friend of Alice, has become interested in the project after testing
+it. She wants to help the team, which is happy to accept her especially since
+she knows more about electronics than they do. To give Carol access to the DML
+services the team is using, Alice goes to DETI-MakerLab mobile app and 
+adds Carol to the project.</p>
+
+<p>Since Carol is not totally familiar with the project, Bob decides to improve
+their documentation in their project’s page.</p>
+
+<p>Finally, with the help of Carol, the team gets production ready. They have
+bought hosting from another company and terminate the VM they had created.
+Without having any more resources allocated to them, the team also decide to
+close the project, indicating that they are no longer using DML to develop it.</p>
+
+<h2 id="staff-scenarios">Staff scenarios</h2>
+
+<p>Mr. Arez is the manager of the DML room. Being responsible for maintaining
+the components inside the room, keeping everything working and available, he
+is constantly adding new parts that arrive and updating information about
+certain items. Recently, a batch of 10 new Intel Galileos arrived, and he
+wants to add them to DML’s inventory so that students can request them and
+learn how to use them.</p>
+
+<p>With this in mind, Mr. Arez goes to create a new product. After filling a
+few generic options existent in the template provided (like the product’s
+abstract, connectors, etc), he soon realises that he would like to specify a
+few other characteristics, such as that there is an integrated RTC which
+requires a 3V battery, a programmable EEPROM, and so on. He thus adds new
+sections to the item’s page, resembling the structure he found on the
+product’s datasheet.</p>
+
+<p>Happy with the result, Mr. Arez creates the Galileo’s product page.</p>
+
+<p>Now, he wants to make available the different units he received (the actual
+items). He goes to the Galileo’s page and chooses to add new units of the
+product, by selecting the number of units he wants to add and all the codes are
+quickly generated so that Mr. Arez can print them on a nearby printer.
+Soon he has added all 10 new Galileos, and can make them available for students.</p>
+
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="icon" type="image/png" href="../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../"><img src="../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>MakerLab</h2>
+                <h3>Search</h3>
+            </div>
+            <article class="content">
+                
+
+
+
+
+
+<p><span id="search-process">Loading</span> results <span id="search-query-container" style="display: none;">for "<strong id="search-query"></strong>"</span></p>
+<ul id="search-results"></ul>
+
+<script>
+window.data = {
+    
+    
+    
+    
+    
+
+    "developer-installation-guide": {
+        "id": "developer-installation-guide",
+        "title": "Installation Guide",
+        "category": "",
+        "url": " /developer/Installation-guide/",
+        "content": "This guide explains how an installation of the core components of MakerLab can be accomplished. In many cases, each repository’s README contains similar (or even more complete) information. Regarding this, the setup repo contains many markdown files and other files which are used in a setup (hence its name). Updates sudo apt-get update sudo apt-get -y upgrade Python This installation handles system-wide packages used by DML’s core. The requirements.txt is from the setup repo. sudo apt-get install -y python3 python3-pip sudo pip3 install -r requirements.txt uWSGI Setup sudo mkdir -p etc uwsgi vassals Start at boot # Edit etc rc.local and add usr local bin uwsgi --emperor etc uwsgi vassals --uid www-data --gid www-data --daemonize var log uwsgi-emperor.log # before the line \"exit 0\". This will make both uwsgi’s emperor start at boot, as well as load and keep the vassals deployed running continuously. Even in case of failure they are restarted. Docker sudo apt-get -y install \\ apt-transport-https \\ ca-certificates \\ curl \\ software-properties-common curl -fsSL https: download.docker.com linux debian gpg | sudo apt-key add - sudo add-apt-repository \\ \"deb [arch=amd64] https: download.docker.com linux debian \\ $(lsb_release -cs) \\ stable\" sudo apt-get update sudo apt-get -y install docker-ce sudo service docker start sudo usermod -aG docker $USER sudo systemctl enable docker Docker Compose The link below was used in the last deploy issued at the time of this writing. Newer versions may exist. sudo su - curl -L https: github.com docker compose releases download 1.12.0 docker-compose-`uname -s`-`uname -m` &gt; usr local bin docker-compose chmod +x usr local bin docker-compose logout Postgres sudo apt-get install -y postgresql-client POSTGRES_PASSWORD=**** \\ docker run --restart=always --name dml-postgres -p 127.0.0.1:5432:5432 \\ -e POSTGRES_PASSWORD=\"$POSTGRES_PASSWORD\" -d postgres psql -h 127.0.0.1 -p 5432 -U postgres postgres &lt; initial.db The initial.db file referenced comes from the setup repo. It contains a based structure necessary to make the wiki function properly. Although probably obvious, POSTGRES_PASSWORD should be replaced with the password desired. The command will start a docker container running Postgres, open only locally (i.e. localhost) and that will auto-spawn and restart at boot and in case of failure. Node.js The url below was up-to-date when written. May be outdated by now. sudo su root curl -sL https: deb.nodesource.com setup_7.x | bash - apt-get install -y nodejs logout Services mkdir $HOME dml This is the directory where the core’s and other services’ repos live. Solr cd $HOME dml git clone git@gitlab.com:makerlab solr-engine.git cd solr-engine virtualenv --python=python3 venv source venv bin activate pip install -r requirements.txt . setup.sh The script above will handle the creation of necessary directories, setting permissions and launching a docker container running Solr (with sensible settings to be used alongside the wiki). uWSGI sudo ln -s `pwd` solr_uwsgi.ini etc uwsgi vassals By linking Solr’s uwsgi configuration to file in the vassals directory, the uwsgi emperor will look after Solr’s proxy server process. Wiki cd $HOME dml git clone git@gitlab.com:makerlab dml-django-wiki.git cd dml-django-wiki virtualenv --python=python3 venv source venv bin activate pip install -r requirements.txt Edit environ.json with the installation specific configurations. You can find more information about this file here. Gentelella sudo npm install -g bower bower install Dependencies This section is fuzzy and might bring headcases (though nothing seriously concerning). Simply, different dependencies might be needed. It shouldn’t be too difficult to track, but as platforms change, so do the dependencies. Maybe a docker container for the wiki might be generated at a later time. cd $HOME dml dml-django-wiki sudo apt-get install -y gettext cd dml python manage.py compilemessages Static files cd $HOME dml dml-django-wiki sudo mkdir -p ' var www makerlab ' sudo cp -a 'dml media' ' var www makerlab ' sudo chown -R www-data:www-data var www makerlab cd dml sudo -u www-data -E env PATH=$PATH PYTHONPATH=$PYTHONPATH python manage.py collectstatic Nginx sudo apt-get install -y nginx cd $HOME dml dml-django-wiki sudo ln -s `pwd` wiki_nginx.conf etc nginx sites-enabled sudo rm etc nginx sites-enabled default sudo etc init.d nginx restart Notice that we link the wiki’s nginx config file to a nginx directory. This way we can keep the file locally without, though changes reflect upstream. uWSGI cd $HOME dml dml-django-wiki sudo ln -s `pwd` wiki_uwsgi.ini etc uwsgi vassals Same model as with Solr. Keep the uwsgi config file locally but link it with the vassals directory. This was the emperor will look after the wiki’s process. SSL Create a self-signed key and certificate pair sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout etc ssl private nginx-selfsigned.key -out etc ssl certs nginx-selfsigned.crt Create a strong Diffie-Hellman group sudo openssl dhparam -out etc ssl certs dhparam.pem 2048 Create the self-signed.conf snippet cat &lt;&lt; EOT | sudo tee etc nginx snippets self-signed.conf &gt; dev null ssl_certificate etc ssl certs nginx-selfsigned.crt; ssl_certificate_key etc ssl private nginx-selfsigned.key; EOT Create the ssl-params.conf snippet cat &lt;&lt; EOT | sudo tee etc nginx snippets ssl-params.conf &gt; dev null # from https: cipherli.st # and https: raymii.org s tutorials Strong_SSL_Security_On_nginx.html ssl_protocols TLSv1 TLSv1.1 TLSv1.2; ssl_prefer_server_ciphers on; ssl_ciphers \"EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH\"; ssl_ecdh_curve secp384r1; ssl_session_cache shared:SSL:10m; ssl_session_tickets off; ssl_stapling on; ssl_stapling_verify on; resolver 8.8.8.8 8.8.4.4 valid=300s; resolver_timeout 5s; # Disable preloading HSTS for now. You can use the commented out header line that includes # the \"preload\" directive if you understand the implications. #add_header Strict-Transport-Security \"max-age=63072000; includeSubdomains; preload\"; add_header Strict-Transport-Security \"max-age=63072000; includeSubdomains\"; add_header X-Frame-Options DENY; add_header X-Content-Type-Options nosniff; ssl_dhparam etc ssl certs dhparam.pem; EOT Servant cd $HOME dml git clone git@gitlab.com:makerlab dml-servant.git cd dml-servant nohup env HUBOT_SLACK_TOKEN=XXXX bin hubot --adapter slack &amp; This will keep the servant’s process running detached in the background, without preventing it from being killed. Mail configuration We used exim. Its configuration follows. To start the configuration wizard issue $ dpkg-reconfigure exim4-config The options with which exim was configured follow (the numbers refer to the screens where they were selected). internet site; mail is sent and received directly using SMTP deti-makerlab.ua.pt 127.0.0.1 ; ::1 deti-makerlab.ua.pt; deti-makerlab; localhost Relay options empty empty no mbox format in var mail no"
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "developer-network-installation-guide": {
+        "id": "developer-network-installation-guide",
+        "title": "Network Installation Guide",
+        "category": "",
+        "url": " /developer/Network-installation-guide/",
+        "content": "This guide explains how an installation of the network components of MakerLab can be accomplished. We suggest that this installation be performed on a different machine than where the core components are installed and on one with good CPU performance, a lot of storage space and at least two network interfaces (alternatively create two virtual interfaces) and a lot of storage space. Also, make sure you have port 22 (for SSH interaction with the dml-servant), 4789 (for the VxLAN tunnel) and 6653 (for OpenFlow packets). This guide covers the installation of the datacenter side only, since the switch at the DETI MakerLab room may be OpenFlow switch ou simply a computer with multiple ethernet interfaces and Open vSwitch running. These instructions are also at the network repository, as well as the code to run everything. We also recommend that you perform this installation on a Debian Jessie machine, since it’s the only distro where we guarantee full compatibility. Updates sudo apt-get update sudo apt-get -y upgrade Necessary packets sudo apt-get -y install \\ apt-transport-https \\ ca-certificates \\ curl \\ software-properties-common \\ vim \\ git \\ python3-dev \\ python3-pip \\ linux-image-amd64 \\ uuid-runtime \\ libpq-dev \\ postgresql-client \\ gcc \\ automake \\ make Adding Debian testing repository It’s necessary to add the testing repository in order to update to the latest kernel version, due to Open vSwitch compatibility. echo 'deb http: http.us.debian.org debian testing main non-free contrib' &gt;&gt; etc apt sources.list echo 'deb-src http: http.us.debian.org debian testing main non-free contrib' &gt;&gt; etc apt sources.list Update Kernel version In order to support VxLAN tunnels, Open vSwitch requires the most up to date kernel image. sudo apt-get update sudo apt-get install linux-headers-4.9.0-3-amd64 linux-image-4.9.0-3-amd64 sudo reboot Open vSwitch wget http: openvswitch.org releases openvswitch-2.7.0.tar.gz tar -xf openvswitch-2.7.0.tar.gz cd openvswitch-2.7.0 . configure make make install export PATH=$PATH: usr local share openvswitch scripts ovs-ctl --system-id=random start cd Docker sudo apt-get -y install \\ apt-transport-https \\ ca-certificates \\ curl \\ software-properties-common curl -fsSL https: download.docker.com linux debian gpg | sudo apt-key add - sudo add-apt-repository \\ \"deb [arch=amd64] https: download.docker.com linux debian \\ $(lsb_release -cs) \\ stable\" sudo apt-get update sudo apt-get -y install docker-ce sudo service docker start sudo usermod -aG docker $USER sudo systemctl enable docker Docker fix sudo echo 'GRUB_CMDLINE_LINUX_DEFAULT=\"quiet cgroup_enable=memory swapaccount=1\" ' &gt;&gt; etc default grub sudo update-grub sudo reboot Network repo git clone git@gitlab.com:makerlab network.git OvS-Docker This script contains a command-line interface to attack containers to Open vSwitch bridges. sudo cp network datacenter-master ovs-docker usr bin sudo chmod a+rwx usr bin ovs-docker Ryu OpenFlow controller Installation of the OpenFlow SDN controller framework. git clone git: github.com osrg ryu.git cd ryu pip3 install . Python This installation handles system-wide packages used by DML’s network. sudo pip3 install flask docker psycopg2 Open vSwitch bridges Install the needed bridges. It requires at least two network interfaces. Routing bridge sudo ovs-vsctl add-br br-routing sudo ovs-vsctl add-port br-routing eth1 VTEP bridge DML_IP=x.x.x.x sudo ovs-vsctl add-br br-vtep sudo ovs-vsctl set-fail-mode br-vtep secure # make flows permanent Add and configure VxLAN VTEP sudo ovs-vsctl add-port br-vtep vxlan-vtep sudo ovs-vsctl set bridge br-vtep protocols=OpenFlow10,OpenFlow11,OpenFlow12,OpenFlow13 sudo ovs-vsctl set interface vxlan-vtep type=vxlan options:remote_ip=${DML_IP} options:key=flow Containers Build pre-defined Docker containers. Router container cd ~ network datacenter-master router-container docker build -t router -f Dockerfile . Ubuntu with SSH server container cd .. ubuntu-ssh-container docker build -t ubuntu_ssh -f Dockerfile . cd .. Postgres POSTGRES_PASSWORD=**** \\ docker run --restart=always --name dml-postgres -p 127.0.0.1:5433:5432 \\ -e POSTGRES_PASSWORD=\"$POSTGRES_PASSWORD\" -d postgres psql -h 127.0.0.1 -p 5432 -U postgres postgres &lt; db.sql Startup script This script will automatically start OvS, Docker and all the containers that were running when the system went down. sudo cp home dml-net network datacenter-master dml_startup.sh etc init.d sudo chmod +x etc init.d dml_startup.sh sudo update-rc.d dml_startup.sh defaults"
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "developer-solr-engine": {
+        "id": "developer-solr-engine",
+        "title": "Solr Engine",
+        "category": "",
+        "url": " /developer/Solr-engine/",
+        "content": "Solr’s engine provides an interface to solr queries, hiding the otherwise necessary direct calls. Its code is contained within the solr-engine repo. Container and settings Solr itself is contained within a docker container. The directory solr-conf within the root of the repo contains Solr’s settings and schemas (currently only one, for Portuguese language). The file docker-composer.yml contains the docker specs for the node to create, which by default uses var makerlab solr to store the information. The script setup.sh handles the container’s deployment. Running everything The container itself should auto-load by itself (look into the installation guide for more details). The server (presented below), being a flask app, usually python solr.py suffices. This should only be done for debug purposes though. For production, a solr_uwsgi.ini is included which handles the configuration in order to properly run the server. Again, refer to the installation guide for more details. Server The file solr.py contains a flask app which provides a set of endpoints to facilitate communication with Solr. These are described below. In all endpoints, json is returned. A return code of 400 is returned in case of failure, otherwise 200 is returned (unless something unexpected happens). Get equipments, projects, profiles api &lt;string:lang&gt; &lt;string:_type&gt; all lang: language to use _type: one of - equipment, profile, project GET: Returns the list of _type Index article api &lt;string:lang&gt; update lang: language to use body.json: article to index POST: Feeds body.json to Solr Remove article api &lt;string:lang&gt; &lt;string:id&gt; lang: language to use id: identifier of the article to remove DELETE: Deletes the article with id (argument received) Projects of a user api &lt;string:lang&gt; user &lt;string:user_id&gt; projects lang: language to use user_id: user identifier GET: Returns the list of projects of a user Requisitions api &lt;string:lang&gt; requisitions api &lt;string:lang&gt; active_requisitions lang: language to use GET: Returns the list of (active) requisitions Requisitions of a user api &lt;string:lang&gt; user &lt;string:user_id&gt; requisitions api &lt;string:lang&gt; user &lt;string:user_id&gt; active_requisitions lang: language to use user_id: user identifier GET: Returns the list of (active) requisitions of a user Requisitions associated with a project api &lt;string:lang&gt; project &lt;string:proj_id&gt; requisitions api &lt;string:lang&gt; project &lt;string:proj_id&gt; active_requisitions lang: language to use proj_id: project identifier GET: Returns the list of (active) requisitions associated with a project"
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "developer-api": {
+        "id": "developer-api",
+        "title": "Api",
+        "category": "",
+        "url": " /developer/api/",
+        "content": "Wiki has an API that is available to be used for any developer that wishes to, but was originally designed to be used and integrated with our mobile app. With the evolution of the project it was also used by our chatbot and even by some particular features of the wiki. Above are the endpoints available and their usage. Articles api articles GET: Returns the list of all the articles (all types) Permissions: Administrator api articles &lt;int:article_id&gt; article_id: article id GET: Returns a article Permissions: Administrator Equipments api equipments GET: Returns the list of all the equipments Permissions: Everyone api equipments &lt;int:equipment_id&gt; equipment_id: equipment id GET: Returns an equipment Permissions: Everyone api equipments &lt;int:equipment_id&gt; quantity &lt;int:quantity&gt; equipment_id: equipment id quantity: quantity to add subtract to the equipment's stock PUT: Adds quantity to the equipment DELETE: Subtracts quantity to the equipment Permissions: Manager api equipments &lt;int:equipment_id&gt; project_id &lt;int:project_id&gt; user_id &lt;int:user_id&gt; timestamp &lt;timestamp:timestamp&gt; lost equipment_id: equipment id project_id: project id associated to the requisition user_id: user id associated to the requisition timestamp: momment when the requisition occured DELETE: Marks a pending unit (with an active requisition) as lost, subtracting it from the stock Permissions: Manager Projects api projects GET: Returns the list of all the projects of the logged user Permissions: Everyone api projects &lt;int:user_id&gt; user_id: user id GET: Returns the list of all the projects of the given user Permissions: Everyone api projects new title: project's title content: project's content GET: Creates a new project Permissions: User api projects &lt;int:project_id&gt; mentor project_id: project id GET: Assigns the logged user as mentor of the given project Permissions: Teacher api projects &lt;int:project_id&gt; member &lt;int:user_id&gt; project_id: project id user_id: user id PUT: Adds the given user to the given project DELETE: Removes the given user from the given project Permissions: User belonging to the given project (PUT) or owner of the given project (DELETE) api projects &lt;int:project_id&gt; requisitions &lt;int:equipment_id&gt; project_id: project id equipment_id: equipment id PUT: Adds a requisition to the given equipment associated to the given project and the logged user DELETE: Removes a requisition from the given equipment associated to the given project and the logged user Permissions: User (PUT) or user in the possession of the active requisition (DELETE) api projects &lt;int:project_id&gt; invite_mentor &lt;email:email&gt; project_id: project id email: destinatary's email PUT: Sends an email to the given destinatary with and invitation to visit and become a mentor of the given project Permissions: User Requisitions api requisitions GET: Returns the list equipments with requisitions from the logged user Permissions: User api requisitions active GET: Returns the list equipments with active requisitions from the logged user Permissions: User Profiles api profiles GET: Returns the list of all the user profiles Permissions: Everyone api profile GET: Returns the profile of the logged user Permissions: User api profiles &lt;int:user_id&gt; user_id: user id GET: Returns the profile of the given user Permissions: Everyone api profiles &lt;int:user_email&gt; user_email: user email GET: Returns the profile of the given user by its email Permissions: Everyone api profiles &lt;int:user_id&gt; teacher user_id: user id PUT: Assigs the given user as teacher Permissions: Manager Solr api solr update all user_id: user id GET: Sends to solr all the articles in the system Permissions: Administrator api solr update &lt;int:article_id&gt; article_id: article id GET: Sends to solr the given article Permissions: Administrator api solr raw &lt;string:path&gt; path: complete path to the solr original API. Example: \" api solr raw api pt user 1 projects\" GET: Calls the solr API's endpoint correspondent to the given path Permissions: Administrator"
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "developer-authentication-system": {
+        "id": "developer-authentication-system",
+        "title": "Authentication System",
+        "category": "",
+        "url": " /developer/authentication-system/",
+        "content": "In order to overcome the need for students and professors to have another account to manage, MakerLab’s access is based on integration with the university’s authentication system, which uses Open Authorization (OAuth) protocol. The authentication and login process are centralized on MakerLab’s api endpoints in order to prevent clients (wiki, mobile applications, etc.) from having to deal with their own authentication system. To join OAuth protocol with wiki’s django server, we use Requests-OAuthlib, which provide an interface for building OAuth1 (version used by University of Aveiro) and OAuth2 clients. For an application to communicate with OAuth server, it must be registered and authorized, by requesting a Consumer and Secret Key and wait for the application to be approved. The OAuth service of the University of Aveiro is composed of four steps, namely : Request Token : after the Consumer Key and Secret have been obtained, we can begin using the OAuth protocol to access restricted services. The first step is to require a pair of temporary credentials on auth login. These tokens will be needed on first steps and have a useful life of 30 minutes, so we need to save them taking into account the concurrency accesses, by using locks and timestamps on write operations. Authorize : now that we have the temporary tokens, we must proceed with the authentication and authorization of the user by redirecting them to University of Aveiro’s IdP, where te user will enter their credentials and approve the use of personal informations by our application. Access Token : after Authorize process ends, a new set of tokens (authorization tokens) will be returned (by a redirect from IdP to auth auth endpoint) that will be used on this step to generate the access tokens. Get data : with final access tokens we can make request for specific user’s informations, whose list can be found on the documentation website of the university. On the first registration of the user on our platform some informations are saved on theirs wiki profile, namely the full name, mec. number and course, if it is a student, or just the name in the case of a teacher. After all steps above are completed a redirect to wiki has to be done, in order to start using it’s features."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "developer-data-structure": {
+        "id": "developer-data-structure",
+        "title": "Data Structure",
+        "category": "",
+        "url": " /developer/data-structure/",
+        "content": "On the data structure Given the flexibility that MakerLab aims for, the data structure it uses internally (that is, inside the API domain) is not trivial. We have divided the (meta)data an article comprises over 3 disjoint layers, plus an extra presentation layer. Structured Layer The information belonging to this layer is persisted in the system database. It deals mainly with permission issues and with otherwise data that already was part of the django-wiki which served as the starting point of our own wiki. Every information in here is highly structured and is hardly modified in any direct way which we don’t control and or verify that is correct and valid. Semi-structured Layer This layer deals with information that is not strictly structured, yet we can ensure its correction and validity, and serves as the first layer where we modify and keep information of our own (versus the information already used by django-wiki). We keep this information stored in XML. This means that an article in our system is no longer solely its contents. It now is its metadata as added by us, plus its contents (XML + Markdown). We call this layer semi-structured since we do not impose a static structure in this layer. As need arises, new tags can be added and old ones removed. And the system has to bare with this flexibility. Yet, we don’t let general users modify this structure, effectively making us (i.e. the system itself) the only entity that uses this information. As a result we don’t need to worry about changes imposed by users and can be sure about the information we access to. Parsed Layer This is the most flexible layer on our system, and the one that effectively poses most challenges when coping with our management-on-a-wiki system. All the content kept within this layer is actually stored directly in the markdown of the articles. This means that any user (with proper credentials) can edit and manipulate this information. At first sight this might seem undesirable, yet we find it to be the ultimate flexibility mechanism. Following the principle “we are all grown-up here”, we think (and our clients do too) that sufficiently privileged users should have direct access to information and be capable of changing it as they would change any other piece of information. We thus, whenever reasonable, store information directly to the respective article’s markdown (its contents), making it directly editable. In order to cope with this, we have developed a parser which looks for pieces of contents which resemble the loosely defined structure in which we would have written information, and hopefully interprets it. We try to use simple structures and be as flexible as possible in our grammar definition, so that users still have freedom to manipulate the structures without braking the overall contents. Normalizer Having all the above layers and information scattered across different storage sources would make it difficult to access information specially out of the domain the API defines with the outer world (e.g. it would be hard to have a mobile app parsing markdown and interpreting it as valid data). With this in mind we have developed a component whose sole purpose is to gather normalize all an article’s information into a well defined structure which can be easily used by and shared with all the other components, specially those which are not (nor should they be) familiar with these layers which we presented here."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "developer-mobile-app": {
+        "id": "developer-mobile-app",
+        "title": "Mobile App",
+        "category": "",
+        "url": " /developer/mobile-app/",
+        "content": "Authentication Since the authentication process is centralized in MakerLab’s api endpoint, the app will make this process through a Web View that, allied to the redirects made by OAuth protocol used by the university, will take the user through the steps needed to the authentication process. The app will only interfere in last step - establishing the session with the wiki - where it will get the session-id through the request headers and save it in the app preferences (Shared Preferences), as it will be necessary to perform all the requests to MakerLab’s api endpoints. This Shared Preferences are saved in a secure way (Secure Preferences) on the equipment (smartphone or tablet) memory. After this proccess, the webview cache need to be cleared, so that the user can logout and re-login with another accounts, since UA’s idp saves session and allways maintains an logged account. After the login’s process, the app will request for user’s infos by making a request to api profile endpoint and save the user name, email and wiki user id. At this point the app also saves the current login time, since wiki’s session is maintained only for 15 days, so it needs to force logout so that the session-id is allways valid. An auto-login feature is also present, by handling the user infos on app preferences. When the user forces logout, these infos are cleared, so the app will ask the user to make authentication by following all workflow shown above. DMLCalls The DMLCalls is the model class responsible for populate and mantaining the information needed on others views, namely the complete list of users, and the list of projects and requisitions of the user that is authenticated. A complete workflow (getting list of users &gt; list of user’s projects &gt; list of user’s requisitions) is done on the app startup, so that the views can be populated in the initial state. These information obtained from the MakerLab’s api endpoints is stored follwoing the OOP methodology, as follows. Users list : based on User object, which contains its name (first and last), wiki user id and a flag used to manipulate checkable list on “Adicionar Membros” feature; User’s projects list : based on Project object, which contains project name and id, creation date and a list of it’s members (User objects); User’s requisitions list : based on Requisition object which contains the item name and id, the associated project name and number of units requested; These objects are stored in lists, accessible at any time, through DMCalls instance. It is also possible to force a refresh of the user’s projects and requisitions by calling the respective method (forceUserProjectsLoad, forceUserRequisitions). The user’s projects refresh will notify Main Activity (with a broadcast signal) and redirect the user to projects list in order to refresh the list view with the last projects, and the user’s requisitions refresh will notify the reader fragment in order to re-activate the camera function. Api call’s All requests to MakerLab’s api endpoints are done based on Volley lib. However, since wiki host has a self-signed certificate to work on http secure mode (https), some changes have to be done on top of Volley lib. These changes are present on network package , namely: AndroidSelfSigned - based on erickok solution creates a keystore containing trusted certificates, a trust manager that trust on certificates placed on the keystore and a ssl context that uses that trust manager; VolleySelfSigned - using all tools created on AndroidSelfSigned and based on HurlStack, creates a connection with a custom ssl socket factory (NoSSLv3SocketFactory) and attach a session-id (cookie) to it; NoSSLv3SocketFactory -disables SSLv3, since while making a secure connection, android was falling back to SSLv3 from TLSv1 . It is a known bug in android versions &lt;= 4.4 and it can be solved by removing the SSLv3 protocol from enabled protocols list; The server certificate that is used on MakerLab’s api endpoints interactions is generated in MakerLab’s server (.crt extension) and placed on assets folder (on project path). Also, the cookie that is attached to the requests responses is obtained on Authentication phase, as described in above section. Views structure The app views are all based on Fragments interface, selected by a side menu which is available at any time with the exception of Project Page fragment, User list fragment and Create Project fragment, since they make part of a separate workflow. In that case, it is necessary to handle go back feature (top left icon is replaced for a go back arrow) and it’s logic in MainActivity. Item scanner Since the app needs to scan QR codes and work on theirs information, the application uses MobileVisionBarcodeScanner lib, which in itself is based on a solution created by Google. It detects a QR code and returns it’s value so that we can work above it. Augmented Reality The augmented reality feature was a addition made on MobileVisionBarcodeScanner source code. When a code is readed, a Barcode wrapper is created, which make possible to find the code bounding box. Based on that, the app builds and draw four paintings on returned canvas, as following: Rect Background - fills the background with white color and bounds the image; Logo bitmap - decodes the png logo file and creates a scaled bitmap to draw over the rect background; Rect border - draws a rectangle border with MakerLab’s color, to make the canvas look better; Text - computes text position on rect’s bottom, so that it appears centered with it. This text is the equipment name where the QR code is pasted, and it is obtained by making a request to api equipments QRCODE_SCANNED. These names are maintained in a Map so that repeated requests are not made to previously readed codes; This feature can be enabled or disabled on settings menu, which controlls a flag saved on app preferences. Requisitions Deliveries logics After the QR code is readed and returned, it is necessary to find the equipment infos, by making a request to api equipments QRCODE_SCANNED and analyse the name, quantity and active requisitions number. After that a dialog is created to handle user input, namely: Requisition Delivery chooser - a switch which determines whether the user wants to make a requisition or a delivery; Project - if the user wants to make a requisition, the project spinner will show all user’s projects (DMLCalls projects list) so that the user selects one of them to associate the requisition. If it is a delivery, the project spinner will just show the projects in which the user have active requisitions, by analysing user active requisitions list (DMLCalls requisition list); Number of units - determines the number of units the user want to request or deliver. The request max value is limited to 10 (so the server does not overload) or number of units available if it has a value smaller than 10. The deliver max value is also limited to 10 or number of units in the active requisition, if it has a value smaller than 10. The inexistence of projects prevents the dialog from being displayed, since there are no projects in which the user can associate the requisition, as well as the inexistence of available equipment’s units will block the requisition feature and the inexistence of active requisitions of the equipment will block delivery feature. When “Concluir” button is pressed, the request need to be done, by making a PUT request to api projects CHOSEN_PROJECT_ID requisitions QRCODE_SCANNED in order to make a requisition or a DELETE request to same endpoint to make a delivery. Since the server does not support multiple requisitions deliveries at once, it is necessary to make multiple requests to the specific endpoint, which value is determined by the number chosen in the NumberPicker. After all requests are computed by the server, a message with operation status will show and the requisition list needs to be refresh by making a reload of the requisitions list on DMLCalls, which, when the reload is finished, will broadcast a signal in order to allow the user to make new requisitions or deliveries based on updated values. Projects Create Project Based on two fields on a form where the user fills the project name and description a PUT request is made to api projects new?title=PROJECT_NAME&amp;content=PROJECT_DESCRIPTION. After that the user is redirected to project list view. Listing Projects The user’s projects list (DMLCalls projects list) is showing based on a listview with a custom adapter which shows the project name, creation date and a rectangle image which represents the project. Project Page When a project is clicked on above section, a page with more details appears. The main feature of this page is to see and manage the project members, by showing a list with them. Adding members to projects When the user clicks on “Adicionar Membros”, a new page with all MakerLab’s users is shown, so that the user can select and add multiple members to it’s projects. This checkable list is handle by consulting isSelected flag present on User object, so it needs to be unchecked on page startup. A listview item click listener is also setted in order to improve user experience and allow them to pick a user by simply touch on the item or in the checkbox. When “Adicionar Membros” button is clicked, a PUT request to api projects PROJECT_ID members USER_ID has to be done , user by user, since the server does not support multiple addings’. Requisitions Lists Based on requisitions and deliveries done on Item Scanner section, a page will be show all user active requisitions (DMLCalls requisition list). Each item of this list will have the equipment name, the project which requisition is associated and number of units requested. Development Environment The app was created on Android Studio IDE and the dependencies are maintained using Gradle (used by default with Android Studio IDE). Dependencies In order to create and build the app so that the requeriments and user experience gets fulfilled, some external libs have been used, namely: MobileVisionBarcodeScanner - base lib to read QRCodes, as explained in the above sections; Gravatar-Android - used to load user avatar; TextDrawable - used to draw project image avatar on its page and projects list; Picasso - used to download and cache images; SecurePreferences-lib - wrapper that encrypts the values of Shared Preferences; FloatingActionButton - custom and animated floating action button based on material design specification; Volley - HTTP library that makes network requests faster and easier to handle; CircleImageVIew - used to draw user avatar with a circular shape;"
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "developer-network-manager": {
+        "id": "developer-network-manager",
+        "title": "Network Manager",
+        "category": "",
+        "url": " /developer/network-manager/",
+        "content": "The network manager is in charge of all things network. It’s main goal is to provide a private network to each project, with internet connectivity, as well as the possibility of launching Docker containers for testing and deployment. All the traffic is completely isolated from each network and the users can access their projects’ networks and containers by associating RJ-45 sockets at DML’s room to them. A simplified vision of our network architecture would be: Before Starting We recommend having a small knowledge base on Software Defined Networks (SDN), OpenFlow, Open vSwitch, Docker and overall networking before diving into this section. The “core” of each project’s network will be hosted on a datacenter, where the containers will be orchestrated and the NAT PAT mechanisms will provide internet access to all the hosts across the private networks. In order to fulfill time milestones, it was decided that this implementation of the container orchestration will be focused on a single-host datacenter architecture, rather than a swarm-like implementation. The datacenter will be running an HTTP server (NetManager), that will fulfill all the requests of the DML’s API, and will be responsible for managing all the Open vSwitch bridges, containers and the associated ports of the projects. The datacenter will also be running the SDN Controller responsible for controlling the switch’s traffic at the DETI MakerLab room. Both the NetManager and SDN Controller will be using the same PostgreSQL database, where it’ll be stored all the information relative to the network. At the moment, all the requests made to the NetManager come exclusively from the dml-servant. The following image describes the current architecture in place: NetManager The controller behind managing all the things at the Datacenter is a flask powered HTTP Server, with the assistance of a PostgreSQL database to store all the networking-relative information. Its main functionalities are: Creation and destruction of a project’s network — when the first container is launched (within the scope of a project) or a ethernet port is requested, an OvS bridge is created and a router-like container is started; Creation and destruction of containers — either a pre-built container or built with a Dockerfile provided by the user; Change of state (start and stop) of containers; Association of RJ-45 sockets (based on a printed ID on them) to projects’ networks (in order to let the SDN controller know which ports belong to the projects’ VLANs); Informational endpoints to the platform’s API, mainly to the dml-servant, returning container’s DockerIDs, IPs, status, logs and more. Project’s vSwitch Project’s vSwitch is nothing more than a virtual switch (using Open vSwitch), created in the scope of each project (when the first container is created or a port is requested) and that will have two main purposes: Operate as a switch bridge for attaching containers; Create a connection between the project’s switch and the VTEP bridge to send the traffic trough the VxLAN tunnel, so that all containers and users’ terminals (laptops, etc.) at DML coexist inside the same Layer 2 network (private network of each project). “Router” container Each private network, after the creation of its OvS bridge, will be provided with a container that will operate like a router, creating the “bridge” between this network and the internet, using NAT PAT mechanisms, and operating like a DHCP server, providing IP addresses to all the hosts within that network. The router container runs a Alpine Linux distro with IPTables for NAT PAT and ISC DHCP server for the DHCP service. Container Orchestration Architecture A more comprehensive view on the internal works of the datacenter orchestration can be seen in the following image. There are two main bridges that are created with the system deployment: Routing bridge — aggregates all the public routers’ interfaces, as well as a network interface of the deployment machine, allowing the routers to obtain a public IP address; VTEP bridge — aggregates all the patch ports that connect directly to the projects’ vSwitches. It’ll operate as a OpenFlow virtual switch, since, by the time a project bridge is created, two flows are installed on the bridge, in order to redirect traffic coming from the VxLAN tunnel to the project’s vSwitch and vice-versa. Setup For the complete setup instructions, please look for the network installation guide for detailed instructions of how to set up all the network related components. Endpoints The datacenter-master server.py contains a flask app which provides a set of endpoints to manage all the networking. These are described below. However, there are other auxiliary methods that are not displayed here, but they are well documented in the code. In all endpoints, json is returned. A return code of 400 or 500 along the with an error message is returned in case of failure, otherwise 200 is returned (unless something unexpected happens). Add port Accepting a given user_id, project_id (id of a project) and a port number, adds that port to the VLAN of that project, using the SDN controller. add-port &lt;int:user_id&gt; &lt;int:project_id&gt; &lt;int:port_id&gt; user_id: ID of the user on the platform project_id: ID of the project that the port will be associated to port_id: Ethernet socket port number that will be requested POST: Returns a successful HTTP response Remove port Accepting a given user_id and a port number, removes that port to the VLAN of that project, using the SDN controller. remove-port &lt;int:user_id&gt; &lt;int:port_id&gt; user_id: ID of the user on the platform port_id: Ethernet socket port number that will be freed POST: Returns a successful HTTP response Create project bridge Accepting a given user_id and a project_id (id of a project), creates a new OvS bridge and launches its router-like container. create-bridge &lt;int:user_id&gt; &lt;int:project_id&gt; user_id: ID of the user on the platform project_id: ID of the project that will have the bridge associated to POST: Returns a successful HTTP response Delete project bridge Accepting a given user_id and a project_id (id of a project), deletes the corresponding OvS bridge and all its containers. delete-bridge &lt;int:user_id&gt; &lt;int:project_id&gt; user_id: ID of the user on the platform project_id: ID of the project that will have the bridge associated to POST: Returns a successful HTTP response New container Accepting a given user_id, a project_id (id of a project), and possibly a Dockerfile, launches a new container. new-container &lt;int:user_id&gt; &lt;int:project_id&gt; user_id: ID of the user on the platform. project_id: ID of the project (bridge) that the new container will be attached to dockerfile: In attachment might be a dockerfile, describing the container that'll be launched POST: Returns a dictionary with {success, container_name, ip, docker_id} Update container Accepting a given user_id, a docker_id and a Dockerfile, updates the container. update-container &lt;int:user_id&gt; &lt;docker_id&gt; user_id: ID of the user on the platform. docker_id: ID of the Docker container that will be updated dockerfile: In attachment, it should be a dockerfile, describing the container that'll be launched. POST: Returns a dictionary with {success, container_name, ip, docker_id} Delete container Given a user_id and a docker_id, stops and removes the corresponding container. remove-container &lt;int:user_id&gt; &lt;docker_id&gt; user_id: ID of the user on the platform. docker_id: ID of the Docker container that will be updated POST: Returns a successful HTTP response Get project’s containers Given a user_id and a project_id (id of a project), returns all the containers info related to the project. get-project-containers &lt;int:user_id&gt; &lt;int:project_id&gt; user_id: ID of the user on the platform. project_id: ID of the project GET: Returns a dictionary with {success, containers} Get container info Accepting a given user_id, docker_id, returns all info about it: IP, DockerID, status and CPU and memory usage stats. get-container-info &lt;int:user_id&gt; &lt;docker_id&gt; user_id: ID of the user on the platform. docker_id: ID of the Docker container that the info is requested GET: Returns a dictionary with {success, stats={id, docker_id, status, cpu, mem_used, mem_limit, mem_perc}} Get container logs Accepting a user_id and a docker_id, returns its last 50 lines of log. get-container-logs &lt;int:user_id&gt; &lt;docker_id&gt; user_id: ID of the user on the platform. docker_id: ID of the Docker container that the info is requested GET: Returns a dictionary with {success, logs} Start container Accepting a given user_id and docker_id, starts the corresponding container. start-container &lt;int:user_id&gt; &lt;docker_id&gt; user_id: ID of the user on the platform. docker_id: ID of the Docker container that'll be started GET: Returns a dictionary with {success, ip, docker_id} Stop container Accepting a given user_id and docker_id, stops the corresponding container. stop-container &lt;int:user_id&gt; &lt;docker_id&gt; user_id: ID of the user on the platform. docker_id: ID of the Docker container that'll be stoped GET: Returns a successful HTTP response Restart container Accepting a given user_id and docker_id, restarts the corresponding container. restart-container &lt;int:user_id&gt; &lt;docker_id&gt; user_id: ID of the user on the platform. docker_id: ID of the Docker container that'll be restarted GET: Returns a dictionary with {success, ip, docker_id} SDN Controller It’ll be at the DETI MakerLab room that the users will connect to their projects’ networks, where there are several RJ-45 sockets and a OpenFlow enabled Switch to control all the traffic inside the room and forward it to the datacenter. To connect all the hosts at DML, a OpenFlow enabled Switch must exist but, in order to work as intended, a SDN controller is also needed. This controller will be responsible for: Analyzing and redirecting packets that the Switch are not familiar with and to tell it where to forward them, may their destination be an host at the room or a VM through the VxLAN tunnel; Installing OpenFlow rules in the Switch, so that the packets with a similar destination would be automatically redirected without the need of sending them to the controller. Although the SDN controller initially provided an HTTP REST endpoints, it’s deprecated an not used at the moment, but in the future it might be useful. With that in mind, the SDN controller runs an HTTP server, but without any current endpoints. To start the SDN controller, just use ryu-manager sdn-controller dml_switch_rest.py. The controller contains the following methods: Get IP (class method) Returns the IP of a project VLAN given a certain project_id. project_id: ID of the project Returns: string containing the IP address. Get VNI (class method) Returns the VLAN ID VNI, which equals the project_id, given an IP of a project VLAN. ip: a given IP address Returns: the VLAN ID VNI of a project's network Get All Reserved Ports Returns a list of all already reserved ports currently in the network database. ip: a given IP address Returns: list of integers - port numbers Get VLAN Port Given a certain port number, returns the VLAN ID that’s associated to. port: ethernet port number Returns: the VLAN ID VNI of the network the given port is associated to Switch Features Handler Receving an OpenFlow event as input, installs a table-miss flow entry. At the moment, if it specified a lesser number, e.g., 128, OvS will send Packet-In with invalid buffer_id and truncated packet data. In that case, it is not possible to output packets correctly. ev: An OpenFlow event, that contains a packet message and the involved protocols Returns: None Add flow Creates a new OpenFlow flow in the current datapath (table 0). datapath: Datapath of the OpenFlow controlled switch priority: Priority of the flow match: Packets matching conditions config actions: Actions to perform given the selected packets buffer_id: used Buffer ID Returns: None Parse VxLAN broadcast Given a certain packet message and its headers that comes from the VxLAN tunnel port and that the destination MAC address is the broadcast address, this method parses that packet, figuring out which VNI VLAN ID the packet carries and send it to the correct ports. msg: Message of a packet header_list: List of headers of the given message Returns: None Packet-In handler Given an OpenFlow event, parses that event packet. According to the In-Packet origin, there are multiple alternatives: If the traffic comes from the VxLAN tunnel port with the broadcast MAC destination, calls the _parse_vxlan_broadcast method with the given packet message and its headers; If the traffic comes from the VxLAN tunnel port with a destination IP address, use the get_vni method to obtain the VLAN ID to forward it to the correct VLAN; If the traffic comes from an host directly connected to the switch, obtain its VLAN ID using the get_port_to_vlan method; According to the In-Packet destination: If the packet’s destination MAC address is unknown (not present in the ARP table at the time), send the packet to all the VLAN ports, including the VxLAN tunnel port (flooding process); If the packet’s destination MAC address is known, send it to the correct port and call the add_flow method to regist a new flow at the switch to prevent these known “routes” to be constantly redirected to the SDN controller; It is worth poiting out that, if a packet is redirected to the VxLAN tunnel port, it’s necessarily added a new OpenFlow message field with the corresponding VNI VLAN ID. ev: An OpenFlow event, that contains a packet message and the involved protocols Returns: None"
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "developer-parser": {
+        "id": "developer-parser",
+        "title": "Parser",
+        "category": "",
+        "url": " /developer/parser/",
+        "content": "The parser can be logically divided into 4 stages: db: when it grabs articles’ metadata directly from the database; xml: when it grabs articles’ metadata from the xml structure associated to each article; md: when it parses the content (markdown) of an article, retrieving information from it; normalization: when it computes inferred values or does simplifications to the article built. Each stage is represented by a function in the file parser parser.py. Public methods The only public method the module exports is parse(article). It receives and parses an article as it is retrieved from the wiki, and returns a dictionary with the proper output. It encapsulates the stages mentioned above. Private methods Each private method implements one of the stages defined above. Their rationale follow. _parse_db(article) =&gt; db_article Retrieves (and returns) the relevant information from article, directly from the database structure implied from Django. _parse_xml(xml_content) =&gt; xml_article Retrieves and returns relevant xml tags from the article’s content. Might do some manipulations with the tags (such as popping them out of a nested structure). _parse_md(md_content) =&gt; md_article Sets up and calls a LL(*) parser (ANTLR grammar) that retrieves relevant information from the markdown itself. Although not strictly imposed, it seems like a good police to not compute extra results after the parsing is done, contrary to what is done with the previous methods. The parser itself should handle the creation of new values. The grammar used is defined in Article.g4. The parser’s generation needs an installation of ANTLR (which although easy is out of the scope of this document). Afterwards the process of generating it should be very streamlined. Notice that with the current implementation, there is no need to generate a parse tree listener not visitor. Disclaimer: Currently this function does nothing. It used to, and thus we decided to leave it be for reference. _normalize(article) =&gt; normalized_article This function is used to ensure that the result of a parse is a well defined structure. Again, it might compute new values from the previous computed ones. No other stages have the ability to compute values based on others that are not from their stage only. This restriction is lifted in the normalizer. Wrap up After the execution of the first three methods, they are joined together and the result is normalized. The normalized article structure is then returned."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "developer-servant": {
+        "id": "developer-servant",
+        "title": "Servant",
+        "category": "",
+        "url": " /developer/servant/",
+        "content": "The commands the servant answers to are already discussed in the user area. Introduction The servant is a hubot chatbot that uses the hubot-slack adapter to interact with DETI’s Slack. It runs in Node.js and accepts scripts in either coffeescript or javascript. The repo which hosts the projects code is dml-servant. To interact with slack, the bot needs a secret token generated at the department’s slack page. Besides answering to the already mentioned commands, the bot is also capable of periodically checking a set of endpoints and reporting their results (through slack). The logged user’s email is used to request information from the wiki (which in turn also uses the same email). This makes transparent (to the user) the integration of both services. Details The following details are given per directory or file of the repo. assets This directory includes relevant files for the bot’s execution. The most useful one is endpoints.txt, which includes a set of endpoints to periodically try to reach. lib constants.js Defines constants used through the rest of the code. The most relevant portion of it is included: DML_NM_HOST: '192.168.1.128', DML_NM_PORT: '22', DML_NM_URL: 'http: 127.0.0.1:5000', DML_NM_USERNAME: 'dml-datacenter', DML_DEV_API_HOST: '188.166.77.53', DML_DEV_SSL_CERT: fs.readFileSync('assets nginx-selfsigned_dev.crt', {encoding: 'utf-8'}), DML_PING_CHANNEL: '#makerlab-reports', DML_PING_ENDPOINTS: 'assets endpoints.txt', DML_PING_MIN_PATTERN: '* 30', every 30 minutes DML_PRIVATE_KEY: fs.readFileSync('assets id_rsa'), DML_SSL_CERT: fs.readFileSync('assets nginx-selfsigned.crt', {encoding: 'utf-8'}) DML_NM_* constants relevant to the bot’s interaction with the network manager. DML_DEV_* define constants used when referencing the development server. DML_PING_* constants used regarding the “test endpoints” function. DML_PRIVATE_KEY key used by the bot in ssh sessions. DML_SSL_CERT certificate the bot expects from the main server. scripts crontab.js Handles testing endpoints in a cron-like approach. Non of its methods are callable from the outside world, since they only output information. scripts projects.js Contains functions regarding projects. Currently one chat listener is registered, which is used to display information about the logged user’s projects. scripts network.js The main script used by the bot. All the network endpoints registered in the bot are written in this file. Major warning The way the servant authenticates with the network, for security reasons, is through ssh. This means that the servant effectively ssh’s into the machine running the network’s server in order to issue requests. This is transparent to the developers by the use of http-ssh-agent, which enables the creation of an agent used to proxy requests. setup A directory containing information scripts on how to generate the initial version of the bot."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "developer-wiki": {
+        "id": "developer-wiki",
+        "title": "Wiki",
+        "category": "",
+        "url": " /developer/wiki/",
+        "content": "Wiki is the core of the system. There lives (almost) all the information of the system. On the one hand, wiki provides tools to manage equipments, projects and users. On the other, users can collaboratively edit articles, in a version controlled way, to document and share all the information that assists students making their projects happen. Context To avoid some misunderstandings, we want to give you a few words about the wiki’s concept. Wiki is primarily… a Wiki, like Wikipedia. There are articles on users, projects and equipments. But, due to the requirements for management, it provides the capabilities of an information system. A wiki is primarily a place to store flexible content, that can be indexed in a dynamic way. For example, each equipment, in its article, saves the requisitions’ logs in a XML structure, along with the content of the article itself. Before starting Before you continue, here are some recommendations for where to start if you need to develop new features over the wiki. Wiki is a fork of the django-wiki project, developed in django, a Python’s web framework. So, first you need to be familiar with Python, witch we assume you are. Second, you will need to be familiar with django, witch we assume you aren’t. In order to achieve that, we recommend you the beginners tutorial available on django’s documentation, here. It will give you a fast and complete way to understand the django’s basics. We really recommend you to follow this tutorial, otherwise it will be chaotic for you too understand what is going on in the project’s structure. After performing this, be sure that words like models, views, urls and templates are not weird for you in the context of django. To conclude, as we said, django-wiki (the original project from where we forked our own) is developed in django. This is not specially important to know, but if you are curious, take a few seconds to visit their repository here. Database model The system is based in the database that was originally developed in the django-wiki. The database has all the logic to manage articles, article’s revisions and a few other things. The database model is presented bellow, and it will be very useful for you when you start manipulating the source code. Use it to guide yourself when building your queries. The database model is 100% kept like the original. This has to do with our vision to build a dynamic and flexible system. The database serves the low level logic to manage the basic functionalities of a wiki: the articles. All the logic we needed to implement in each article type (equipments, projects, users), was done in the article content. Each article has in its content a XML structure. That XML provides everything we need to store information in a structured way. The wiki, supported with an indexer and a parser, can interpret all this information in a dynamically. The tag ‘type’ specifies the article type. The article’s content, displayed to the users when they surf on the wiki, is saved in the ‘content’ tag, using markdown. Other tags are present according to the article type. Equipment’s structure Each equipment has tags for quantity, active requisitions and requisition logs. &lt;wiki&gt; &lt;content&gt; # Ficha Técnica * ** Família: ** Microcomputador * ** Sub-Família: ** Raspberry * ** Código: ** 640522710850 * ** Preço (c IVA): ** 38.63€ * ** Fornecedor: ** Farnell * ** Localização: ** N A * ** Data Última Aquisição: ** 2016 11 03 # Imagens [image:4 align:left size:orig] ... &lt; content&gt; &lt;type&gt;equipment&lt; type&gt; &lt;quantity&gt;20&lt; quantity&gt; &lt;active_requisitions&gt;1&lt; active_requisitions&gt; &lt;requisitions&gt; &lt;requisition&gt; &lt;project&gt;42&lt; project&gt; &lt;member&gt;1&lt; member&gt; &lt;begin&gt;2017-06-11T17:35:22.773391Z&lt; begin&gt; &lt;end&gt;2017-06-11T17:35:33.716983Z&lt; end&gt; &lt; requisition&gt; &lt;requisition&gt; &lt;project&gt;42&lt; project&gt; &lt;member&gt;1&lt; member&gt; &lt;begin&gt;2017-06-11T17:35:24.551744Z&lt; begin&gt; &lt; requisition&gt; &lt; requisitions&gt; &lt; wiki&gt; Project’s structure A project has tags for members. &lt;wiki&gt; &lt;content&gt; # Descrição O DETI MakerLab é um sistema projetado para gerir a nova sala do DETI. ... &lt; content&gt; &lt;type&gt;project&lt; type&gt; &lt;members&gt; &lt;owner&gt;4&lt; owner&gt; &lt;mentor&gt;2&lt; mentor&gt; &lt;member&gt;5&lt; member&gt; &lt;member&gt;8&lt; member&gt; &lt; members&gt; &lt; wiki&gt; User profile’s structure A user profile saves some personal data like NMEC and course. It also registers if a user is a teacher. &lt;wiki&gt; &lt;content&gt; # Sobre mim ![Foto](https: qph.ec.quoracdn.net main-thumb-t-47219-200-krmazzslyzgyzmjogyetrglpdgxnodob.jpeg) Esta página é reservada a ti. Edita-a a teu gosto. ... &lt; content&gt; &lt;type&gt;profile&lt; type&gt; &lt;is_teacher&gt;True&lt; is_teacher&gt; &lt; wiki&gt; environ.json Wiki has a configuration file some environment variables. Those value vary from installation to installation. This is an example of a setup of this file: { \"HOST\": \"https: deti-makerlab.ua.pt \", \"ALLOWED_HOSTS\": \"188.166.77.53 127.0.0.1\", \"DEBUG\": true, \"SECRET_KEY\": \"1234567890qwertyuiopasdfghjklzxc\", \"DATABASE_HOST\": \"127.0.0.1\", \"DATABASE_PASSWORD\": \"password\", \"DATABASE_PORT\": \"5432\", \"WIKI_URL\": \"http: 127.0.0.1:80\", \"SOLR_URL\": \"http: 127.0.0.1:5000\", \"MEDIA_ROOT\": \" var www makerlab media \", \"STATIC_ROOT\": \" var www makerlab static \", \"DML_AUTH_KEY\": \"_1234abcd\", \"DML_AUTH_SECRET\": \"_5678efgh\", \"DML_EMAIL_HOST\": \"noreply@deti-makerlab.ua.pt\", \"DML_EMAILS_ADMIN\": \"admin@example.com\", \"DML_EMAILS_MANAGER\": \"manager@example.com, manager2@example.com\" } The parameters without the DML_ prefix are mapping configuration parameters original from django, used in a settings.py file. Bellow is an explanation of the others: HOST: Wiki MakerLab base url; DML_AUTH_KEY and DML_AUTH_SECRET: Parameters from UA OAuth ver aqui; DML_EMAIL_HOST: email to appear in the sender field of MakerLab’s automatic emails DML_EMAILS_ADMIN: list of emails to where are sent a copy of all emails sent by the system (usually the administrator of the system) DML_EMAILS_MANAGER: list of emails to where are sent all requisitions deliveries (usually the managers of the system) Wiki roles When developing new features to the wiki, be attentive to the existent user roles, explained in detail here. django-wiki Along the development of MakerLab Wiki, we maintained our repository fork updated with the new versions coming from django-wiki (here), the wiki that is in the origin of ours. All the development made in MakerLab Wiki was done with that in mind, supporting new changes from the original project, MakerLab Wiki up to date with the new features and fixes that came from the original project. So, please keep these efforts in your development, don’t forget to merge new django-wiki versions with ours."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-architecture": {
+        "id": "specification-architecture",
+        "title": "Architecture",
+        "category": "",
+        "url": " /specification/architecture/",
+        "content": "Architecture Here is a simple illustration of how DETI MakerLab looks like: Although not an extensive diagram, hopefully it will empower the reader with a top-level understanding of the DML’s internals. Components The components illustrated above are documented within each one’s page. Yet, a succinct description of each component will be provided for completeness’ sake. API provider This is the component responsible for programmatically interfacing with the outside world — with apps or the lab’s servant, for example. Wiki Engine Responsible for handling the wiki-like internal structure, managing revisions, and validating (authentication-wise) the access to wiki pages. For more information see here. App The app provides for a more user-centered experience within the lab and have all necessary tools to start using it’s features as fast as possible. For more information see here. Index Manager Answers performance concerns that could rise due to our data organization model (which in turn is based on requirements such as the use of a wiki-based system). Facades the interaction with an indexer, abstracting the build of queries that would otherwise require extensive knowledge about the indexer’s internals. For more information see here. Wiki Parser The component responsible for processing the (unstructured) structure of the wiki into a more well-defined form. It handles the different stages of organization discussed in data-structure. Network Manager Answers to the network matters of the lab. Abstracts the issuing of VLANs and the creation removal of VMs. For more information see here. Plugins Should be as decoupled as possible from the rest of the system. They should be hot-swappable, without affecting the overall, basic functionality of the system. They should be the main way of expanding the platform to new possibilities of interactions services. An example of a plugin is Makerlab’s servant."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-indexer": {
+        "id": "specification-indexer",
+        "title": "Indexer",
+        "category": "",
+        "url": " /specification/indexer/",
+        "content": "Since most of the knowledge of the system is kept within our wiki, in a mostly unstructured manner, our architecture was drawn taking into consideration that we needed a way to sanitize its storage and its accessing. The first topic is covered here, where we discus decisions about the data organization we adopted. This page continues this documentation effort by targeting the data access with an indexer. By including in our architecture ways of handling data from different layers, we have supported requirements such as: high flexibility, wiki based approach. Yet, this alone hinders the performance of the platform since the only way of finding a piece of information not within the database structured layer is by iterating through the many existing articles, interpreting and evaluating them. The situation worsens as one realises that at times we also need to evaluate not only the current articles, but also each article’s past revisions. We address this issue by including a block (the indexer) that captiously indexes our interpretation of each article, as they are updated. We can then query the indexer for features of our interest, and it will search its index for them. This solves our performance worries since by design the indexer is implemented with optimizations and efficiency in mind. Although not meant to be an extensive list, a few queries that are will be supported include: Active requisitions, filtered by date range, project, etc; Projects a user belongs to (and vice-versa); Users that were with the item between a range of dates; Other queries necessary for the wiki’s operation;"
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-introduction": {
+        "id": "specification-introduction",
+        "title": "Introduction",
+        "category": "",
+        "url": " /specification/introduction/",
+        "content": "Our Vision DETI MakerLab (DML) is a system designed to manage a modern and innovative room. This room is filled with electronic components and devices, such as Arduinos, Raspberries, 3D printers, a network closet and the like. The space aims at being the room to carry on projects inside DETI. Our goal is to provide a flexible platform to manage an hacker space like DML, easing the students’ and manager’s lives, and to solve some of the space current issues."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-mobile-app": {
+        "id": "specification-mobile-app",
+        "title": "Mobile App",
+        "category": "",
+        "url": " /specification/mobile-app/",
+        "content": "The mobile app will be the main bridge between the users and the system. It’ll provide the possibility to: Manage pending requisitions, providing information of the project to which it is associated and the number of units requested; Create and manage projects with which the user is involved and add new members to them. Make item requisitions and deliveries. Login The users will be able to login into the app with their University of Aveiro’s credentials, and , in order to automate and make things easier, it will have an auto-login feature, so that the users don’t have to keep filling the login form every time they want to use the app. Projects There is a place where the users can show to others everything that has been done on a project and, in the case of equipments, give them ideas of how to use them, leading them to develop new ideas and continuing the loop. In order to populate and maintain this important space, the app will allow them to manage the two most important parts - projects and their participants. By creating and manage projects and adding a colleague to a project, users will be able to access all project information and documentation in order to start their work in no time. Requisitions The equipments spread across the lab will be labeled with QR Codes. The users will be able to point to them and sneak peek some information about them with an Augmented Reality touch, which is particularly useful if they’re not familiar with the equipment. If they are pointing to the intended item, they can select it and choose the project name that the requisition will be associated to. The users will also be able to deliver items they previously requested through the app. The process is almost the same as to making a requisition. Simply pointing the phone’s camera to the QR code pasted in the item and clicking “Deliver” will do the trick."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-network-manager": {
+        "id": "specification-network-manager",
+        "title": "Network Manager",
+        "category": "",
+        "url": " /specification/network-manager/",
+        "content": "The network manager is in charge of all things network. It’s main goal is to provide a private network to each project, with internet connectivity, as well as the possibility of launching Docker containers for testing and deployment. All the traffic is completely isolated from each network and the users can access their projects’ networks and containers by associating RJ-45 sockets at DML’s room to them. A simplified vision of our network architecture would be: The “core” of each project’s network will be hosted on a datacenter, where the containers will be orchestrated and the NAT PAT mechanisms will provide internet access to all the hosts across the private networks. In order to fulfill time milestones, it was decided that this implementation of the container orchestration will be focused on a single-host datacenter architecture, rather than a swarm-like implementation. The datacenter will also be running the SDN Controller responsible for controlling the switch’s traffic at the DETI MakerLab room. NetManager The datacenter will host a controller that will manage all the networking information. Its main functionalities are: Creation and destruction of a project’s network; Creation and destruction of containers; Change of state (start and stop) of containers; Association of RJ-45 sockets (based on a printed ID on them) to projects’ networks; Informational endpoints to the platform’s API, mainly to the dml-servant. SDN Controller It’ll be at the DETI MakerLab room that the users will connect to their projects’ networks, where there are several RJ-45 sockets and a OpenFlow enabled Switch to control all the traffic inside the room and forward it to the datacenter. To connect all the hosts at DML, a OpenFlow enabled Switch must exist but, in order to work as intended, a SDN controller is also needed. This controller will be responsible for: Analyzing and redirecting packets that the Switch are not familiar with and to tell it where to forward them, may their destination be an host at the room or a VM through the VxLAN tunnel; Installing OpenFlow rules in the Switch, so that the packets with a similar destination would be automatically redirected without the need of sending them to the controller."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-print-util": {
+        "id": "specification-print-util",
+        "title": "Print Util",
+        "category": "",
+        "url": " /specification/print-util/",
+        "content": "In order to identify items services within Makerlab’s context we use ids. These are printed as a QR code that is then placed on each item it refers to, making possible the automation and process simplification mentioned in other components (see wiki or mobile-app). This implies the existence of labels, and although for the platform itself the simple QR code would suffice, we had to cope with requirements imposed by Makerlab’s technical manager and support labels with different designs and with much more content than the simple code. Some of the limitations requirements we had to address include: The printer in the room (a special purpose printer to print labels) doesn’t have network connection; The computer the printer connects to runs Windows; The technical manager already had template labels prepared; The labels the technical manager wanted to print do not follow a static structure (i.e. some include a set of fields, others include different fields). The solution In order to simplify the issuing of each item’s label, and taking into consideration the arguments made above, we developed a simple application that takes a template label and manipulates the ZPL code (code resembling assembly that the printer understands) so that each label generated actually includes the correct QR code. Then, it sends these labels for printing. A screenshot of the application follows: We kept its looks simple and minimalistic since this is not considered a killing feature nor something that will be frequently used. The technical manager said himself he will be using this around once per new batch of items he receives, thus he doesn’t need something really eye-catching."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-requirements-and-features": {
+        "id": "specification-requirements-and-features",
+        "title": "Requirements And Features",
+        "category": "",
+        "url": " /specification/requirements-and-features/",
+        "content": "Requirements The following requirements state the functions and capabilities that the DML system will provide, although some requirements may be stated on other pages: Integration with University of Aveiro’s services (UU) — for easier access and information retrieval; Wiki-based platform — imposed by stakeholders — search for information in the system and manage equipments and their requisitions, projects and users; Android and iOS apps — manage projects and request equipments using their QR codes to make the requisition process agile; Self-managed network — able to satisfy the users’ requests to VM’s and VLANs autonomously, in order to overcome UA’s network constraints; Components must be independent — the failure of a plugin component must not affect neither the core nor other plugins; History of equipment usage (owner and associated project) — keep a log of users who might have broken it; Ability to automatically test the reachability of a set of endpoints; Interface to manage the room’s network; Statistics about the room’s usage (count people); The system must provide APIs for easy expansion — this is a multi-year project. Features DETI MakerLab (DML) platform includes the following features: Create, edit and delete projects; Register and edit equipment’s info and their quantity; Invite and remove collaborators to projects; Generation of QR codes for unlabeled units; Search users projects equipments; Document users projects equipments with text, images and file attachments; Version controlled documentation; Let teachers approve projects; Request and return release electronic equipment in the context of approved projects; Scanning QR codes of equipments using the mobile app in order to do requests; Notify requisitions by email; Request and release VLANs and create or destroy VMs through the DETI MakerLab Servant."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-risks": {
+        "id": "specification-risks",
+        "title": "Risks",
+        "category": "",
+        "url": " /specification/risks/",
+        "content": "Although all the requests of equipment, VMs, VLANs and the like are unmoderated, relying on the users’ good will may lead to a situation where a project has all of the units of a resource in its possession and other projects cannot continue because of this. Moderation can reduce the frequency and intensity of these situations. As usually happens with wikis, bad-intended users may disrupt the common process of the system by, for instance, editing pages of equipments making them unusable. Moderation mitigates the problem. An user not provided with a supported smartphone or a tablet can’t access all the functionality the system. A “community” phone may exist in the room, providing for those who need."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-scenarios": {
+        "id": "specification-scenarios",
+        "title": "Scenarios",
+        "category": "",
+        "url": " /specification/scenarios/",
+        "content": "With the best possible representation of the DML purpose in mind, the following scenarios should illustrate the interaction users should have with the system. It is not intended to be fully complete, nor is necessarily to be addressed within this year. User scenarios Alice and Bob decided to start a service to do animal inferring from photos. They need to do image processing for this, and they are interested in finding out whether a Raspberry Pi is capable of such task. With this in mind they create a project on DETI MakerLab (DML) and explain their goals and purposes. After a professor approves their project, they’re ready to make requisitions. They then use Alice’s phone to request a Raspberry by scanning a QR code existent in the device’s box. The team’s project is automatically updated, now stating that a Raspberry was requested for the project and that it is currently at Alice’s responsibility. Meanwhile, the Raspberry’s page is also updated, indicating that one is being used in this project. Testing the platform with evermore colleagues, Alice and Bob need something with more power than a Raspberry. They decide to carry on tests using a DML VM. With that in mind, Bob goes to DETI Slack to issue a VM creation with the dml-servant. After a few seconds, the servant replies, providing the machine’s IP address, credentials and DockerID, and thus creating a VLAN for that project, eliminating the restrictions of UA’s network. In order to access the recently created VM, Bob gets the ID of a ethernet socket at DETI MakerLab and issues the dml-servant to associate it to their project’s network. Bob is liable for this VM. After porting their project from the RPi to the VM, the team no longer needs their RPi. They thus scan the QR code existent in the device’s box with DETI-MakerLab mobile app and hand it to Mr. Arez, DML’s staff. The project is no longer in possession of the RPi, which is reflected in the project’s and RPi’s page. Carol, a friend of Alice, has become interested in the project after testing it. She wants to help the team, which is happy to accept her especially since she knows more about electronics than they do. To give Carol access to the DML services the team is using, Alice goes to DETI-MakerLab mobile app and adds Carol to the project. Since Carol is not totally familiar with the project, Bob decides to improve their documentation in their project’s page. Finally, with the help of Carol, the team gets production ready. They have bought hosting from another company and terminate the VM they had created. Without having any more resources allocated to them, the team also decide to close the project, indicating that they are no longer using DML to develop it. Staff scenarios Mr. Arez is the manager of the DML room. Being responsible for maintaining the components inside the room, keeping everything working and available, he is constantly adding new parts that arrive and updating information about certain items. Recently, a batch of 10 new Intel Galileos arrived, and he wants to add them to DML’s inventory so that students can request them and learn how to use them. With this in mind, Mr. Arez goes to create a new product. After filling a few generic options existent in the template provided (like the product’s abstract, connectors, etc), he soon realises that he would like to specify a few other characteristics, such as that there is an integrated RTC which requires a 3V battery, a programmable EEPROM, and so on. He thus adds new sections to the item’s page, resembling the structure he found on the product’s datasheet. Happy with the result, Mr. Arez creates the Galileo’s product page. Now, he wants to make available the different units he received (the actual items). He goes to the Galileo’s page and chooses to add new units of the product, by selecting the number of units he wants to add and all the codes are quickly generated so that Mr. Arez can print them on a nearby printer. Soon he has added all 10 new Galileos, and can make them available for students."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-servant": {
+        "id": "specification-servant",
+        "title": "Servant",
+        "category": "",
+        "url": " /specification/servant/",
+        "content": "Given that most tasks carried by DML require little to no human interaction, a unified way of outputting communicating information to the outside world is required. dml-servant is the entity responsible for this, built in an independent and decoupled manner — also illustrating our plugin architecture. Its top level features include: Provisioning diagnostic tools; Providing a cli-like interface with which users can interact with; Monitoring services, e.g. giving information about the state of things; The first bullet is aimed more at the development team, while the last two targets most users. In essence, dml-servant tries to bring to Makerlab the chatops-like bot it needed in order to interact with the outside world and inform its masters if it finds any problems. Better, only if it solved the problems itself (future work). It is accessible through DETI’s Slack. Diagnostic services These services give the development team a simpler interface in order to track down and isolate problems, leveraging the knowledge required to successfully do this (e.g. the team doesn’t need to know about the location of all the services that are running in order to test them). Tasks so far scheduled for development include: Test reachability of set of endpoints (partially complete); Monitoring services Run tasks regularly and inform users (the team or otherwise) of their result, for example. Functions scheduled for development include: Monitor a set of endpoints, informing if they fail become inaccessible (partially complete); Inform a user when a given item he she has marked becomes available; Inform users that have subscribed to a given channel of new equipment available; Blame (eventually publicly) users that have failed to return a product in time; CLI interface Interface through which users the team can interact with the servant. These include endpoints to make available the functionality described in the services above, as well as an interface to manage the state of virtual machines within the datacenter (although this is still open for discussion). Once the documentation of the endpoints being developed is complete, which will be available through the servant’s help command (see the image above), this section will see further extension with such information."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-wiki-parser": {
+        "id": "specification-wiki-parser",
+        "title": "Wiki Parser",
+        "category": "",
+        "url": " /specification/wiki-parser/",
+        "content": "Requirements such as the use of a wiki-based platform and high flexibility demands made us adopt the data organization discussed here. This page we will deal with the component that implements what was discussed in the previously mentioned link. On the component As the name suggests, the wiki-parser in not a component per se, but more a sub component associated to the wiki. It enables the wiki to have access to a uniform data model, abstracting the steps needed in order to attain the model itself (for example parsing the markdown of a wiki’s article). Given the nature of the component, a test suite was developed to assert that new additions to it don’t break compatibility to what had already been implemented. For brevity these have been left out of this document, though they can be found what the component’s repository (access is granted if requested), where they integrate the deployment pipeline."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "specification-wiki": {
+        "id": "specification-wiki",
+        "title": "Wiki",
+        "category": "",
+        "url": " /specification/wiki/",
+        "content": "DML’s wiki is all about the knowledge of the system. Its domain includes equipments, projects, members and requisitions, although others could be added to the list. The point of the system is to manage all the information in a dynamic, unbounded way, regardless of the content. This is possible due to the flexibility and collaborative capabilities provided by our wiki engine. This follows with other wikis, such as Python’s, Ubuntu’s, and of course, Wikipedia’s. Roles The wiki divides its users into 5 different levels: Administrator Manager Mentor Teacher User Student Visitor These levels are cumulative, witch means the higher ones have the capabilities of the lower ones. The Administrator is the highest level. Visitor The visitors are all the users that access the wiki unauthenticated. They can see the content of equipments and projects, as long as they access the website inside the university network or via VPN. User Student The student can edit information of most wiki pages, participating in the collaborative loop of information share. He can also be member of a (set of) project(s). Finally, he can do requisitions of equipments, in the context of one of the projects he belongs to. A student has full access to its account information as long as he has its UA credentials. Mentor Teacher A teacher is the mentor of a project running inside MakerLab. Projects can be created by a teacher. After that, he can add students to it (who can also add other students), making them part of the project. This is MakerLab’s way of assigning responsibility of the scientific value of a given project, in this case to its mentor. Manager The manager is the person that supervises the room. He is responsible to look after the material and help to keep the room an enjoyable space. He can manage all the equipment in the wiki, creating editing new pages for equipments, adding new units to them (the physical manifestation of a given item), and maintaining projects’ pages if the need rises. Requisitions are tracked by the manager, who is also capable of manually editing them. Being the mentor a special role, after authenticating himself via UA he needs to have this permission granted by the manager. Administrator The administration level is the highest level of the system. All the features are available to users with this role. Authentication Users can authenticate themselves with the system in a transparent way by using OAuth1, provided by UA. Completing its workflow is a requirement in order to login to the platform (which assumes the existence of UA credentials) — this means there is no need for an actual registration. Management The management is one of the main tools of the wiki. This section intends to develop the manager features. Equipments Equipments are registered in the wiki, which provides a template page with the last used fields (although the manager can edit the entire page to his needs). This avoids the existence of blank fields in a typical information system. For instance, links to images or datasheets can be added to each equipment on demanded, that is, withouth assuming that all items should contain this time of information associated. For each equipment, several units can be added. Requisitions The requisition of units happens through mobile apps. Despite this, the manager can track the complete requisition process, tracking pending requisitions and the requisition history, being able to contact the students via email. Requisition process The way the requisitions’ workflow processes is of extreme importance. We want to be sure that: Equipments are safe and well maintained — no damage, loss or thefts. If this happens someone needs to be responsibilized; Equipments are used in deserving projects. The diagram below illustrates the procedure to do requisitions (inside the dashed box) as an easy and fast step, wrapped in a bigger process (the whole diagram). Following all these steps we can trust in the paradigm of a system where everybody can enjoy learning and making, with the less bureaucracies possible, yet where when things go wrong the responsible doesn’t get away."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "team-roles": {
+        "id": "team-roles",
+        "title": "Roles",
+        "category": "",
+        "url": " /team/roles/",
+        "content": "Ricardo Jesus Project manager API, Solr, wiki parser, print util, servant (chatbot), counting people Diogo Ferreira Documentation manager Android app, authentication system Leonardo Oliveira Product manager Brand, aesthetics, wiki, API, counting people Pedro Martins Infrastructure manager Network Jorge Silva Developer iOS app"
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "team-weeks": {
+        "id": "team-weeks",
+        "title": "Weeks",
+        "category": "",
+        "url": " /team/weeks/",
+        "content": "#17 Looking at the horizon with the feeling of having the job done. Published at 12-06-2017 #16 The week started with the first “full project” demo. Its our opinion that everything went mostly well. We received good feedback, and had the opportunity to discuss ideas with many different professors and visitors, which enabled us to collect relevant features that we decided to include. So what have we been working on? We implemented a big portion of these features. They were mostly small things, such as displaying this information in this page, of that graph in that other place. We did it. We also configured a mail agent, so that we can now send email @deti-makerlab.ua.pt! This also means that we can start sending emails logging requisitions and all those other niceties we had been talking about for so long. New endpoints to the servant were also added, giving answer to the (also) new endpoints of the NetworkManager (namely port’s management). Oh, and we also developed a nice poster for the students@deti event. There’s still a not so small path till we can see this project’s completion, though we are heading full power mode aiming towards a strong finish! Published at 28-05-2017 #15 We are still building up towards the projects completion. Missing features have been decreasing at a steady state, and most things are thus slowing down development. It is starting to become about the little details at this point. As an example, the servant + network not only now communicate reasonable well, as they also start to worry about the way they output information to the outside world, in a pretty and informative way. Some improvements were made in our algorithm to measure the average people in the room during the day. We are adding features, improving old ones and bug-fixing errors that appear along the way. We are building towards DETI MakerLab completion one step at a time (now aiming to the soon to come full demo). Published at 21-05-2017 #14 Things have been closing during the last week (and will continue to do so). No new features are being accepted and schedule for development, now the main focus being to have everything working as soon as possible. For reference: The wiki is mostly OK. Until the apps are completed we can’t really call it closed, but not much remains to do. The exception including features regarding groups of users and sending email logs. The Android app has received a major visual refactor, and now looks quite good. Apart from a few set of views, is mostly complete. The iOS app halted development a few time ago… Though now trying to pick up again, the team is unsure whether this will be possible. Network - still needs to be integrated. This should have been done earlier, but people keep on pushing the schedule. We’ll see. Counting people - needs results, but should be done within one to two days. Others: might need changes pushed by the other components that are not yet closed. Apart from this, they should be OK. Also, we have recently found another use case for one of our components (servant) in an IT’s project. This is being written in the team’s log since it shows that one of the project’s goals (the possibility of using its components outside the project’s scope) is in fact a reality — this being the first example of a situation where this will be done. Published at 14-05-2017 #13 This week saw little development, after last weeks tight schedules we had to turn our attention into other matters. Thus, to reduce having some team members waiting on others at different moments, the whole team took the time to work on things that needed the time, even if out of scope of this project. We hope to have some interesting news soon. Published at 07-05-2017 #12 We have started integrating the Network Manager (NM) with its public interface (chatbot). The network manager had also to be changed. While we were expecting a switch with VXLAN capabilities, we now will only be capable of using one without. This meant refactoring the overall network architecture, but things should proceed without much fuzz. Our Android app also saw visual improvements, and we are back on track with the requisition platform (after that last minute change we were imposed). As an addition, we have also started experimenting with ideas for people counting. We expect to have it working soon. Published at 30-04-2017 #11 This was an interesting week. First and foremost we had another milestone (M4) to prepare, which burdened us with the creation of another presentation and demo. It’s the group’s opinion that everything went mostly fine and we are happy with the outcome. Pressured by the milestone we also got authentication with UA working; connections through HTTPS done (this was already completed, except for the integration with mobile apps since we use a self-signed certificate); and requisitions mostly completed (or so we thought). Not all roses though… When we went to deploy the system, we found out that a previously discussed matter turned out to be an issue. Long story short, we were first asked to consider individual units of equipments, whereas now units don’t exist. I repeat, this had been discussed with both parties (manager and administrator), it was not lack of planning. Hopefully we anticipate that the damage can be mostly repaired within a week, it is just unpleasant to have to fix something that should have never been broken. Now onto the future: This week (12) we begin phase 3 of project development. This means we will begin integrating the datacenter (currently supporting the creation of VMs), as well as developing some new, different things (aside from maintaining what has already been developed deployed). As a sneak peek, we have planned the development of a “How many people in the room?” feature, as well as having the chatbot handling the interface with the datacenter’s management API. Published at 23-04-2017 #10 This week was a lot about improving the project’s documentation (feel free to go on an check the specifications. We also got a development server set up, so that we can use it to test features before releasing them into production. With it we tested and have already deployed: Communications over HTTPS; Having both our wiki engine and our Solr’s instance running behind uwsgi and nginx; Got a few servant’s features introduced (such as a ping-like command). This is not meant to be an extensive list. Published at 16-04-2017 #9 Easter took us most time. This week saw little development, with the main focus being on fixing things and preparing for future work. Published at 09-04-2017 #8 We now have an assistant - dml-servant - the chatbot that will help us managing DETI’s MakerLab. For now, it provides simple endpoints that are mostly funny but not really useful (e.g. a way to annoy some other users), however its main goal is to automate some tasks made by the lab users and also by us. Regarding the users, we will focus on endpoints given special functionality for the IT students. UA’s auth system is also mostly finished, enabling us to use each user’s UU to login and get their profile information (effectively, from the standpoint of the users, eliminating the need for yet another account to keep track of). We have also migrated our services to the STIC’s VM, and Sr. Arez has started to fill in the wiki with some information. This enables us to test what we were missing, making it possible to schedule the releases we have been holding on. Expect big updates soon, although we will also be busy documenting everything. Published at 02-04-2017 #7 After some headaches we have finally came up with a proper architecture for structuring our data. We developed a parser which solves the flexibility requirements imposed by one of our clients, which demanded general “management” information to be directly editable as if it was any other kind of content of an article. Here goes how it looks like: This step was necessary since now the mobile apps will start to actually communicate with the API, and they definitely don’t want to face all the complexity (imposed by the system’s flexibility, one of its requirements) of our data structure. We have added a new page on the issue here. On other news, we are still waiting to have items added onto the wiki. We will have to ask prof. Diogo Gomes to pressure Sr. Arez so that we can have actual items to test with. Hopefully, though, the STIC have finally delivered us our server (although with an odd name). During the next few days we will start migrations, although we expect things to go smoothly (it now feels good to be using Docker, since most things are automatic). Published at 26-03-2017 #6 Although there’s still some polishing to do, after a few attempts and some headaches we now can “fast” print a set of custom labels, which include our codes. This will hopefully simplify a lot the life of Sr. Arez, who otherwise would have to print one label by one. Also, improving last week’s release (adding equipments to the wiki), we have released a new feature when adding units so that it’s easy to add multiple units belonging to a given equipment. On other news, everything is mostly ready to support requisitions. We are simply waiting to have items on the wiki so that we can test our new features before releasing them to public. With the improvements above, hopefully these shouldn’t take too long. Published at 19-03-2017 #5 First partial release of the platform! This week brought many news. On the one hand, there was the first project’s presentation, where we presented our overall architecture of the system and its scheduled features. On the other hand, we delivered “half” of the platform, by now permitting Sr. Arez (DETI Makerlab’s staff) to start adding news equipments to the wiki. We’ve also come to conclude that we will develop both an extra component, a parser, to better integrate with prof. Diogo’s vision of how the system should behave, as well as a simple utility to facilitate Sr. Arez product labelling workflow. Hopefully these will not consume much time. As a side effect of the team’s presentation, we now feel we have a much more crystallised vision of the system and a map of how things will fit together. As an example, the plugin-based section of the architecture is pretty much established, contrary to what used to be true. Yet, we’ve once again stomped on the network’s section. What we thought was to be done in Layer 3 will be Layer 2, which further pushed the network’s delivery schedule. Next week: Requisitions! Published at 12-03-2017 #4 As promised, this week’s major update upgrade is the site’s refactor. It is now much better, much prettier, user friendlier and useful all around. It’s unrecognisable. Also, our wiki finally dropped SQLite (which was being used for development testing purposes) for a Postgres container. With the most recent wiki updates, we are close to being capable of releasing the Phase 1 of the wiki’s delivering schedule. We hope this is possible next week. By then we will also start adding images (like print screens and such) to these devlogs. Published at 05-03-2017 #3 We started launching containers! Although still far from complete and not even open to public, this was the first time we were capable of launching VMs programmatically. We also scheduled a major front-page refactor, which will hopefully make our site’s front page much friendlier and useful. On other news, our wiki went from english to portuguese, at least for its first version. This also meant start indexing articles in portuguese. This is mostly solved now. Published at 26-02-2017 #2 During this week Milestone 1 (M1) was prepared. This took some time from our schedules, which meant we could progress as much as we would have liked. Despite this, a general architecture was proposed accompanied by a draft of our API; Solr’s readings and learning were closed and actual work can begin. The template of our project’s site was also changed, so that it could better fit its documentation purposes. It is quite different now. Some mockups for the mobile app were also prepared: Published at 19-02-2017 #1 Project was started. The team met and momentum picked up. We also met with our mentor, which enlightened us with is vision of the project. Each of us was assigned an initial role, so that we could start reading and investigating what to do. Published at 12-02-2017"
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "user-servant": {
+        "id": "user-servant",
+        "title": "Servant",
+        "category": "",
+        "url": " /user/Servant/",
+        "content": "Here follows the language dml-servant has so far learned. Servant’s rules dml-servant the rules In case you wonder about the rules dml-servant was programmed to obey to. Debug dml-servant echo &lt;text&gt; If you doubt the servant’s capacity to reply to you, please, give it a try. ping Because ping-pong is a nice game. Oh, and it enables you to test whether the servant is really listening to you or has gone rogue. Help dml-servant help Because dml-servant is kind enough to help you learn its language. Projects dml-servant projects ls dml-servant is smart enough to tell you about your projects inside the famous DETI MakerLab. No need to switch context! Network dml-servant network add port &lt;proj-id&gt; &lt;port-id&gt; If you need to have your own private network (free from UA’s constraints!). dml-servant network create &lt;proj-id&gt; &lt;dockerfile-url&gt; Or a VM, dml-servant comes to the rescue. dml-servant network log &lt;cont-id&gt; It can also show you a VM’s log, in case you need it. dml-servant network ls &lt;proj-id&gt; Or list the VM’s bound to a project! dml-servant network restart &lt;cont-id&gt; Restarting a VM is a easy as 1, 2, 3, dml-servant network restart container id. dml-servant network rm &lt;cont-id&gt; Removing is a classic, no explanation needed. Proceed with care though. dml-servant network rm port &lt;port-id&gt; When you no longer need to have your own private network. dml-servant network start &lt;cont-id&gt; Every Stop &lt;X&gt; needs a Start &lt;X&gt;. dml-servant network stat &lt;cont-id&gt; Looking for statistics about a VM? Well… Look no more. dml-servant network stop &lt;cont-id&gt; Every Start &lt;X&gt; needs a Stop &lt;X&gt;."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "user-mobile-app": {
+        "id": "user-mobile-app",
+        "title": "Mobile App",
+        "category": "",
+        "url": " /user/mobile-app/",
+        "content": "The app provides for a more user-centered experience within the lab and have all necessary tools to start using it’s features as fast as possible. Authentication In order to overcome the need for students and professors to have another account to manage, MakerLab’s access (wiki and mobile app) is based on integration with the university’s authentication system, so you just need to enter your University of Aveiro’s credentials (on idp.ua’s platform) and then you will be redirected to app’s home page so that you can start enjoying MakerLab’s features. You will also see, on menu’s header, your account details (name and email) and your photo, based on Gravatar, so you will need to associate a photo to your UA’s email on Gravatar’s platform, in order to be shown on the app. Projects Projects are the Makerlab’s foundations, meaning that the user will need a project to start using the lab’s features and equipments. For that just go to “Projectos” menu tab, click on the plus icon and then “Criar Projecto”. After that fill the project’s name and description and click on “Criar Projecto”. Now that the projected is created, you can start adding members to it so that the project begins to build itself. For that, select the project, click on settings icon, then “Adicionar membros” and select the users you want to add. The user will need to be registered on Makerlab’s platform (through the wiki or mobile app) in order to appear on the list. You can , at any time, see the project’s page and it’s members, by clicking on it’s name. Making requisitions and deliveries Now that the project is created and the members are added, it is possible to start making equipments requisitions. You will find QR codes labeled on all items in the lab, so simply grab the item, go to “Leitor de itens”, and point your camera to the QR code. If you have Augmented Reality enabled, a canvas with Makerlab’s logo and item name will appear and you need to click on it, otherwise the requisition delivery dialog will appear instantainly. Requisitions If you want to make a requisition, just choose the project to which you want to associate it, the number of units you want to request and simple click on “Confirmar”. Deliveries If you want to make an item delivery, change the switch value on “Requisitar Entregar”, select the project in which the requisition is associated (only projects with active requisitions for the equipment you are reading will appear), choose the number of units you want to deliver and click on “Confirmar” Augmented Reality Users can also sneak peek some information about the item they are holding with an Augmented Reality feature, which is particularly useful if they are not familiar with the equipment. To use it, make sure “Augmented Reality” feature is enabled on “Definições” menu (it is enabled by default), point the camera to the QR code and a canvas with Makerlab’s logo and item name will appear. Requisitions As long as you request more than one item, it is a good idea to maintain the history of the requisitions you made. This is done in “Requisições” menu tab, where you will find all your active requisitions grouped by the item and project name."
+    }
+
+    
+    
+    
+    
+    
+    
+    ,
+    
+
+    "user-wiki": {
+        "id": "user-wiki",
+        "title": "Wiki",
+        "category": "",
+        "url": " /user/wiki/",
+        "content": "All the knowledge of the system is on the wiki. On the one hand, wiki provides tools to manage equipments, projects and users. On the other, users can collaboratively edit articles, in a version controlled way, to document and share all the information that assists students making their projects happen. Login To avoid the constraints of having multiple accounts, wiki comes with UA’s authentication system, integrating it with the whole system. Home Page Everybody goes to Google when looking for something. We intend to provide the same experience. Wiki’s homepage has a search bar where you can find what you are looking for: a project, an equipment, a user. Articles Users can collaboratively edit articles, in a version controlled way, to document and share all the information that assists students making their projects happen. Equipment’s Management The room’s manager can add new equipments and manage their stock and requisitions. He has a log of active and past requisitions. If an equipment is lost during a requisition, it can be easily marked. When a requisition occurs, the user and manager are notified by email. Project’s Management Users are integrated in projects. In the project’s management page, the members are listed, and also their requisitions. If a project is waiting for a mentor, users can ask a teacher for it. The system will automatically send an email to notify the request. Afterwards, the invited teacher can approve the project. After being approved, users are finally able to do requisitions in the context of that project. The group can be easily emailed at the distance of a click. User Profile’s Management User profile’s management pages shows useful information from each user. There, the user’s requisitions are logged. If it is the case, the manager can promote a user to a teacher. Again, emails can easily be sent to each user. Room’s stats Thanks to the room’s video vigilance and through some image processing, we can detect movement, estimating the occupation of the room in real time. We use it to provide stats of how the room is used during the day. Wiki means fast in Hawaiian."
+    }
+
+    
+    
+    
+    
+};
+</script>
+<script src="../scripts/lunr.min.js"></script>
+<script src="../scripts/search.js"></script>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

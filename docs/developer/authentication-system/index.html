@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item current"><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>Developer</h2>
+                <h3>Authentication System</h3>
+            </div>
+            <article class="content">
+                <p>In order to overcome the need for students and professors to have another account to manage,
+MakerLab’s access is based on integration with the university’s authentication system,
+which uses <a href="https://tools.ietf.org/html/rfc5849">Open Authorization (OAuth) protocol</a>.</p>
+
+<p>The authentication and login process are centralized on MakerLab’s api endpoints
+in order to prevent clients (wiki, mobile applications, etc.) from having to deal
+with their own authentication system.</p>
+
+<p>To join OAuth protocol with wiki’s django server, we use <a href="http://requests-oauthlib.readthedocs.io/en/latest/index.html">Requests-OAuthlib</a>, which provide an
+interface for building OAuth1 (version used by University of Aveiro) and OAuth2 clients.</p>
+
+<p>For an application to communicate with OAuth server, it must be registered and authorized,
+by <a href="http://identity.ua.pt/oauth/">requesting a Consumer and Secret Key</a> and wait
+for the application to be approved.</p>
+
+<p>The OAuth service of the University of Aveiro is composed of four steps, namely :</p>
+
+<ol>
+  <li>
+    <p>Request Token : after the Consumer Key and Secret have been obtained, we can begin
+using the OAuth protocol to access restricted services. The first step is to require
+a pair of temporary credentials on <code class="highlighter-rouge">auth/login</code>. These tokens will be needed on
+first steps and have a useful life of 30 minutes, so we need to save them taking
+into account the concurrency accesses, by using locks and timestamps on write operations.</p>
+  </li>
+  <li>
+    <p>Authorize : now that we have the temporary tokens, we must proceed with the
+authentication and authorization of the user by redirecting them to University
+of Aveiro’s IdP, where te user will enter their credentials and approve the use
+of personal informations by our application.</p>
+  </li>
+  <li>
+    <p>Access Token : after Authorize process ends, a new set of tokens (authorization tokens)
+will be returned (by a redirect from IdP to <code class="highlighter-rouge">auth/auth</code> endpoint) that will be used
+on this step to generate the access tokens.</p>
+  </li>
+  <li>
+    <p>Get data : with final access tokens we can make request for specific user’s
+informations, whose list can be found on the <a href="http://api.web.ua.pt/pt/services/universidade_de_aveiro/oauth#servicos_disponiveis">documentation website of the university</a>.
+On the first registration of the user on our platform some informations are saved
+on theirs wiki profile, namely the full name, mec. number and course, if it is a student,
+or just the name in the case of a teacher.</p>
+  </li>
+</ol>
+
+<p>After all steps above are completed a redirect to wiki has to be done, in order to
+start using it’s features.</p>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

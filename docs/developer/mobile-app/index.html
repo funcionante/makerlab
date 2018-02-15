@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item current"><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>Developer</h2>
+                <h3>Mobile App</h3>
+            </div>
+            <article class="content">
+                <h1 id="authentication">Authentication</h1>
+
+<p>Since the authentication process is centralized in MakerLab’s api endpoint, the app 
+will make this process through a Web View that, allied to the redirects made by 
+OAuth protocol used by the university, will take the user through the steps needed
+to the authentication process. The app will only interfere in last step - 
+establishing the session with the wiki - where it will get the session-id through
+the request headers and save it in the app preferences (Shared Preferences),
+as it will be necessary to perform all the requests to MakerLab’s api endpoints.
+This Shared Preferences are saved in a secure way (Secure Preferences) on the equipment
+(smartphone or tablet) memory. After this proccess, the webview cache need to be
+cleared, so that the user can logout and re-login with another accounts, since UA’s
+idp saves session and allways maintains an logged account.</p>
+
+<p>After the login’s process, the app will request for user’s infos by making
+a request to <code class="highlighter-rouge">/api/profile</code> endpoint and save the user name, email and wiki user id.
+At this point the app also saves the current login time, since wiki’s session is maintained
+only for 15 days, so it needs to force logout so that the session-id is allways
+valid.</p>
+
+<p>An auto-login feature is also present, by handling the user infos on app preferences.
+When the user forces logout, these infos are cleared, so the app will ask the user
+to make authentication by following all workflow shown above.</p>
+
+<h1 id="dmlcalls">DMLCalls</h1>
+
+<p>The DMLCalls is the model class responsible for populate and mantaining the information
+needed on others views, namely the complete list of users, and the list of projects 
+and requisitions of the user that is authenticated.
+A complete workflow (getting list of users &gt; list of user’s projects &gt; list of user’s
+requisitions) is done on the app startup, so that the views can be populated in
+the initial state.</p>
+
+<p>These information obtained from the MakerLab’s api endpoints is stored follwoing
+the OOP methodology, as follows.</p>
+
+<ul>
+  <li>Users list : based on User object, which contains its name (first and last),
+wiki user id and a flag used to manipulate checkable list on “Adicionar Membros”
+feature;</li>
+  <li>User’s projects list : based on Project object, which contains project name and id,
+creation date and a list of it’s members (User objects);</li>
+  <li>User’s requisitions list : based on Requisition object which contains the item name
+and id, the associated project name and number of units requested;</li>
+</ul>
+
+<p>These objects are stored in lists, accessible at any time, through DMCalls instance.
+It is also possible to force a refresh of the user’s projects and requisitions
+by calling the respective method (forceUserProjectsLoad, forceUserRequisitions).
+The user’s projects refresh will notify Main Activity (with a broadcast signal)
+and redirect the user to projects list in order to refresh the list view 
+with the last projects, and the user’s requisitions refresh will notify the reader
+fragment in order to re-activate the camera function.</p>
+
+<h2 id="api-calls">Api call’s</h2>
+
+<p>All requests to MakerLab’s api endpoints are done based on Volley lib.
+However, since wiki host has a self-signed certificate to work on http secure mode
+(https), some changes have to be done on top of Volley lib. These changes are 
+present on <code class="highlighter-rouge">network package</code> , namely:</p>
+
+<ul>
+  <li>AndroidSelfSigned - based on <a href="https://gist.github.com/erickok/7692592">erickok solution</a>
+creates a keystore containing trusted certificates, a trust manager that trust
+ on certificates placed on the keystore and a ssl context that uses that trust manager;</li>
+  <li>VolleySelfSigned - using all tools created on AndroidSelfSigned and based on
+HurlStack, creates a connection with a custom ssl socket factory (NoSSLv3SocketFactory)
+and attach a session-id (cookie) to it;</li>
+  <li><a href="https://github.com/gotev/okhttp-tlscompat/blob/master/okhttp-tlscompat/src/main/java/net/gotev/okhttptlscompat/NoSSLv3SocketFactory.java">NoSSLv3SocketFactory</a> -disables SSLv3, since while making a secure connection, android was falling back
+to SSLv3 from TLSv1 . It is a known bug in android versions &lt;= 4.4 and it can be
+solved by removing the SSLv3 protocol from enabled protocols list;</li>
+</ul>
+
+<p>The server certificate that is used on MakerLab’s api endpoints interactions is
+generated in MakerLab’s server (.crt extension) and placed on assets folder (on project path).
+Also, the cookie that is attached to the requests / responses is obtained on
+Authentication phase, as described in above section.</p>
+
+<h1 id="views-structure">Views structure</h1>
+
+<p>The app views are all based on Fragments interface, selected by a side menu which
+is available at any time with the exception of Project Page fragment, User list
+fragment and Create Project fragment, since they make part of a separate workflow.
+In that case, it is necessary to handle go back feature (top left icon is replaced
+for a go back arrow) and it’s logic in MainActivity.</p>
+
+<h1 id="item-scanner">Item scanner</h1>
+
+<p>Since the app needs to scan QR codes and work on theirs information,
+the application uses <a href="https://github.com/KingsMentor/MobileVisionBarcodeScanner">MobileVisionBarcodeScanner</a>
+lib, which in itself is based on a <a href="https://developers.google.com/vision/android/barcodes-overview">solution created by Google</a>.
+It detects a QR code and returns it’s value so that we can work above it.</p>
+
+<h2 id="augmented-reality">Augmented Reality</h2>
+
+<p>The augmented reality feature was a addition made on MobileVisionBarcodeScanner
+source code. When a code is readed, a Barcode wrapper is created, which make
+possible to find the code bounding box. Based on that, the app builds and draw four
+paintings on returned canvas, as following:</p>
+
+<ul>
+  <li>Rect Background - fills the background with white color and bounds the image;</li>
+  <li>Logo bitmap - decodes the png logo file and creates a scaled bitmap to draw over the
+rect background;</li>
+  <li>Rect border - draws a rectangle border with MakerLab’s color, to make the canvas look better;</li>
+  <li>Text - computes text position on rect’s bottom, so that it appears centered with it. This
+text is the equipment name where the QR code is pasted, and it is obtained by making
+a request to <code class="highlighter-rouge">api/equipments/QRCODE_SCANNED</code>. These names are maintained in a Map
+so that repeated requests are not made to previously readed codes;</li>
+</ul>
+
+<p>This feature can be enabled or disabled on settings menu, which controlls a flag
+saved on app preferences.</p>
+
+<h2 id="requisitions--deliveries-logics">Requisitions / Deliveries logics</h2>
+
+<p>After the QR code is readed and returned, it is necessary to find the equipment
+infos, by making a request to <code class="highlighter-rouge">api/equipments/QRCODE_SCANNED</code> and analyse the name,
+quantity and active requisitions number. After that a dialog is created to
+handle user input, namely:</p>
+
+<ul>
+  <li>Requisition / Delivery chooser - a switch which determines whether the user wants
+to make a requisition or a delivery;</li>
+  <li>Project - if the user wants to make a requisition, the project spinner will
+show all user’s projects (DMLCalls projects list) so that the user selects one of them
+to associate the requisition. If it is a delivery, the project spinner will just
+show the projects in which the user have active requisitions, by analysing user 
+active requisitions list (DMLCalls requisition list);</li>
+  <li>Number of units - determines the number of units the user want to request or deliver.
+The request max value is limited to 10 (so the server does not overload) or number
+of units available if it has a value smaller than 10. The deliver max value is also
+limited to 10 or number of units in the active requisition, if it has a value smaller than 10.</li>
+</ul>
+
+<p>The inexistence of projects prevents the dialog from being displayed, since
+there are no projects in which the user can associate the requisition, as well as
+the inexistence of available equipment’s units will block the requisition feature
+and the inexistence of active requisitions of the equipment will block delivery feature.</p>
+
+<p>When “Concluir” button is pressed, the request need to be done, by making a PUT request
+to <code class="highlighter-rouge">api/projects/CHOSEN_PROJECT_ID/requisitions/QRCODE_SCANNED</code> in order to make a requisition
+or a DELETE request to same endpoint to make a delivery. Since the server does 
+not support multiple requisitions / deliveries at once, it is necessary to make 
+multiple requests to the specific endpoint, which value is determined by the 
+number chosen in the NumberPicker. After all requests are computed
+by the server, a message with operation status will show and the requisition list needs
+to be refresh by making a reload of the requisitions list on DMLCalls, which, when the reload
+is finished, will broadcast a signal in order to allow the user to make new requisitions
+or deliveries based on updated values.</p>
+
+<h1 id="projects">Projects</h1>
+
+<h2 id="create-project">Create Project</h2>
+
+<p>Based on two fields on a form where the user fills the project name and description
+a PUT request is made to <code class="highlighter-rouge">api/projects/new?title=PROJECT_NAME&amp;content=PROJECT_DESCRIPTION</code>.
+After that the user is redirected to project list view.</p>
+
+<h2 id="listing-projects">Listing Projects</h2>
+
+<p>The user’s projects list (DMLCalls projects list) is showing based on a listview with
+a custom adapter which shows the project name, creation date and a rectangle image which
+represents the project.</p>
+
+<h2 id="project-page">Project Page</h2>
+
+<p>When a project is clicked on above section, a page with more details appears.
+The main feature of this page is to see and manage the project members, by showing
+a list with them.</p>
+
+<h2 id="adding-members-to-projects">Adding members to projects</h2>
+
+<p>When the user clicks on “Adicionar Membros”, a new page with all MakerLab’s users
+is shown, so that the user can select and add multiple members to it’s projects.
+This checkable list is handle by consulting isSelected flag present on User object,
+so it needs to be unchecked on page startup. A listview item click listener is also
+setted in order to improve user experience and allow them to pick a user by simply touch on
+the item or in the checkbox. When “Adicionar Membros” button is clicked, a PUT request
+to <code class="highlighter-rouge">api/projects/PROJECT_ID/members/USER_ID</code> has to be done , user by user, since
+the server does not support multiple addings’.</p>
+
+<h2 id="requisitions-lists">Requisitions Lists</h2>
+
+<p>Based on requisitions and deliveries done on Item Scanner section, a page will be
+show all user active requisitions (DMLCalls requisition list).
+Each item of this list will have the equipment name, the project which requisition
+is associated and number of units requested.</p>
+
+<h1 id="development-environment">Development Environment</h1>
+
+<p>The app was created on Android Studio IDE and the dependencies are maintained using
+Gradle (used by default with Android Studio IDE).</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>In order to create and build the app so that the requeriments and user experience
+gets fulfilled, some external libs have been used, namely:</p>
+
+<ul>
+  <li>MobileVisionBarcodeScanner - base lib to read QRCodes, as explained in the above sections;</li>
+  <li><a href="https://github.com/tkeunebr/gravatar-android">Gravatar-Android</a> - used to
+load user avatar;</li>
+  <li><a href="https://github.com/amulyakhare/TextDrawable">TextDrawable</a> - used to draw
+project image/avatar on its page and projects list;</li>
+  <li><a href="https://github.com/square/picasso">Picasso</a> - used to download and cache images;</li>
+  <li><a href="https://github.com/scottyab/secure-preferences">SecurePreferences-lib</a> - wrapper
+that encrypts the values of Shared Preferences;</li>
+  <li><a href="https://github.com/Clans/FloatingActionButton">FloatingActionButton</a> - custom
+and animated floating action button based on material design specification;</li>
+  <li><a href="https://github.com/google/volley">Volley</a> - HTTP library that makes network requests
+faster and easier to handle;</li>
+  <li><a href="https://github.com/hdodenhof/CircleImageView">CircleImageVIew</a> - used to draw
+user avatar with a circular shape;</li>
+</ul>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item current"><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>User</h2>
+                <h3>Servant</h3>
+            </div>
+            <article class="content">
+                <p>Here follows the language <code class="highlighter-rouge">dml-servant</code> has so far learned.</p>
+
+<h3 id="servants-rules">Servant’s rules</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant the rules
+</code></pre>
+</div>
+<p>In case you wonder about the rules <code class="highlighter-rouge">dml-servant</code> was programmed to obey to.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fthe-rules.png?alt=media&amp;token=c7bfd5d4-bdc6-4831-80de-5571f36df397" alt="the-rules" /></p>
+
+<h3 id="debug">Debug</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant echo &lt;text&gt;
+</code></pre>
+</div>
+<p>If you doubt the servant’s capacity to reply to you, please, give it a try.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fecho.png?alt=media&amp;token=4616a041-346b-4ac5-a4e3-0d897c71dc7a" alt="echo" /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ping
+</code></pre>
+</div>
+<p>Because ping-pong is a nice game. Oh, and it enables you to test whether the
+servant is really listening to you or has gone rogue.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fping.png?alt=media&amp;token=8a0aff86-9b4d-4b14-bf87-0ad46ea13ff3" alt="ping" /></p>
+
+<h3 id="help">Help</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant help
+</code></pre>
+</div>
+<p>Because <code class="highlighter-rouge">dml-servant</code> is kind enough to help you learn its language.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fhelp.png?alt=media&amp;token=7d057d40-be12-4655-b7e9-6023aed68a31" alt="help" /></p>
+
+<h3 id="projects">Projects</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant projects ls
+</code></pre>
+</div>
+<p><code class="highlighter-rouge">dml-servant</code> is smart enough to tell you about your projects inside the famous
+DETI MakerLab. No need to switch context!</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fprojects-ls.png?alt=media&amp;token=ef6ba01c-3c57-489a-a084-7dbfca4ad9d8" alt="projects-ls" /></p>
+
+<h3 id="network">Network</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant network add port &lt;proj-id&gt; &lt;port-id&gt;
+</code></pre>
+</div>
+<p>If you need to have your own private network (free from UA’s constraints!).</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-add-port.png?alt=media&amp;token=8858ec91-69c5-499f-826b-96983133c29f" alt="network-add-port" /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant network create &lt;proj-id&gt; &lt;dockerfile-url&gt;
+</code></pre>
+</div>
+<p>Or a VM, <code class="highlighter-rouge">dml-servant</code> comes to the rescue.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-create.png?alt=media&amp;token=39b14f86-d4dc-4381-981a-dfd109fb8503" alt="network-create" /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant network log &lt;cont-id&gt;
+</code></pre>
+</div>
+<p>It can also show you a VM’s log, in case you need it.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-log.png?alt=media&amp;token=eea4342e-ee97-426f-b252-a93a0aa64e1d" alt="network-log" /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant network ls &lt;proj-id&gt;
+</code></pre>
+</div>
+<p>Or list the VM’s bound to a project!</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-ls.png?alt=media&amp;token=a674a2b0-2eaf-48d3-9a53-6c1419b6c7fd" alt="network-ls" /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant network restart &lt;cont-id&gt;
+</code></pre>
+</div>
+<p>Restarting a VM is a easy as 1, 2, 3, dml-servant network restart container id.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-restart.png?alt=media&amp;token=7552370b-5a5a-498f-aab2-288e23d2038d" alt="network-restart" /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant network rm &lt;cont-id&gt;
+</code></pre>
+</div>
+<p>Removing is a classic, no explanation needed. Proceed with care though.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-rm.png?alt=media&amp;token=374ba24a-9f20-4899-8dea-b0f248fa6517" alt="network-rm" /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant network rm port &lt;port-id&gt;
+</code></pre>
+</div>
+<p>When you no longer need to have your own private network.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-rm-port.png?alt=media&amp;token=33b1a500-3080-4e78-808c-f4bcbc142480" alt="network-rm-port" /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant network start &lt;cont-id&gt;
+</code></pre>
+</div>
+<p>Every <code class="highlighter-rouge">Stop &lt;X&gt;</code> needs a <code class="highlighter-rouge">Start &lt;X&gt;</code>.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-start.png?alt=media&amp;token=074400d1-4bf3-4dd2-8390-1837c0989a7d" alt="network-start" /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant network stat &lt;cont-id&gt;
+</code></pre>
+</div>
+<p>Looking for statistics about a VM? Well… Look no more.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-stat.png?alt=media&amp;token=7066afef-cb00-4b66-abd2-7edf35ecb6a3" alt="network-stat" /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dml-servant network stop &lt;cont-id&gt;
+</code></pre>
+</div>
+<p>Every <code class="highlighter-rouge">Start &lt;X&gt;</code> needs a <code class="highlighter-rouge">Stop &lt;X&gt;</code>.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/servant%2Fnetwork-stop.png?alt=media&amp;token=8beabf48-847b-4127-a40c-f4c9f0a85fb3" alt="network-stop" /></p>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

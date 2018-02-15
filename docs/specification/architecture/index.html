@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item current"><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>Specifications</h2>
+                <h3>Architecture</h3>
+            </div>
+            <article class="content">
+                <h2 id="architecture">Architecture</h2>
+
+<p>Here is a simple illustration of how DETI MakerLab looks like:</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/Architecture.png?alt=media&amp;token=4fe547e4-ce7c-4458-a2b1-dda5ee212d47" alt="DML Architecture" /></p>
+
+<p>Although not an extensive diagram, hopefully it will empower the reader with a
+top-level understanding of the DML’s internals.</p>
+
+<h3 id="components">Components</h3>
+
+<p>The components illustrated above are documented within each one’s page. Yet,
+a succinct description of each component will be provided for completeness’
+sake.</p>
+
+<h4 id="api-provider">API provider</h4>
+
+<p>This is the component responsible for programmatically interfacing with the
+outside world — with apps or the lab’s servant, for example.</p>
+
+<h4 id="wiki-engine">Wiki Engine</h4>
+
+<p>Responsible for handling the wiki-like internal structure, managing revisions,
+and validating (authentication-wise) the access to wiki pages.</p>
+
+<p>For more information see <a href="/specification/wiki/">here</a>.</p>
+
+<h4 id="app">App</h4>
+
+<p>The app provides for a more user-centered experience within the lab and have
+all necessary tools to start using it’s features as fast as possible.</p>
+
+<p>For more information see <a href="/specification/mobile-app/">here</a>.</p>
+
+<h4 id="index-manager">Index Manager</h4>
+
+<p>Answers performance concerns that could rise due to our data organization
+model (which in turn is based on requirements such as the use of a wiki-based
+system). Facades the interaction with an indexer, abstracting the build of
+queries that would otherwise require extensive knowledge about the indexer’s
+internals.</p>
+
+<p>For more information see <a href="/specification/indexer/">here</a>.</p>
+
+<h4 id="wiki-parser">Wiki Parser</h4>
+
+<p>The component responsible for processing the (unstructured) structure of the
+wiki into a more well-defined form.</p>
+
+<p>It handles the different stages of organization discussed in
+<a href="/developer/data-structure/">data-structure</a>.</p>
+
+<h4 id="network-manager">Network Manager</h4>
+
+<p>Answers to the network matters of the lab. Abstracts the issuing of
+VLANs and the creation/removal of VMs.</p>
+
+<p>For more information see <a href="/specification/network-manager/">here</a>.</p>
+
+<h4 id="plugins">Plugins</h4>
+
+<p>Should be as decoupled as possible from the rest of the system.</p>
+
+<p>They should be hot-swappable, without affecting the overall, basic
+functionality of the system. They should be the main way of expanding the
+platform to new possibilities of interactions/services.</p>
+
+<p>An example of a plugin is <a href="/specification/servant/">Makerlab’s servant</a>.</p>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

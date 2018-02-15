@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item current"><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>Developer</h2>
+                <h3>Servant</h3>
+            </div>
+            <article class="content">
+                <p>The commands the servant answers to are already discussed in the <a href="../../user/Servant/">user
+area</a>.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The servant is a <a href="https://hubot.github.com/">hubot</a> chatbot that uses the
+<a href="https://www.npmjs.com/package/hubot-slack">hubot-slack</a> adapter to interact
+with <a href="https://detiuaveiro.slack.com">DETI’s Slack</a>.</p>
+
+<p>It runs in Node.js and accepts scripts in either coffeescript or javascript.</p>
+
+<p>The repo which hosts the projects code is <code class="highlighter-rouge">dml-servant</code>.</p>
+
+<p>To interact with slack, the bot needs a secret token generated at the
+department’s slack page.</p>
+
+<p>Besides answering to the already mentioned commands, the bot is also capable of
+periodically checking a set of endpoints and reporting their results (through
+slack).</p>
+
+<p>The logged user’s email is used to request information from the wiki (which in
+turn also uses the same email). This makes transparent (to the user) the
+integration of both services.</p>
+
+<h2 id="details">Details</h2>
+
+<p>The following details are given per directory or file of the repo.</p>
+
+<h3 id="assets"><code class="highlighter-rouge">assets/</code></h3>
+
+<p>This directory includes relevant files for the bot’s execution.</p>
+
+<p>The most useful one is <code class="highlighter-rouge">endpoints.txt</code>, which includes a set of endpoints to
+periodically try to reach.</p>
+
+<h3 id="libconstantsjs"><code class="highlighter-rouge">lib/constants.js</code></h3>
+
+<p>Defines constants used through the rest of the code.</p>
+
+<p>The most relevant portion of it is included:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>DML_NM_HOST: '192.168.1.128',
+DML_NM_PORT: '22',
+DML_NM_URL: 'http://127.0.0.1:5000',
+DML_NM_USERNAME: 'dml-datacenter',
+
+DML_DEV_API_HOST: '188.166.77.53',
+DML_DEV_SSL_CERT: fs.readFileSync('assets/nginx-selfsigned_dev.crt', {encoding: 'utf-8'}),
+
+DML_PING_CHANNEL: '#makerlab-reports',
+DML_PING_ENDPOINTS: 'assets/endpoints.txt',
+DML_PING_MIN_PATTERN: '*/30',  // every 30 minutes
+
+DML_PRIVATE_KEY: fs.readFileSync('assets/id_rsa'),
+DML_SSL_CERT: fs.readFileSync('assets/nginx-selfsigned.crt', {encoding: 'utf-8'})
+</code></pre>
+</div>
+
+<ul>
+  <li><code class="highlighter-rouge">DML_NM_*</code> constants relevant to the bot’s interaction with the network manager.</li>
+  <li><code class="highlighter-rouge">DML_DEV_*</code> define constants used when referencing the development server.</li>
+  <li><code class="highlighter-rouge">DML_PING_*</code> constants used regarding the “test endpoints” function.</li>
+  <li><code class="highlighter-rouge">DML_PRIVATE_KEY</code> key used by the bot in ssh sessions.</li>
+  <li><code class="highlighter-rouge">DML_SSL_CERT</code> certificate the bot expects from the main server.</li>
+</ul>
+
+<h3 id="scriptscrontabjs"><code class="highlighter-rouge">scripts/crontab.js</code></h3>
+
+<p>Handles testing endpoints in a cron-like approach.</p>
+
+<p>Non of its methods are callable from the outside world, since they only output
+information.</p>
+
+<h3 id="scriptsprojectsjs"><code class="highlighter-rouge">scripts/projects.js</code></h3>
+
+<p>Contains functions regarding projects.</p>
+
+<p>Currently one chat listener is registered, which is used to display information
+about the logged user’s projects.</p>
+
+<h3 id="scriptsnetworkjs"><code class="highlighter-rouge">scripts/network.js</code></h3>
+
+<p>The main script used by the bot.</p>
+
+<p>All the <code class="highlighter-rouge">network</code> endpoints registered in the bot are written in this file.</p>
+
+<h4 id="major-warning">Major warning</h4>
+
+<p>The way the servant authenticates with the network, for security reasons, is
+through ssh. This means that the servant effectively ssh’s into the machine
+running the network’s server in order to issue requests.</p>
+
+<p>This is transparent to the developers by the use of
+<a href="https://www.npmjs.com/package/http-ssh-agent">http-ssh-agent</a>, which enables
+the creation of an agent used to proxy requests.</p>
+
+<h3 id="setup"><code class="highlighter-rouge">setup/</code></h3>
+
+<p>A directory containing information/scripts on how to generate the initial
+version of the bot.</p>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

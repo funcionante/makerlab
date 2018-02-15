@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item current"><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>MakerLab</h2>
+                <h3>Wiki</h3>
+            </div>
+            <article class="content">
+                <p>DML’s wiki is all about the knowledge of the system. Its domain includes
+equipments, projects, members and requisitions, although others could be added
+to the list. The point of the system is to manage all the information in a
+dynamic, unbounded way, regardless of the content. This is possible due to the
+flexibility and collaborative capabilities provided by our wiki engine. This
+follows with other wikis, such as Python’s, Ubuntu’s, and of course,
+Wikipedia’s.</p>
+
+<h2 id="roles">Roles</h2>
+
+<p>The wiki divides its users into 5 different levels:</p>
+<ul>
+  <li>Administrator</li>
+  <li>Manager</li>
+  <li>Mentor/Teacher</li>
+  <li>User/Student</li>
+  <li>Visitor</li>
+</ul>
+
+<p>These levels are cumulative, witch means the higher ones have the capabilities
+of the lower ones. The Administrator is the highest level.</p>
+
+<h3 id="visitor">Visitor</h3>
+
+<p>The visitors are all the users that access the wiki unauthenticated. They can
+see the content of equipments and projects, as long as they access the website
+inside the university network or via VPN.</p>
+
+<h3 id="userstudent">User/Student</h3>
+
+<p>The student can edit information of most wiki pages, participating in the
+collaborative loop of information share. He can also be member of a (set of)
+project(s). Finally, he can do requisitions of equipments, in the context of one
+of the projects he belongs to. A student has full access to its account
+information as long as he has its UA credentials.</p>
+
+<h3 id="mentorteacher">Mentor/Teacher</h3>
+
+<p>A teacher is the mentor of a project running inside MakerLab. Projects can be
+created by a teacher. After that, he can add students to it (who can also add
+other students), making them part of the project. This is MakerLab’s way of
+assigning responsibility of the scientific value of a given project, in this
+case to its mentor.</p>
+
+<h3 id="manager">Manager</h3>
+
+<p>The manager is the person that supervises the room. He is responsible to look
+after the material and help to keep the room an enjoyable space. He can manage
+all the equipment in the wiki, creating/editing new pages for equipments, adding
+new units to them (the physical manifestation of a given item), and maintaining
+projects’ pages if the need rises.</p>
+
+<p>Requisitions are tracked by the manager, who is also capable of manually editing
+them.</p>
+
+<p>Being the mentor a special role, after authenticating himself via UA he needs to
+have this permission granted by the manager.</p>
+
+<h3 id="administrator">Administrator</h3>
+
+<p>The administration level is the highest level of the system. All the features
+are available to users with this role.</p>
+
+<h2 id="authentication">Authentication</h2>
+
+<p>Users can authenticate themselves with the system in a transparent way by using
+OAuth1, provided by UA. Completing its workflow is a requirement in order to
+login to the platform (which assumes the existence of UA credentials) — this
+means there is no need for an actual registration.</p>
+
+<h2 id="management">Management</h2>
+
+<p>The management is one of the main tools of the wiki. This section intends to
+develop the manager features.</p>
+
+<h3 id="equipments">Equipments</h3>
+
+<p>Equipments are registered in the wiki, which provides a template page with the
+last used fields (although the manager can edit the entire page to his needs).
+This avoids the existence of blank fields in a typical information system. For
+instance, links to images or datasheets can be added to each equipment on
+demanded, that is, withouth assuming that all items should contain this time
+of information associated. For each equipment, several units can be added.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/wiki%2Fv05%2Fwiki_06.png?alt=media&amp;token=9690ccc8-6fad-4ae3-a7ab-c57a3e660566" alt="Raspberry Pi 3 Wiki" /></p>
+
+<h3 id="requisitions">Requisitions</h3>
+
+<p>The requisition of units happens through mobile apps. Despite this, the
+manager can track the complete requisition process, tracking pending
+requisitions and the requisition history, being able to contact the students via
+email.</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/wiki%2Fv05%2Fwiki_02.png?alt=media&amp;token=fbbed565-9910-4a1d-af99-0d1867238404" alt="Raspberry Pi 3 Management" /></p>
+
+<h3 id="requisition-process">Requisition process</h3>
+
+<p>The way the requisitions’ workflow processes is of extreme importance. We want
+to be sure that:</p>
+<ul>
+  <li>Equipments are safe and well maintained — no damage, loss or thefts. If
+this happens someone needs to be responsibilized;</li>
+  <li>Equipments are used in deserving projects.</li>
+</ul>
+
+<p>The diagram below illustrates the procedure to do requisitions (inside the
+dashed box) as an easy and fast step, wrapped in a bigger process (the whole
+diagram).</p>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/Requisition%20Process.png?alt=media&amp;token=1dee8917-a1d9-4a6b-a349-071012d11a2f" alt="Requisition process" /></p>
+
+<p>Following all these steps we can trust in the paradigm of a system where
+everybody can enjoy learning and making, with the less bureaucracies possible,
+yet where when things go wrong the responsible doesn’t get away.</p>
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>

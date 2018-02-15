@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="Jekyll v3.3.1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <a href="../../"><img src="../../images/emblem.svg" width="40" height="40" alt="MakerLab logo"></a>
+                MakerLab
+                <button type="button" class="open-nav" id="open-nav"></button>
+            </h1>
+
+            <form action="../../search/" method="get">
+                <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+                <input type="submit" value="Search" style="display: none;">
+            </form>
+
+            <nav class="full-navigation">
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="../../">Home</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    
+                    
+                    <li class="nav-item top-level current">
+                        
+                        <a href="../../developer/api/">Developer</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../developer/api/">Api</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/authentication-system/">Authentication System</a></li>
+                            
+                            <li class="nav-item current"><a href="../../developer/data-structure/">Data Structure</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Installation-guide/">Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Network-installation-guide/">Network Installation Guide</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/parser/">Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/Solr-engine/">Solr Engine</a></li>
+                            
+                            <li class="nav-item "><a href="../../developer/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/introduction/">Specifications</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/introduction/">Introduction</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/requirements-and-features/">Requirements And Features</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/scenarios/">Scenarios</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/architecture/">Architecture</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/risks/">Risks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../specification/indexer/"></a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../specification/indexer/">Indexer</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/network-manager/">Network Manager</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/print-util/">Print Util</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki-parser/">Wiki Parser</a></li>
+                            
+                            <li class="nav-item "><a href="../../specification/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../team/roles/">Team</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../team/roles/">Roles</a></li>
+                            
+                            <li class="nav-item "><a href="../../team/weeks/">Weeks</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../user/mobile-app/">User</a>
+                        <ul>
+                            
+                            <li class="nav-item "><a href="../../user/mobile-app/">Mobile App</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/Servant/">Servant</a></li>
+                            
+                            <li class="nav-item "><a href="../../user/wiki/">Wiki</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level ">
+                        
+                        <a href="../../design/">Design Conventions</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li class="nav-item top-level">
+                        <a href="https://docs.google.com/spreadsheets/d/1Jbi-owmXIcexfThzl7p5dC-3x0x5HvHDrpuxFcMQSFU/edit?usp=sharing" target="_blank">Timesheet</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="page-header">
+                <h2>Developer</h2>
+                <h3>Data Structure</h3>
+            </div>
+            <article class="content">
+                <h2 id="on-the-data-structure">On the data structure</h2>
+
+<p>Given the flexibility that MakerLab aims for, the data structure it uses
+internally (that is, inside the API domain) is not trivial.<br />
+We have divided the (meta)data an article comprises over 3 disjoint layers,
+plus an extra presentation layer.</p>
+
+<p style="text-align: center"><img src="https://firebasestorage.googleapis.com/v0/b/makerlab-b9b8c.appspot.com/o/Data%20Layers.svg?alt=media&amp;token=5c0565ea-b8b3-4578-afbd-8d24b76747fc" alt="Data Layer Image" /></p>
+
+<h4 id="structured-layer">Structured Layer</h4>
+
+<p>The information belonging to this layer is persisted in the system database.
+It deals mainly with permission issues and with otherwise data that already
+was part of the <a href="https://github.com/django-wiki/django-wiki">django-wiki</a>
+which served as the starting point of our own wiki.<br />
+Every information in here is highly structured and is hardly modified in any
+direct way which we don’t control and/or verify that is correct and valid.</p>
+
+<h4 id="semi-structured-layer">Semi-structured Layer</h4>
+
+<p>This layer deals with information that is not strictly structured, yet we can
+ensure its correction and validity, and serves as the first layer where we
+modify and keep information of our own (versus the information already used by
+<em>django-wiki</em>).<br />
+We keep this information stored in XML. This means that an article in our
+system is no longer solely its contents. It now is its metadata as added by
+us, plus its contents (XML + Markdown).<br />
+We call this layer semi-structured since we do not impose a static structure
+in this layer. As need arises, new tags can be added and old ones removed. And
+the system has to bare with this flexibility. Yet, we don’t let general users
+modify this structure, effectively making us (i.e. the system itself) the
+only entity that uses this information. As a result we don’t need to worry
+about changes imposed by users and can be sure about the information we
+access to.</p>
+
+<h4 id="parsed-layer">Parsed Layer</h4>
+
+<p>This is the most flexible layer on our system, and the one that effectively
+poses most challenges when coping with our management-on-a-wiki system.<br />
+All the content kept within this layer is actually stored directly in the
+markdown of the articles. This means that any user (with proper credentials)
+can edit and manipulate this information.<br />
+At first sight this might seem undesirable, yet we find it to be the ultimate
+flexibility mechanism. Following the principle “we are all grown-up here”, we
+think (and our clients do too) that sufficiently privileged users should have
+direct access to information and be capable of changing it as they would
+change any other piece of information.<br />
+We thus, whenever reasonable, store information directly to the respective
+article’s markdown (its contents), making it directly editable.<br />
+In order to cope with this, we have developed a parser which looks for pieces
+of contents which resemble the loosely defined structure in which we would
+have written information, and hopefully interprets it. We try to use simple
+structures and be as flexible as possible in our grammar definition, so that
+users still have freedom to manipulate the structures without braking the
+overall contents.</p>
+
+<h4 id="normalizer">Normalizer</h4>
+
+<p>Having all the above layers and information scattered across different storage
+sources would make it difficult to access information specially out of the
+domain the API defines with the outer world (e.g. it would be hard to have a
+mobile app parsing markdown and interpreting it as valid data).<br />
+With this in mind we have developed a component whose sole purpose is to
+gather normalize all an article’s information into a well defined structure
+which can be easily used by and shared with all the other components,
+specially those which are not (nor should they be) familiar with these layers
+which we presented here.</p>
+
+<!-- -->
+
+            </article>
+        </section>
+
+        <script>
+document.getElementById("open-nav").addEventListener("click", function () {
+    document.body.classList.toggle("nav-open");
+});
+        </script>
+    </body>
+</html>
